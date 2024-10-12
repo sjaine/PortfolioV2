@@ -276,6 +276,8 @@ a > li > div:first-child {
 
 .first_box_bold {
   text-align: right;
+  margin-bottom: -40px;
+  margin-right: 10px;
 }
 
 
@@ -910,12 +912,6 @@ a > li > div:first-child {
     font-size: 20px;
   }
 
-  .card > img {
-    width: 90vw;
-    height: 40vh;
-    max-width: none;
-  }
-
   .info_body {
     padding: 0 5vw;
   }
@@ -1088,8 +1084,9 @@ a > li > div:first-child {
 
   .archive_card {
     margin: 0;
-    width: 90vw;
-    height: 40vh;
+    margin-bottom: 30px;
+    width: 78vw;
+    height: 48vw;
   }
 
   .archive_container {
@@ -1098,8 +1095,8 @@ a > li > div:first-child {
 
   .archive_card > img {
     max-width: none;
-    width: 85vw;
-    height: 38vh;
+    width: 75vw;
+    height: 45vw;
   }
 
   .archive_sticky {
@@ -1181,8 +1178,8 @@ a > li > div:first-child {
 /* Small screens */
 @media (max-width: 768px) {
   .card > img {
-    width: 95vw;
-    height: 30vh;
+    width: 90vw;
+    height: 60vw;
     max-width: none;
     border-radius: 15px;
   }
@@ -1202,15 +1199,14 @@ a > li > div:first-child {
   }
 
   .archive_card {
-    margin: 0;
-    width: 95vw;
-    height: 27vh;
+    width: 90vw;
+    height: 60vw;
+    margin-bottom: 0;
   }
 
   .archive_card > img {
-    max-width: none;
-    width: 90vw;
-    height: 25vh;
+    width: 87vw;
+    height: 57vw;
   }
 
 }

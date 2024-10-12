@@ -52,7 +52,7 @@ function Archive() {
     useEffect(() => {
       const triggers = [];
 
-      const isMobile = window.innerWidth <= 768;
+      const isMobile = window.innerWidth <= 1024;
   
       if (!isMobile && archiveRef.current && containerRef.current) {
         triggers.push(
