@@ -29,11 +29,14 @@ function Work() {
 
   useLayoutEffect(() => {
     const triggers = [];
+    const screenWidth = window.innerWidth;
 
     if (workRef.current) {
       const cards = workRef.current.querySelectorAll('.card');
 
       cards.forEach((card, index) => {
+        const isMobile = screenWidth < 1024;
+
         const trigger = gsap.timeline({
           scrollTrigger: {
             id: `work-card-${index}`,
@@ -51,13 +54,13 @@ function Work() {
               scale: 0.8,
               position: 'absolute',
               zIndex: cards.length - index,
-              top: `${50 + index * 40}%`,
+              top: isMobile ? `${30 + index * 40}%` : `${50 + index * 40}%`,
               left: '50%',
               transform: 'translate(-50%, -50%)'
             },
             {
               scale: 1,
-              top: `${50 + index * 30}%`,
+              top: isMobile ? `${30 + index * 30}%` : `${50 + index * 30}%`,
               duration: 4,
               ease: 'sine.inOut'
             }
@@ -65,7 +68,7 @@ function Work() {
           .to(
             card,
             {
-              top: `${30 + index * 30}%`,
+              top: isMobile ? `${10 + index * 40}%` : `${30 + index * 30}%`,
               scale: 0.5,
               duration: 4,
               ease: 'sine.inOut'

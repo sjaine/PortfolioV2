@@ -120,7 +120,14 @@
   color: white;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* main css part */
+html {
+  overflow-x: hidden;
+}
 
 body {
   margin: 0;
@@ -398,7 +405,7 @@ a > li > div:first-child {
 }
 
 
-/* Work */
+/* Work */ 
 #work {
   height: 140vh;
 }
@@ -526,7 +533,7 @@ a > li > div:first-child {
   margin-left: 150px;
 }
 
-.archiver_card_container {
+.archive_card_container {
   display: flex;
   width: max-content;
 }
@@ -693,9 +700,7 @@ a > li > div:first-child {
 }
 
 .photo > img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
+  object-fit: contain;
 }
 
 .project_title {
@@ -884,59 +889,20 @@ a > li > div:first-child {
   .info_title {
     font-size: 30vw;
   }
-
-  .card > img {
-    width: 50vw;
-    height: 65vh;
-  }
-
-  .archive_card {
-    width: 41vw;
-    height: 52vh;
-  }
-
-  .project_title {
-    font-size: 500px;
-  }
 }
 
-/* Medium screens (e.g., tablets) */
-@media (max-width: 1024px) and (min-width: 768px) {
-  .h0 {
-    font-size: 300px;
-  }
-
-  .info_title {
-    font-size: 40vw;
-  }
-
-  .card > img {
-    width: 70vw;
-    height: 50vh;
-  }
-
-  .archive_card {
-    width: 60vw;
-    height: 45vh;
-  }
-
-  .project_title {
-    font-size: 300px;
-  }
-
-  .first_arrow {
-    font-size: 190px;
-  }
-
-  .first_table > div {
-    padding: 15px 10px;
-  }
-}
-
-/* Small screens (e.g., smartphones) */
-@media (max-width: 768px) {
+/* Medium screens */
+@media (max-width: 1024px) {
   section > div {
     height: max-content;
+  }
+
+  #work, #info {
+    margin-bottom: 50px;
+  }
+
+  #work {
+    height: 130vh;
   }
 
   .h2 {
@@ -957,16 +923,8 @@ a > li > div:first-child {
 
   .card > img {
     width: 90vw;
-    height: 30vh;
-  }
-
-  .archive_card {
-    width: 80vw;
     height: 40vh;
-  }
-
-  .project_title {
-    font-size: 150px;
+    max-width: none;
   }
 
   .info_body {
@@ -1005,7 +963,7 @@ a > li > div:first-child {
     align-items: normal;
     justify-content: normal;
     padding: 0 20px;
-    height: 100vh;
+    margin-top: 30px;
   }
 
   .first_left {
@@ -1074,16 +1032,11 @@ a > li > div:first-child {
   /* work */
   .card > img {
     width: 95vw;
-    height: 30vh;
+    height: 40vh;
     max-width: none;
   }
 
   /* info */
-  .info_title::before {
-    font-size: 90vw;
-    content: "JAINE!";
-  }
-
   .info_main {
     margin: 0;
   }
@@ -1097,8 +1050,6 @@ a > li > div:first-child {
   }
 
   .info1 {
-    left: 50%;
-    top: 1%;
     width: 160px;
     height: 160px;
     border-radius: 6px;
@@ -1111,8 +1062,6 @@ a > li > div:first-child {
   }
 
   .bubble {
-    left: 22%;
-    top: 1%;
     width: 120px;
   }
 
@@ -1120,8 +1069,6 @@ a > li > div:first-child {
     width: 160px;
     height: 200px;
     border-radius: 6px;
-    left: 20%;
-    top: 20%;
   }
 
   .info2 > img {
@@ -1132,11 +1079,7 @@ a > li > div:first-child {
 
   .bubble2 {
     width: 120px;
-    left: 60%;
-    top: 24%;
   }
-
-
 
   /* archive */
   .archive {
@@ -1157,8 +1100,8 @@ a > li > div:first-child {
 
   .archive_card {
     margin: 0;
-    width: 95vw;
-    height: 27vh;
+    width: 90vw;
+    height: 40vh;
   }
 
   .archive_container {
@@ -1167,8 +1110,8 @@ a > li > div:first-child {
 
   .archive_card > img {
     max-width: none;
-    width: 90vw;
-    height: 25vh;
+    width: 85vw;
+    height: 38vh;
   }
 
   .archive_sticky {
@@ -1180,6 +1123,10 @@ a > li > div:first-child {
   }
 
   /* Footer */
+  .footer {
+    height: 100vh;
+  }
+
   .footer_bottom::before {
     content: "Reach out!";
   }
@@ -1187,7 +1134,7 @@ a > li > div:first-child {
   .footer_bottom {
     position: relative;
     font-size:  65vw;
-    bottom: -6.5vh;
+    bottom: 0;
     white-space: nowrap;
   }
 
@@ -1207,4 +1154,67 @@ a > li > div:first-child {
   .footer_arrow {
     font-size: 30px;
   }
+
+  /* Project */
+  .project_info {
+    flex-direction: column;
+  }
+
+  .project_info > div {
+    width: 100%;
+  }
+
+  .project_title {
+    font-size: 250px;
+    letter-spacing: 0;
+    margin-top: 20px;
+    margin-bottom: 0;
+    display: inline-block;
+  }
+
+  .project_type {
+    font-size: 28px;
+  }
+
+  .project_info_right {
+    margin: 0;
+  }
+
+  .project_role_detail {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .project_role_detail > div:first-child {
+    width: 30%;
+  }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .card > img {
+    width: 95vw;
+    height: 30vh;
+    max-width: none;
+    border-radius: 15px;
+  }
+
+
+  .info_title::before {
+    font-size: 90vw;
+    content: "JAINE!";
+  }
+
+  .archive_card {
+    margin: 0;
+    width: 95vw;
+    height: 27vh;
+  }
+
+  .archive_card > img {
+    max-width: none;
+    width: 90vw;
+    height: 25vh;
+  }
+
 }

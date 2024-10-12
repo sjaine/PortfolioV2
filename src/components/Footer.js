@@ -19,7 +19,9 @@ function Footer() {
   useEffect(() => {
     const triggers = [];
 
-    if (footerRef.current) {
+    const isMobile = window.innerWidth <= 768;
+
+    if (!isMobile && footerRef.current) {
       triggers.push(
         gsap.to(footerRef.current, {
           scrollTrigger: {
@@ -37,7 +39,6 @@ function Footer() {
 
     ScrollTrigger.refresh();
 
-    // 클린업 함수로 이 컴포넌트에서 생성한 트리거만 제거
     return () => {
       triggers.forEach(trigger => trigger.scrollTrigger.kill());
     };
