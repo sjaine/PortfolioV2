@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLocation } from 'react-router-dom';
+import arrow from '../assets/img/Arrow.svg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,7 +50,7 @@ function Footer() {
             <div className="left_content h3 color_white">
                 <div className="main">Let's build something <span className="color_orange main_italic">amazing</span> together.</div>
                 <div>
-                    <img src="/img/Arrow.svg" alt="Arrow" />
+                    <img src={arrow} alt="Arrow" />
                     <a href="mailto:jaineysshin@gmail.com" className="mail main_light color_white">jaineysshin@gmail.com</a>
                 </div>
             </div>
@@ -68,7 +69,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="footer_bottom title color_green">Reach out anytime!</div>
+      <div className="footer_bottom title color_green"></div>
     </div>
   );
 }

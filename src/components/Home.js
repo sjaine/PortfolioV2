@@ -7,7 +7,7 @@ function Home() {
         <div><i className="fa-solid fa-arrow-down first_arrow color_green"></i></div>
         <div className="first_table main_light h2">
           <div>Front-End Developer</div>
-          <div>UI/UX Designer • Interaction Designer</div>
+          <div></div>
           <div>Based in Toronto</div>
         </div>
       </div>

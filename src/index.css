@@ -1,31 +1,31 @@
 @font-face {
   font-family: 'Humane_Regular';
-  src: url('/public/fonts/Humane-Regular.woff');
+  src: url('./assets/fonts/Humane-Regular.woff');
 }
 
 @font-face {
   font-family: 'Humane_Light';
-  src: url('/public/fonts/Humane-Light.woff');
+  src: url('./assets/fonts/Humane-Light.woff');
 }
 
 @font-face {
   font-family: 'PPEditorialNew_Italic';
-  src: url('/public/fonts/PPEditorialNew-Italic.otf') format('opentype');
+  src: url('./assets/fonts/PPEditorialNew-Italic.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'PPEditorialNew_UltraItalic';
-  src: url('/public/fonts/PPEditorialNew-UltralightItalic.otf') format('opentype');
+  src: url('./assets/fonts/PPEditorialNew-UltralightItalic.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'PPEditorialNew_Regualr';
-  src: url('/public/fonts/PPEditorialNew-Regular.otf') format('opentype');
+  src: url('./assets/fonts/PPEditorialNew-Regular.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'PPEditorialNew_Ultralight';
-  src: url('/public/fonts/PPEditorialNew-Ultralight.otf') format('opentype');
+  src: url('./assets/fonts/PPEditorialNew-Ultralight.otf') format('opentype');
 }
 
 /* Font / Font-size / Color */
@@ -216,6 +216,10 @@ a > li > div:first-child {
   border-top: 1px solid;
 }
 
+.first_table > div:nth-child(2)::before {
+  content: "UI/UX Designer • Interaction Designer";
+}
+
 .first_arrow {
   font-size: 180px;
   margin-bottom: 10px;
@@ -238,6 +242,7 @@ a > li > div:first-child {
   justify-content: space-between;
   padding: 20px 20px;
   box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .status {
@@ -282,6 +287,10 @@ a > li > div:first-child {
   font-size: 30vw;
 }
 
+.info_title::before {
+  content: "IT'S A ME, JAINE!";
+}
+
 .info_title span {
   display: inline-block;
   opacity: 0;
@@ -301,7 +310,7 @@ a > li > div:first-child {
 
 .info1 {
   position: absolute;
-  left: 52vh;
+  left: 52vw;
   width: 340px;
   height: 340px;
   display: flex;
@@ -359,12 +368,13 @@ a > li > div:first-child {
 /* Banner */
 .banner {
   display: flex;
-  background-image: url("../public/img/banner.png");
+  background-image: url("./assets/img/banner.png");
   justify-content: center;
   align-items: center;
   padding: 70px 0 40px 0;
   font-size: 15vw;
   margin-top: 140px;
+  white-space: nowrap;
 }
 
 
@@ -569,6 +579,10 @@ a > li > div:first-child {
   margin-bottom: -50vh;
 }
 
+.footer_bottom::before {
+  content: "Reach out anytime!";
+}
+
 .footer_arrow {
   font-size: 50px;
   transform: rotate(-125deg);
@@ -582,6 +596,7 @@ a > li > div:first-child {
   padding: 15px;
   width: 100%;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 .table:first-child {
@@ -738,7 +753,7 @@ a > li > div:first-child {
   position: absolute;
   bottom: 10px;
   display: flex;
-  background-image: url("../public/img/banner.png");
+  background-image: url("./assets/img/banner.png");
   justify-content: center;
   align-items: center;
   width: 300%;
@@ -833,16 +848,17 @@ a > li > div:first-child {
 
 
 
+
  /* Responsive */
+
+ /* Extra Large Screens */
+ @media (min-width: 2560px) {  }
+
 
 /* Large screens (e.g., desktops) */
 @media (min-width: 1024px) {
   .h0 {
     font-size: 500px;
-  }
-
-  .title {
-    font-size: 320px;
   }
 
   .info_title {
@@ -870,9 +886,6 @@ a > li > div:first-child {
     font-size: 300px;
   }
 
-  .title {
-    font-size: 200px;
-  }
 
   .info_title {
     font-size: 40vw;
@@ -895,12 +908,16 @@ a > li > div:first-child {
 
 /* Small screens (e.g., smartphones) */
 @media (max-width: 768px) {
-  .h0 {
-    font-size: 100px;
+  .h2 {
+    font-size: 30px; 
   }
 
-  .title {
-    font-size: 120px;
+  .h3 {
+    font-size: 22px;
+  }
+
+  .h4 {
+    font-size: 20px;
   }
 
   .info_title {
@@ -931,5 +948,213 @@ a > li > div:first-child {
 
   .project_content {
     padding: 20px;
+  }
+
+  /* nav */
+  header {
+    width: 100vw;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .header_name {
+    width: 60%;
+  }
+  
+  .header_right, nav {
+    width: 20%;
+  }
+
+  /* first page */
+
+  .first {
+    flex-direction: column-reverse;
+    align-items: normal;
+    justify-content: normal;
+    padding: 0 20px;
+  }
+
+  .first_left {
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2vh;
+  }
+
+  .first_right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .first_table > div:nth-child(2)::before {
+    content: "Interaction Designer";
+  }
+
+  .first_arrow {
+    transform: rotate(360deg);
+    margin-left: 10px;
+  }
+
+  .first_table > div {
+    padding: 15px 0;
+  }
+
+  .first_box {
+    height: 70vh;
+    margin-bottom: 2vh;
+  }
+
+  .first_box_bold {
+    font-size: 180px;
+    margin-bottom: -10px;
+  }
+
+  .status {
+    font-size: 17px;
+  }
+
+  /* banner */
+
+  .banner {
+    margin-top: 100px;
+    font-size: 30vw;
+    padding: 55px 0 40px 0;
+  }
+
+  /* work */
+  .card > img {
+    width: 95vw;
+    height: 30vh;
+    max-width: none;
+  }
+
+  /* info */
+  .info_title::before {
+    font-size: 90vw;
+    content: "JAINE!";
+  }
+
+  .info_title {
+    white-space: nowrap;
+  }
+
+  .info_body {
+    font-size: 18px;
+  }
+
+  .info1 {
+    left: 50%;
+    top: 1%;
+    width: 160px;
+    height: 160px;
+    border-radius: 6px;
+  }
+
+  .info1 > img {
+    width: 140px;
+    height: 140px;
+    border-radius: 6px;
+  }
+
+  .bubble {
+    left: 22%;
+    top: 1%;
+    width: 120px;
+  }
+
+  .info2 {
+    width: 160px;
+    height: 200px;
+    border-radius: 6px;
+    left: 20%;
+    top: 20%;
+  }
+
+  .info2 > img {
+    width: 140px;
+    height: 180px;
+    border-radius: 6px;
+  }
+
+  .bubble2 {
+    width: 120px;
+    left: 60%;
+    top: 24%;
+  }
+
+  /* archive */
+  .archive {
+    height: max-content;
+  }
+
+  .archive_box {
+    margin: 0;
+  }
+
+  .archive_title {
+    font-size: 50vw;;
+  }
+
+  .archive_container > div:first-child {
+    margin-left: 0;
+  }
+
+  .archive_card {
+    margin: 0;
+    width: 95vw;
+    height: 27vh;
+  }
+
+  .archive_container {
+    flex-direction: column;
+  }
+
+  .archive_card > img {
+    max-width: none;
+    width: 90vw;
+    height: 25vh;
+  }
+
+  .archive_sticky {
+    display: none;
+  }
+
+  .archive_card_container {
+    margin-bottom: 60px;
+  }
+
+  /* Footer */
+  .footer_bottom::before {
+    content: "Reach out!";
+  }
+
+  .footer_bottom {
+    position: relative;
+    font-size:  65vw;
+    bottom: -6.5vh;
+    white-space: nowrap;
+  }
+
+  .footer_content {
+    padding: 0 20px;
+    flex-direction: column;
+  }
+
+  .footer_left, .footer_right {
+    width: 100%;
+  }
+
+  .footer_left {
+    margin-bottom: 100px;
+  }
+
+  .footer_arrow {
+    font-size: 30px;
   }
 }

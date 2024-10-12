@@ -1,5 +1,15 @@
 import React, { useRef, useState } from 'react';
 
+import artbook from '../../../assets/img/artbook.png';
+
+import final1 from '../../../assets/img/artbook/final1.png';
+import final2 from '../../../assets/img/artbook/final2.png';
+import final3 from '../../../assets/img/artbook/final3.png';
+import final4 from '../../../assets/img/artbook/final4.png';
+import final5 from '../../../assets/img/artbook/final5.png';
+
+import arrow from '../../../assets/img/Arrow.svg';
+
 const hyperlinks = [
     { id: 1, title: 'Resume', link: 'https://www.dropbox.com/scl/fi/u2qeg2kbhw6lfoslt14fy/Shin_Resume.pdf?rlkey=93j616q524y4o6v6y2bg1ermz&st=s3bglvto&dl=0' },
     { id: 2, title: 'LinkedIn', link: 'https://www.linkedin.com/in/jaineysshin/' },
@@ -72,7 +82,7 @@ function ArtBookDetails() {
                     </div>
                 </div>
                 <div className="blackBackground"></div>
-                <div className="photo"><img src="/img/artbook.png" alt="artbook" /></div>
+                <div className="photo"><img src={artbook} alt="artbook" /></div>
             </div>
 
             <div className="project_section bc_beige">
@@ -109,19 +119,19 @@ function ArtBookDetails() {
                 > 
                     <div className="project_img_container">
                         <div className="img_wrapper">
-                            <img src="/img/artbook/final1.png" alt="final1" onDragStart={(e) => e.preventDefault()} />
+                            <img src={final1} alt="final1" onDragStart={(e) => e.preventDefault()} />
                         </div>
                         <div className="img_wrapper">
-                            <img src="/img/artbook/final2.png" alt="final2" onDragStart={(e) => e.preventDefault()} />
+                            <img src={final2} alt="final2" onDragStart={(e) => e.preventDefault()} />
                         </div>
                         <div className="img_wrapper">
-                            <img src="/img/artbook/final3.png" alt="final3" onDragStart={(e) => e.preventDefault()} />
+                            <img src={final3} alt="final3" onDragStart={(e) => e.preventDefault()} />
                         </div>
                         <div className="img_wrapper">
-                            <img src="/img/artbook/final4.png" alt="final4" onDragStart={(e) => e.preventDefault()} />
+                            <img src={final4} alt="final4" onDragStart={(e) => e.preventDefault()} />
                         </div>
                         <div className="img_wrapper">
-                            <img src="/img/artbook/final5.png" alt="final5" onDragStart={(e) => e.preventDefault()} />
+                            <img src={final5} alt="final5" onDragStart={(e) => e.preventDefault()} />
                         </div>
                     </div>
                 </div>
@@ -135,7 +145,7 @@ function ArtBookDetails() {
                 <div className="left_content h3 color_white">
                     <div className="main">Let's build something <span className="color_orange main_italic">amazing</span> together.</div>
                     <div>
-                        <img src="/img/Arrow.svg" alt="Arrow" />
+                        <img src={arrow} alt="Arrow" />
                         <a href="mailto:jaineysshin@gmail.com" className="mail main_light color_white">jaineysshin@gmail.com</a>
                     </div>
                 </div>

@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ScrollToTop from './menu/ScrollToTop'; 
+import ScrollToTop from './components/ScrollToTop'; 
 import React from 'react';
-import Home from './menu/Home';
-import Info from './menu/Info';
-import Work from './menu/work/Work';
-import Archive from './menu/archive/Archive';
-import Footer from './menu/Footer';
-import Banner from './menu/Banner';
-import ArtBookDetails from './menu/work/project/ArtBookDetails';
-import PawlertDetails from './menu/work/project/PawlertDetails';
+import Home from './components/Home';
+import Info from './components/Info';
+import Work from './components/work/Work';
+import Archive from './components/archive/Archive';
+import Footer from './components/Footer';
+import Banner from './components/Banner';
+import ArtBookDetails from './components/work/project/ArtBookDetails';
+import PawlertDetails from './components/work/project/PawlertDetails';
 
 
 function App() {

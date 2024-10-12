@@ -4,12 +4,16 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Card from './Card';
 
+import artbook from '../../assets/img/artbook.png';
+import pawlert from '../../assets/img/pawlart.png';
+import instagram from '../../assets/img/instagram.png';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  { id: 1, title: 'ArtBook', thumbnail: 'img/artbook.png', info: "Designed to help art beginners and travelers who often feel overwhelmed by the vast collections at museums. By offering a curated selection of artworks from different departments, users can easily choose an artwork to start with. After selecting one, they are guided through categories such as year, department, period, and medium, allowing them to explore related pieces in a more structured and manageable way.", type: "Academic Project" },
-  { id: 2, title: 'Pawlert', thumbnail: 'img/pawlart.png', info: "(*Award Winning Project) Pawlert is a tracking system that help owners spot potential risk of heat stroke that may occur to their dog, based on real-time data the collar and app gathers.", type: "Hackathon Project" },
-  { id: 3, title: 'Instagram', thumbnail: 'img/instagram.png', info: "Instagram has become one of the essential photo-based platforms for people to follow trends, build communities, and bring the world closer together. For users with visual impairments, Instagram supports Alt text, which can be read aloud by screen readers. However, there are still many challenges that limit the accessibility of alternative text for users with visual difficulties.", type: "Academic Project" }
+  { id: 1, title: 'ArtBook', thumbnail: artbook, info: "Designed to help art beginners and travelers who often feel overwhelmed by the vast collections at museums. By offering a curated selection of artworks from different departments, users can easily choose an artwork to start with. After selecting one, they are guided through categories such as year, department, period, and medium, allowing them to explore related pieces in a more structured and manageable way.", type: "Academic Project" },
+  { id: 2, title: 'Pawlert', thumbnail: pawlert, info: "(*Award Winning Project) Pawlert is a tracking system that help owners spot potential risk of heat stroke that may occur to their dog, based on real-time data the collar and app gathers.", type: "Hackathon Project" },
+  { id: 3, title: 'Instagram', thumbnail: instagram, info: "Instagram has become one of the essential photo-based platforms for people to follow trends, build communities, and bring the world closer together. For users with visual impairments, Instagram supports Alt text, which can be read aloud by screen readers. However, there are still many challenges that limit the accessibility of alternative text for users with visual difficulties.", type: "Academic Project" }
 ];
 
 function Work() {

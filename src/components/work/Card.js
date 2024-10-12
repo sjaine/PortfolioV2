@@ -5,7 +5,9 @@ const Card = forwardRef(({ title, type, info, thumbnail, onMouseEnter, onMouseLe
   const hoverRef = useRef(null);
 
   useEffect(() => {
-    if (hoverRef.current) {
+    const isMobile = window.innerWidth <= 768;
+
+    if (!isMobile && hoverRef.current) {
       if (isHovered) {
         gsap.fromTo(
           hoverRef.current,
@@ -18,7 +20,9 @@ const Card = forwardRef(({ title, type, info, thumbnail, onMouseEnter, onMouseLe
           duration: 0.2,
           ease: "power3.in"
         });
-      }
+      } 
+    } else {
+      gsap.set(hoverRef.current, { display: "none" });
     }
   }, [isHovered]);
 

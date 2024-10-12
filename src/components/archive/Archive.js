@@ -4,13 +4,18 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import CardA from './CardA';
 import { useLocation } from 'react-router-dom';
 
+import movienight from '../../assets/img/movienight.png';
+import arborday from '../../assets/img/arborday.gif';
+import book from '../../assets/img/book.png';
+import movieposter from '../../assets/img/movieposter.png';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  { id: 1, title: 'movie night', thumbnail: 'img/movienight.png' },
-  { id: 2, title: 'arbor day', thumbnail: 'img/arborday.gif' },
-  { id: 3, title: 'book redesign', thumbnail: 'img/book.png' },
-  { id: 4, title: 'movie poster', thumbnail: 'img/movieposter.png' }
+  { id: 1, title: 'movie night', thumbnail: movienight },
+  { id: 2, title: 'arbor day', thumbnail: arborday },
+  { id: 3, title: 'book redesign', thumbnail: book },
+  { id: 4, title: 'movie poster', thumbnail: movieposter }
 ];
 
 function Archive() {
@@ -46,8 +51,10 @@ function Archive() {
 
     useEffect(() => {
       const triggers = [];
+
+      const isMobile = window.innerWidth <= 768;
   
-      if (archiveRef.current && containerRef.current) {
+      if (!isMobile && archiveRef.current && containerRef.current) {
         triggers.push(
           gsap.to(archiveRef.current, {
             scrollTrigger: {
