@@ -918,7 +918,7 @@ a > li > div:first-child {
   }
 
   .info_title {
-    font-size: 50vw;
+    font-size: 18em;
   }
 
   .card > img {
@@ -963,7 +963,7 @@ a > li > div:first-child {
     align-items: normal;
     justify-content: normal;
     padding: 0 20px;
-    margin-top: 30px;
+    margin-top: 100px;
   }
 
   .first_left {
@@ -1018,7 +1018,13 @@ a > li > div:first-child {
   }
 
   .status {
-    font-size: 17px;
+    font-size: 15px;
+  }
+
+  .point {
+    width: 9px;
+    height: 9px;
+    margin-right: 8px;
   }
 
   /* banner */
@@ -1031,9 +1037,9 @@ a > li > div:first-child {
 
   /* work */
   .card > img {
-    width: 95vw;
-    height: 40vh;
     max-width: none;
+    width: 80vw;
+    height: 65vh;
   }
 
   /* info */
