@@ -285,6 +285,7 @@ a > li > div:first-child {
 
 .info_title {
   font-size: 30vw;
+  position: relative;
 }
 
 .info_title::before {
@@ -308,9 +309,31 @@ a > li > div:first-child {
   text-align: justify;
 }
 
-.info1 {
+.info_photo {
   position: absolute;
-  left: 52vw;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.info_photo1 {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+}
+
+.info_photo2 {
+  position: absolute;
+  top: 13%;
+  left: 55%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.info1 {
   width: 340px;
   height: 340px;
   display: flex;
@@ -330,9 +353,6 @@ a > li > div:first-child {
 }
 
 .info2 {
-  position: absolute;
-  left: 53vw;
-  top: 19vh;
   width: 340px;
   height: 450px;
   display: flex;
@@ -352,18 +372,18 @@ a > li > div:first-child {
 }
 
 .bubble {
-  position: absolute;
-  left: 14vw;
-  top: 5vh;
-  width: 250px;
+  margin-top: -10px;
+  margin-right: 5px;
+  width: 200px;
 }
 
 .bubble2 {
-  position: absolute;
-  left: 72vw;
-  top: 27vh;
-  width: 250px;
+  margin-top: 100px;
+  margin-left: 30px;
+  width: 200px;
 }
+
+
 
 /* Banner */
 .banner {
@@ -886,7 +906,6 @@ a > li > div:first-child {
     font-size: 300px;
   }
 
-
   .info_title {
     font-size: 40vw;
   }
@@ -904,12 +923,24 @@ a > li > div:first-child {
   .project_title {
     font-size: 300px;
   }
+
+  .first_arrow {
+    font-size: 190px;
+  }
+
+  .first_table > div {
+    padding: 15px 10px;
+  }
 }
 
 /* Small screens (e.g., smartphones) */
 @media (max-width: 768px) {
+  section > div {
+    height: max-content;
+  }
+
   .h2 {
-    font-size: 30px; 
+    font-size: 28px; 
   }
 
   .h3 {
@@ -974,6 +1005,7 @@ a > li > div:first-child {
     align-items: normal;
     justify-content: normal;
     padding: 0 20px;
+    height: 100vh;
   }
 
   .first_left {
@@ -985,6 +1017,16 @@ a > li > div:first-child {
     align-items: center;
     justify-content: center;
     margin-bottom: 2vh;
+  }
+
+  .first_left > div:nth-child(2) {
+    width: 60%;
+  }
+
+  .first_left > div:first-child {
+    display: flex;
+    justify-content: center;
+    width: 40%;
   }
 
   .first_right {
@@ -999,10 +1041,12 @@ a > li > div:first-child {
   .first_arrow {
     transform: rotate(360deg);
     margin-left: 10px;
+    font-size: 140px;
   }
 
   .first_table > div {
-    padding: 15px 0;
+    padding: 15px 0px;
+    white-space: nowrap;
   }
 
   .first_box {
@@ -1038,6 +1082,10 @@ a > li > div:first-child {
   .info_title::before {
     font-size: 90vw;
     content: "JAINE!";
+  }
+
+  .info_main {
+    margin: 0;
   }
 
   .info_title {
@@ -1087,6 +1135,8 @@ a > li > div:first-child {
     left: 60%;
     top: 24%;
   }
+
+
 
   /* archive */
   .archive {
