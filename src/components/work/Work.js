@@ -35,15 +35,18 @@ function Work() {
       const cards = workRef.current.querySelectorAll('.card');
 
       cards.forEach((card, index) => {
-        const isMobile = screenWidth < 1024;
+        const isMobile = screenWidth <= 425;
+        const isTablet = screenWidth <= 1024;
+        const isLaptop = screenWidth > 1024;
+        const is2560 = screenWidth >= 2560;
 
         const trigger = gsap.timeline({
           scrollTrigger: {
             id: `work-card-${index}`,
             trigger: card,
-            start: 'top 60%',
-            end: 'top 3%',
-            scrub: 2,
+            start:  is2560 ? 'top 70%' : 'top 60%',
+            end: is2560 ? 'top 5%' : 'top 3%',
+            scrub: 1,
             anticipatePin: 1,
             invalidateOnRefresh: true,
           }
@@ -51,16 +54,30 @@ function Work() {
           .fromTo(
             card,
             {
-              scale: 0.8,
+              scale: isMobile ? 0.9 : isTablet ? 0.8 : isLaptop ? 0.8 : 0.8,
               position: 'absolute',
               zIndex: cards.length - index,
-              top: isMobile ? `${40 + index * 40}%` : `${50 + index * 40}%`,
+              top: isMobile 
+              ? `${30 + index * 40}%`
+              : isTablet 
+              ? `${40 + index * 65}%`
+              : is2560 
+              ? `${50 + index * 50}%`
+              : `${50 + index * 40}%`,
               left: '50%',
               transform: 'translate(-50%, -50%)'
             },
             {
-              scale: 1,
-              top: isMobile ? `${40 + index * 30}%` : `${50 + index * 30}%`,
+              scale: isTablet ? 0.9 : 1,
+              top: isMobile 
+              ? `${30 + index * 40}%` 
+              : isTablet 
+              ? `${40 + index * 65}%` 
+              : isLaptop
+              ? `${50 + index * 30}%`
+              : is2560 
+              ? `${50 + index * 40}%`
+              : `${50 + index * 30}%`,
               duration: 4,
               ease: 'sine.inOut'
             }
@@ -68,8 +85,16 @@ function Work() {
           .to(
             card,
             {
-              top: isMobile ? `${10 + index * 40}%` : `${20 + index * 30}%`,
-              scale: 0.6,
+              top: isMobile 
+              ? `${30 + index * 40}%` 
+              : isTablet 
+              ? `${40 + index * 65}%` 
+              : isLaptop 
+              ? `${20 + index * 30}%`
+              : is2560 
+              ? `${50 + index * 20}%`
+              : `${20 + index * 30}%`,
+              scale: isMobile ? 0.9 : isTablet ? 0.8 : 0.6,
               duration: 4,
               ease: 'sine.inOut'
             },

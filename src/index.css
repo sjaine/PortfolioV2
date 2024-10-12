@@ -38,7 +38,7 @@
 }
 
 .h2 {
-  font-size: 48px;
+  font-size: 46px;
 }
 
 .h3 {
@@ -81,7 +81,8 @@
 
 .title {
   font-family: 'Humane_Regular';
-  font-size: 320px;
+  /* font-size: 320px; */
+  font-size: 18vw;
 }
 
 .title_text {
@@ -241,8 +242,8 @@ a > li > div:first-child {
 }
 
 .first_box {
-  border-radius: 40px;
-  height: 800px;
+  border-radius: 20px;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -400,7 +401,7 @@ a > li > div:first-child {
 
 /* Work */ 
 #work {
-  height: 120vh;
+  height: 140vh;
 }
 
 .work {
@@ -497,11 +498,6 @@ a > li > div:first-child {
   align-items: center;
 }
 
-.archive_title {
-  font-size: 30vw;
-  margin-bottom: -35px;
-}
-
 .archive_sticky {
   position: relative;
   top: 50%;
@@ -510,7 +506,6 @@ a > li > div:first-child {
 
 .archive_box {
   height: 100%;
-  margin-top: -50px;
 }
 
 .archive_container {
@@ -519,7 +514,6 @@ a > li > div:first-child {
   -webkit-overflow-scrolling: touch;
   width: 100%; 
   max-width: 100vw; 
-  padding-top: 30px;
 }
 
 .archive_container > div:first-child {
@@ -870,19 +864,17 @@ a > li > div:first-child {
  /* Responsive */
 
  /* Extra Large Screens */
- @media (min-width: 2560px) { 
-
-}
-
-
-/* Large screens (e.g., desktops) */
-@media (max-width: 1500px) {
-  .h0 {
-    font-size: 500px;
+@media (min-width: 2560px) { 
+  #work {
+    height: 145vh;
   }
 
   .info_title {
     font-size: 30vw;
+  }
+
+  .footer_content {
+    padding: 0 210px;
   }
 }
 
@@ -897,7 +889,7 @@ a > li > div:first-child {
   }
 
   #work {
-    height: 145vh;
+    height: 210vh;
   }
 
   #archive {
@@ -1026,8 +1018,8 @@ a > li > div:first-child {
   /* work */
   .card > img {
     max-width: none;
-    width: 90vw;
-    height: 60vw;
+    width: 85vw;
+    height: 55vw;
   }
 
   /* info */
@@ -1183,12 +1175,16 @@ a > li > div:first-child {
 @media (max-width: 768px) {
   .card > img {
     border-radius: 15px;
+    width: 90vw;
+    height: 60vw;
   }
 
 
   .info_title::before {
     font-size: 90vw;
     content: "JAINE!";
+    position: relative;
+    bottom: -30px;
   }
 
  .info_photo1 {
@@ -1210,4 +1206,10 @@ a > li > div:first-child {
     height: 57vw;
   }
 
+}
+
+@media (max-width: 425px) {
+  #work {
+    height: 135vh;
+  }
 }

@@ -20,7 +20,6 @@ const projects = [
 
 function Archive() {
     const archiveRef = useRef(null);
-    const containerRef = useRef(null);
     const location = useLocation();
     const scrollRef = useRef(null);
     const [isDragging, setIsDragging] = useState(false);
@@ -54,7 +53,7 @@ function Archive() {
 
       const isMobile = window.innerWidth <= 1024;
   
-      if (!isMobile && archiveRef.current && containerRef.current) {
+      if (!isMobile && archiveRef.current) {
         triggers.push(
           gsap.to(archiveRef.current, {
             scrollTrigger: {
@@ -82,7 +81,7 @@ function Archive() {
         <div className="title color_green archive_title h0">Archive</div>
       </div>
 
-      <div className="archive_box" ref={containerRef}>
+      <div className="archive_box">
         <div className="archive_list">
           <div className="archive_container"
             ref={scrollRef}
