@@ -299,17 +299,6 @@ a > li > div:first-child {
   content: "IT'S A ME, JAINE!";
 }
 
-.info_title span {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(0);
-}
-
-.info_title span.visible {
-  transform: translateY(0);
-  opacity: 1;
-}
-
 .info_body {
   margin-top: 30px;
   padding: 0 14vw;
@@ -324,25 +313,27 @@ a > li > div:first-child {
 }
 
 .info_photo1 {
+  width: 100%;
   position: absolute;
-  top: 0;
-  left: 15%;
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-start;
+  transform: scale(0.9) translate(-60%, 0%);
+  transition: transform 0.3s ease;
 }
 
 .info_photo2 {
+  width: 100%;
   position: absolute;
-  top: 13%;
-  left: 55%;
   display: flex;
   align-items: flex-start;
+  transform: scale(0.9)  translate(60%, 10%);
+  transition: transform 0.3s ease;
 }
 
 .info1 {
-  width: 340px;
-  height: 340px;
+  width: 20vw;
+  height: 20vw;
   display: flex;
   background: #ffffff8c;
   box-sizing: border-box;
@@ -353,15 +344,15 @@ a > li > div:first-child {
 }
 
 .info1 > img {
-  width: 300px;
-  height: 300px;
+  width: 18vw;
+  height: 18vw;
   object-fit: cover;
   border-radius: 15px;
 }
 
 .info2 {
-  width: 340px;
-  height: 450px;
+  width: 20vw;
+  height: 26vw;
   display: flex;
   background: #ffffff8c;
   box-sizing: border-box;
@@ -372,22 +363,22 @@ a > li > div:first-child {
 }
 
 .info2 > img {
-  width: 300px;
-  height: 410px;
+  width: 18vw;
+  height: 24vw;
   object-fit: cover;
   border-radius: 15px;
 }
 
 .bubble {
-  margin-top: -10px;
-  margin-right: 5px;
-  width: 200px;
+  margin-top: -1vw;
+  margin-right: 1vw;
+  width: 12vw;
 }
 
 .bubble2 {
-  margin-top: 100px;
-  margin-left: 30px;
-  width: 200px;
+  margin-top: 5vw;
+  margin-left: 1vw;
+  width: 12vw;
 }
 
 
@@ -877,11 +868,13 @@ a > li > div:first-child {
  /* Responsive */
 
  /* Extra Large Screens */
- @media (min-width: 2560px) {  }
+ @media (min-width: 2560px) { 
+
+}
 
 
 /* Large screens (e.g., desktops) */
-@media (min-width: 1024px) {
+@media (max-width: 1500px) {
   .h0 {
     font-size: 500px;
   }
@@ -915,10 +908,6 @@ a > li > div:first-child {
 
   .h4 {
     font-size: 20px;
-  }
-
-  .info_title {
-    font-size: 18em;
   }
 
   .card > img {
@@ -1055,37 +1044,30 @@ a > li > div:first-child {
     font-size: 18px;
   }
 
+  .info_photo1 {
+    transform: scale(0.8) translate(-60%, -5%);
+  }
+
+  .info_photo2 {
+    transform: scale(0.8)  translate(60%, 5%);
+  }
+
   .info1 {
-    width: 160px;
-    height: 160px;
     border-radius: 6px;
   }
 
   .info1 > img {
-    width: 140px;
-    height: 140px;
     border-radius: 6px;
   }
 
-  .bubble {
-    width: 120px;
-  }
-
   .info2 {
-    width: 160px;
-    height: 200px;
     border-radius: 6px;
   }
 
   .info2 > img {
-    width: 140px;
-    height: 180px;
     border-radius: 6px;
   }
 
-  .bubble2 {
-    width: 120px;
-  }
 
   /* archive */
   .archive {
@@ -1209,6 +1191,14 @@ a > li > div:first-child {
   .info_title::before {
     font-size: 90vw;
     content: "JAINE!";
+  }
+
+ .info_photo1 {
+    transform: scale(1.6) translate(-29%, 12%);
+  }
+
+  .info_photo2 {
+    transform: scale(1.6) translate(30%, 90%);
   }
 
   .archive_card {
