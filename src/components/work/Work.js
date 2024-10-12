@@ -42,8 +42,8 @@ function Work() {
             id: `work-card-${index}`,
             trigger: card,
             start: 'top 60%',
-            end: 'top 5%',
-            scrub: 1,
+            end: 'top 3%',
+            scrub: 2,
             anticipatePin: 1,
             invalidateOnRefresh: true,
           }
@@ -54,13 +54,13 @@ function Work() {
               scale: 0.8,
               position: 'absolute',
               zIndex: cards.length - index,
-              top: isMobile ? `${30 + index * 40}%` : `${50 + index * 40}%`,
+              top: isMobile ? `${40 + index * 40}%` : `${50 + index * 40}%`,
               left: '50%',
               transform: 'translate(-50%, -50%)'
             },
             {
               scale: 1,
-              top: isMobile ? `${30 + index * 30}%` : `${50 + index * 30}%`,
+              top: isMobile ? `${40 + index * 30}%` : `${50 + index * 30}%`,
               duration: 4,
               ease: 'sine.inOut'
             }
@@ -68,8 +68,8 @@ function Work() {
           .to(
             card,
             {
-              top: isMobile ? `${10 + index * 40}%` : `${30 + index * 30}%`,
-              scale: 0.5,
+              top: isMobile ? `${10 + index * 40}%` : `${20 + index * 30}%`,
+              scale: 0.6,
               duration: 4,
               ease: 'sine.inOut'
             },

@@ -5,7 +5,7 @@ const Card = forwardRef(({ title, type, info, thumbnail, onMouseEnter, onMouseLe
   const hoverRef = useRef(null);
 
   useEffect(() => {
-    const isMobile = window.innerWidth <= 768;
+    const isMobile = window.innerWidth <= 1024;
 
     if (!isMobile && hoverRef.current) {
       if (isHovered) {
