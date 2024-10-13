@@ -7,9 +7,12 @@ import Archive from './archive/Archive';
 import Footer from './Footer';
 import Banner from './Banner';
 
+import MobileNav from './MobileNav';
+
 function HomePage() {
     return (
         <div>
+          <MobileNav />
           <section id="home">
             <Home />
           </section>
