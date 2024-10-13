@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, forwardRef } from 'react';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Card = forwardRef(({ title, type, info, thumbnail, onMouseEnter, onMouseLeave, isHovered, onClick }, ref) => {
   const hoverRef = useRef(null);
@@ -7,22 +10,56 @@ const Card = forwardRef(({ title, type, info, thumbnail, onMouseEnter, onMouseLe
   useEffect(() => {
     const isMobile = window.innerWidth <= 1024;
 
-    if (!isMobile && hoverRef.current) {
-      if (isHovered) {
-        gsap.fromTo(
-          hoverRef.current,
-          { opacity: 0 },
-          { opacity: 1, duration: 0.3, ease: "power3.out" }
-        );
-      } else {
-        gsap.to(hoverRef.current, {
-          opacity: 0,
-          duration: 0.2,
-          ease: "power3.in"
+    if (hoverRef.current) {
+      if (!isMobile) {
+        if (isHovered) {
+          gsap.fromTo(
+            hoverRef.current,
+            { opacity: 0 },
+            { opacity: 1, duration: 0.3, ease: "power3.out" }
+          );
+        } else {
+          gsap.to(hoverRef.current, {
+            opacity: 0,
+            duration: 0.2,
+            ease: "power3.in"
+          });
+        }
+      } else if (isMobile) {
+        ScrollTrigger.create({
+          trigger: hoverRef.current,
+          start: 'top 60%', 
+          end: 'top 3%',
+          onEnter: () => {
+            gsap.to(hoverRef.current, {
+              opacity: 1,
+              duration: 0.5,
+              ease: "sine.inOut"
+            });
+          },
+          onLeave: () => {
+            gsap.to(hoverRef.current, {
+              opacity: 0,
+              duration: 0.5,
+              ease: "sine.inOut"
+            });
+          },
+          onEnterBack: () => {
+            gsap.to(hoverRef.current, {
+              opacity: 1,
+              duration: 0.5,
+              ease: "sine.inOut"
+            });
+          },
+          onLeaveBack: () => {
+            gsap.to(hoverRef.current, {
+              opacity: 0,
+              duration: 0.5,
+              ease: "sine.inOut"
+            });
+          }
         });
-      } 
-    } else {
-      gsap.set(hoverRef.current, { display: "none" });
+      }
     }
   }, [isHovered]);
 

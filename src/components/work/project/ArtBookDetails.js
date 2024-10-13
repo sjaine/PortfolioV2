@@ -11,8 +11,8 @@ import final5 from '../../../assets/img/artbook/final5.png';
 import arrow from '../../../assets/img/icons/arrow-left.svg';
 import livelink from '../../../assets/img/icons/external-link.svg';
 import github from  '../../../assets/img/icons/github.svg';
-import arrowRight from '../../../assets/img/icons/arrow-right.svg';
 
+import arrowRight from '../../../assets/img/icons/arrow-right.svg';
 import footerArrow from '../../../assets/img/icons/arrow-up-right.svg';
 
 import { useNavigate } from 'react-router-dom';
@@ -65,7 +65,7 @@ function ArtBookDetails() {
                 <a href="https://artbookproject.netlify.app/" target="_blank" rel="noopener noreferrer">
                     <img src={livelink} alt="External link" />
                 </a>
-                <a href="https://github.com/sjaine/ArtBook">
+                <a href="https://github.com/sjaine/ArtBook"  target="_blank" rel="noopener noreferrer">
                     <img src={github} alt="GitHub" />
                 </a>
             </div>

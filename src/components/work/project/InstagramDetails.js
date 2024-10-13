@@ -7,9 +7,9 @@ import github from  '../../../assets/img/icons/github.svg';
 import { useNavigate } from 'react-router-dom';
 
 
-function PawlertDetails() {
+function InstagramDetails() {
   const navigate = useNavigate();
-
+  
   return (
     <div>
       <header className="project_nav">
@@ -36,4 +36,4 @@ function PawlertDetails() {
   );
 }
 
-export default PawlertDetails;
+export default InstagramDetails;
