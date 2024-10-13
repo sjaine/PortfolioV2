@@ -68,7 +68,7 @@ function Work() {
               transform: 'translate(-50%, -50%)'
             },
             {
-              scale: isTablet ? 0.9 : 1,
+              scale: isMobile ? 1 : isTablet ? 0.9 : 1,
               top: isMobile 
               ? `${30 + index * 40}%` 
               : isTablet 

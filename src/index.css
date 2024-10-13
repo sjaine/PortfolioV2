@@ -1333,11 +1333,11 @@ a > li > div:first-child {
   }
 
  .info_photo1 {
-    transform: scale(1.6) translate(-29%, 12%);
+    transform: scale(1.6) translate(-29%, 42%);
   }
 
   .info_photo2 {
-    transform: scale(1.6) translate(30%, 90%);
+    transform: scale(1.6) translate(30%, 110%);
   }
 
   .archive_card {
