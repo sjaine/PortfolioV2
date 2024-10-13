@@ -6,6 +6,7 @@ import ArtBookDetails from './components/work/project/ArtBookDetails';
 import PawlertDetails from './components/work/project/PawlertDetails';
 import InstagramDetails from './components/work/project/InstagramDetails';
 
+
 function App() {
   const location = useLocation();
 

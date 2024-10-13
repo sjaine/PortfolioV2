@@ -81,6 +81,12 @@ function Archive() {
         <div className="title color_green archive_title h0">Archive</div>
       </div>
 
+      <div className="archive_banner project_banner_container main_italic color_white h3">
+          <div>
+            Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive • Archive
+          </div>
+      </div>
+
       <div className="archive_box">
         <div className="archive_list">
           <div className="archive_container"

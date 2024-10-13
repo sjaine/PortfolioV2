@@ -145,7 +145,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  /* cursor: url('./imgs/cursor.svg') 12 12, auto; */
+  /* cursor: none; */
+  cursor: url('./assets/img/cursor.svg') 12 12, auto;
 }
 
 section > div {
@@ -397,7 +398,7 @@ a {
   margin-top: 30px;
   padding: 0 14vw;
   text-align: left;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 .info_photo {
@@ -605,6 +606,10 @@ a {
   position: relative;
   top: 50%;
   z-index: -1;
+}
+
+.archive_banner {
+  display: none !important;
 }
 
 .archive_box {
@@ -1070,7 +1075,7 @@ a {
   }
 
   #archive {
-    margin-top: 100px;
+    margin-top: 180px;
   }
 
   .h2 {
@@ -1239,6 +1244,13 @@ a {
   /* archive */
   .archive {
     height: max-content;
+  }
+
+
+  .archive_banner {
+    display: flex !important;
+    top: -12vh;
+    height: 5vh;
   }
 
   .archive_box {
@@ -1526,4 +1538,15 @@ a {
   #work {
     height: 135vh;
   }
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transition: transform 0.1s ease;
+  transform: translate(-50%, -50%);
 }
