@@ -8,7 +8,14 @@ import final3 from '../../../assets/img/artbook/final3.png';
 import final4 from '../../../assets/img/artbook/final4.png';
 import final5 from '../../../assets/img/artbook/final5.png';
 
-import arrow from '../../../assets/img/Arrow.svg';
+import arrow from '../../../assets/img/icons/arrow-left.svg';
+import livelink from '../../../assets/img/icons/external-link.svg';
+import github from  '../../../assets/img/icons/github.svg';
+import arrowRight from '../../../assets/img/icons/arrow-right.svg';
+
+import footerArrow from '../../../assets/img/icons/arrow-up-right.svg';
+
+import { useNavigate } from 'react-router-dom';
 
 const hyperlinks = [
     { id: 1, title: 'Resume', link: 'https://www.dropbox.com/scl/fi/u2qeg2kbhw6lfoslt14fy/Shin_Resume.pdf?rlkey=93j616q524y4o6v6y2bg1ermz&st=s3bglvto&dl=0' },
@@ -21,6 +28,8 @@ function ArtBookDetails() {
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
     const [scrollLeft, setScrollLeft] = useState(0);
+
+    const navigate = useNavigate();
   
     const handleMouseDown = (e) => {
       setIsDragging(true);
@@ -46,6 +55,21 @@ function ArtBookDetails() {
 
   return (
     <div>
+        <header className="project_nav">
+            <div className="project_button bc_orange" onClick = {() => navigate(-1)}>
+                <img src={arrow} alt="Arrow" />
+                <div className="main h4 previous_button"></div>
+            </div>
+
+            <div className="project_link">
+                <a href="https://artbookproject.netlify.app/" target="_blank" rel="noopener noreferrer">
+                    <img src={livelink} alt="External link" />
+                </a>
+                <a href="https://github.com/sjaine/ArtBook">
+                    <img src={github} alt="GitHub" />
+                </a>
+            </div>
+        </header>
         <div className="project_page">
             <div className="project_header">
                 <div className="project_info color_white">
@@ -57,6 +81,10 @@ function ArtBookDetails() {
                         <div className="project_title title ">ArtBook</div>
                     </div>
                     <div className="project_info_right">
+                        <div>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <i class="fa-brands fa-github"></i>
+                        </div>
                         <div className="project_role color_white">
                             <div className="project_role_detail body">
                                 <div>ROLE</div>
@@ -103,10 +131,6 @@ function ArtBookDetails() {
 
                 <div className="project_detail project_output">
                     <div className="project_detail_title title color_green">Output</div>
-                    <div className="project_detail_info">
-                        <div className="project_detail_sub">Capture, Create & Share What You Love!</div>
-                        <div className="project_detail_desc">Instagram has become one of the essential photo-based platforms for people to follow trends, build communities, and bring the world closer together. For users with visual impairments, Instagram supports Alt text, which can be read aloud by screen readers. However, there are still many challenges that limit the accessibility of alternative text for users with visual difficulties.</div>
-                    </div>
                 </div>
 
                 <div className="project_img" 
@@ -145,7 +169,7 @@ function ArtBookDetails() {
                 <div className="left_content h3 color_white">
                     <div className="main">Let's build something <span className="color_orange main_italic">amazing</span> together.</div>
                     <div>
-                        <img src={arrow} alt="Arrow" />
+                        <img src={arrowRight} alt="Arrow" />
                         <a href="mailto:jaineysshin@gmail.com" className="mail main_light color_white">jaineysshin@gmail.com</a>
                     </div>
                 </div>
@@ -158,7 +182,7 @@ function ArtBookDetails() {
                             <div className="h4 color_white main_light table_num">[0{hyperlink.id}]</div>
                             <div className="h3 color_white main_light">{hyperlink.title}</div>
                         </div>
-                        <div><i className="fa-solid fa-arrow-down footer_arrow color_white"></i></div>
+                        <img src={footerArrow} alt="footer arrow" />
                     </a>
                 ))}
             </div>

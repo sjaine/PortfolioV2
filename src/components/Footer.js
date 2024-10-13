@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLocation } from 'react-router-dom';
-import arrow from '../assets/img/Arrow.svg';
+import arrow from '../assets/img/icons/arrow-right.svg';
+import footerArrow from '../assets/img/icons/arrow-up-right.svg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,7 +65,7 @@ function Footer() {
                         <div className="h4 color_white main_light table_num">[0{hyperlink.id}]</div>
                         <div className="h3 color_white main_light">{hyperlink.title}</div>
                     </div>
-                    <div><i className="fa-solid fa-arrow-down footer_arrow color_white"></i></div>
+                    <img src={footerArrow} alt="footer arrow" />
                 </a>
             ))}
           </div>

@@ -101,6 +101,10 @@
   background-color:#0736FE;
 }
 
+.bc_orange {
+  background-color:#EB5B38;
+}
+
 .color_blue {
   color: #0736FE;
 }
@@ -582,6 +586,11 @@ a > li > div:first-child {
   display: flex;
 }
 
+.arrow {
+  color: white;
+  stroke: white;
+}
+
 .mail {
   padding-left: 15px;
   text-decoration: none;
@@ -598,8 +607,6 @@ a > li > div:first-child {
 }
 
 .footer_arrow {
-  font-size: 50px;
-  transform: rotate(-125deg);
 }
 
 .table {
@@ -629,6 +636,20 @@ a > li > div:first-child {
 
 
 /* Project Details */
+.project_button {
+  display: flex;
+  padding: 8px 20px;
+  border-radius: 50px;
+  align-items: flex-start;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.project_button > img {
+  margin-right: 10px;
+}
+
 
 .project_header {
   position: relative;
@@ -650,13 +671,30 @@ a > li > div:first-child {
 
 .project_info_right {
   margin-left: 200px;
+  display: flex;
+  flex-direction: column;
 }
+
+.project_info_right > div:first-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.fa-arrow-up-right-from-square {
+  font-size: 25px;
+  margin-right: 50px;
+}
+
+.fa-github {
+  font-size: 30px;
+}
+
 
 .project_type {
   display: flex;
   align-items: center;
-  margin-bottom: -20px;
-  margin-top: 20px;
+  margin-bottom: 100px;
   font-size: 36px;
   font-weight: 500;
 }
@@ -677,7 +715,7 @@ a > li > div:first-child {
   height: 100%;
   width: 100%;
   z-index: -3;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
 }
 
 .photo {
@@ -691,13 +729,27 @@ a > li > div:first-child {
 }
 
 .project_title {
-  margin-bottom: 40px;
+  margin-bottom: 100px;
   letter-spacing: -1.5px;
   font-size: 500px;
+  line-height: 0.6;
 }
 
-.project_description {
-  font-size: 18px;
+.project_link {
+  display: flex;
+}
+
+.previous_button::before {
+  content: "Return";
+}
+
+.project_link > a > img {
+  color: black;
+  width: 45px;
+}
+
+.project_link > a:first-child {
+  margin-right: 30px;
 }
 
 .project_role {
@@ -713,7 +765,7 @@ a > li > div:first-child {
 
 .project_role_detail > div:first-child {
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 2px;
   width: 50%;
 }
@@ -732,7 +784,7 @@ a > li > div:first-child {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 300px;
+  padding: 0 200px;
   position: relative;
 }
 
@@ -786,6 +838,7 @@ a > li > div:first-child {
 .project_output {
   display: flex;
   align-items: flex-start;
+  justify-content: flex-start;
   margin-top: 100px;
 }
 
@@ -1143,6 +1196,7 @@ a > li > div:first-child {
 
   .project_info > div {
     width: 100%;
+    margin-top: 25px;
   }
 
   .project_title {
@@ -1168,6 +1222,97 @@ a > li > div:first-child {
 
   .project_role_detail > div:first-child {
     width: 30%;
+  }
+
+  .project_info {
+    width: auto;
+  }
+
+  .project_link > a:first-child {
+    margin-right: 15px;
+  }
+
+  .project_link > a > img {
+    width: 35px;
+  }
+
+  .previous_button::before {
+    content: "";
+  }
+
+  .project_nav {
+    padding: 15px 20px;
+  }
+
+  .project_button {
+    padding: 5.5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project_button > img {
+    margin: 0;
+  }  
+
+  .project_type {
+    margin-bottom: 25px;
+  }
+
+  .project_info_right > div:first-child {
+    margin-bottom: 30px;
+  }
+
+  .fa-arrow-up-right-from-square {
+    font-size: 20px;
+  }
+
+  .fa-github {
+    font-size: 25px;
+  }
+
+  .project_role_detail > div:first-child {
+    width: 50%;
+  } 
+
+  .project_role_detail > div:nth-child(2) {
+    width: 50%;
+    margin: 0;
+    text-align: right;
+  }
+
+  .project_detail {
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project_detail > div:not(:nth-child(3)) {
+    padding: 0 120px;
+  }
+
+  .project_detail_title {
+    font-size: 20vw;
+  }
+
+  .project_overview > div:first-child {
+    margin-bottom: 50px;
+  }
+
+  .img_wrapper > img {
+    width: 70vw;
+  }
+
+  .project_img_container {
+    margin: 50px 0 100px 0;
+  }
+
+  .project_footer {
+    height: 50vh;
+  }
+
+  .footer_left {
+    margin-bottom: 50px;
   }
 }
 
@@ -1206,6 +1351,17 @@ a > li > div:first-child {
     height: 57vw;
   }
 
+  .project_detail_title {
+    font-size: 40vw;
+  }
+
+  .project_detail > div:not(:nth-child(3)) {
+    padding: 0 30px;
+  }
+
+  .img_wrapper > img {
+    width: 60vh;
+  }
 }
 
 @media (max-width: 425px) {
