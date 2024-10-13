@@ -96,7 +96,7 @@ function ArtBookDetails() {
                             </div>
                             <div className="project_role_detail body">
                                 <div>TEAMMATES</div>
-                                <div>Nayeong Cho (UI/UX Designer)</div>
+                                <div>Nayeong Cho<br />(UI/UX Designer)</div>
                             </div>
                             <div className="project_role_detail body">
                                 <div>TOOLS</div>
