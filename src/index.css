@@ -134,6 +134,10 @@ html {
   overflow-x: hidden;
 }
 
+.project_a {
+  color: white;
+}
+
 body {
   margin: 0;
   font-weight: 400;
@@ -392,7 +396,8 @@ a {
 .info_body {
   margin-top: 30px;
   padding: 0 14vw;
-  text-align: justify;
+  text-align: left;
+  font-weight: 500;
 }
 
 .info_photo {
@@ -471,7 +476,14 @@ a {
   width: 12vw;
 }
 
+.info_body > span {
+  font-weight: 700;
+  color:#EB5B38;
+}
 
+.info_body > i {
+  color: gray;
+}
 
 /* Banner */
 .banner {
@@ -555,9 +567,13 @@ a {
   font-size: 250px;
 }
 
+.card_tag {
+  font-weight: 700;
+}
+
 .card_desc {
   margin-top: -10px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .card_type {
@@ -738,6 +754,7 @@ a {
   position: relative;
   height: 110vh;
   overflow: hidden;
+  width: 100%;
 }
 
 .project_info {
@@ -764,7 +781,7 @@ a {
   align-items: center;
 }
 
-.fa-arrow-up-right-from-square {
+.project_arrow_up {
   font-size: 25px;
   margin-right: 50px;
 }
@@ -805,10 +822,14 @@ a {
   position: absolute;
   z-index: -5;
   top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .photo > img {
-  object-fit: contain;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .project_title {
@@ -886,14 +907,24 @@ a {
 .project_detail_sub {
   font-size: 18px;
   font-family: pretendard, Arial, Helvetica, sans-serif;
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 25px;
 }
 
 .project_detail_desc {
   font-size: 18px;
   font-family: pretendard, Arial, Helvetica, sans-serif;
-  margin-bottom: 60px;
+}
+
+.project_detail_desc > a {
+  display: inline-block;
+  color:#EB5B38;
+  font-weight: 700;
+  text-decoration: underline; 
+}
+
+.project_detail_desc:not(:last-of-type) {
+  margin-bottom: 25px;
 }
 
 .project_banner_container {
@@ -1354,7 +1385,7 @@ a {
     margin-bottom: 30px;
   }
 
-  .fa-arrow-up-right-from-square {
+  .project_arrow_up {
     font-size: 20px;
   }
 
@@ -1390,6 +1421,10 @@ a {
     margin-bottom: 50px;
   }
 
+  .project_detail_desc:nth-child(:last-child) {
+    margin-bottom: 60px;
+  }
+
   .img_wrapper > img {
     width: 70vw;
   }
@@ -1415,6 +1450,10 @@ a {
 
   .mobile_nav {
     display: flex;
+  }
+
+  .card_tag {
+    display: none;
   }
 
   .card_desc {

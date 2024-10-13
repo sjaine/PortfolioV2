@@ -82,28 +82,28 @@ function ArtBookDetails() {
                     </div>
                     <div className="project_info_right">
                         <div>
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            <i class="fa-brands fa-github"></i>
+                            <a href="https://artbookproject.netlify.app/" target="_blank" rel="noopener noreferrer" className="project_a"><i class="fa-solid fa-arrow-up-right-from-square project_arrow_up"></i></a>
+                            <a href="https://github.com/sjaine/ArtBook"  target="_blank" rel="noopener noreferrer" className="project_a"><i class="fa-brands fa-github"></i></a>
                         </div>
                         <div className="project_role color_white">
                             <div className="project_role_detail body">
                                 <div>ROLE</div>
-                                <div>UI/UX Design</div>
-                            </div>
-                            <div className="project_role_detail body">
-                                <div>TEAMMATES</div>
-                                <div>Personal Work!</div>
+                                <div>Front-end Developer</div>
                             </div>
                             <div className="project_role_detail body">
                                 <div>TIMELINE</div>
-                                <div>8 weeks</div>
+                                <div>October 2024 – <br /> Present</div>
+                            </div>
+                            <div className="project_role_detail body">
+                                <div>TEAMMATES</div>
+                                <div>Nayeong Cho (UI/UX Designer)</div>
                             </div>
                             <div className="project_role_detail body">
                                 <div>TOOLS</div>
                                 <div className="project_tools">
-                                    <div>HTML</div>
-                                    <div>CSS</div>
-                                    <div>JavaScript</div>
+                                    <div>React</div>
+                                    <div>REST APIs</div>
+                                    <div>Visual Studio Code</div>
                                 </div>
                             </div>
                         </div>
@@ -118,8 +118,9 @@ function ArtBookDetails() {
                 <div className="project_detail project_overview">
                     <div className="project_detail_title title color_green">Overview</div>
                     <div className="project_detail_info">
-                        <div className="project_detail_sub">Capture, Create & Share What You Love!</div>
-                        <div className="project_detail_desc">Instagram has become one of the essential photo-based platforms for people to follow trends, build communities, and bring the world closer together. For users with visual impairments, Instagram supports Alt text, which can be read aloud by screen readers. However, there are still many challenges that limit the accessibility of alternative text for users with visual difficulties.</div>
+                        <div className="project_detail_sub color_green">✸ Explore the MET's collection with ease, one artwork at a time!</div>
+                        <div className="project_detail_desc">We developed a website that recommends artworks tailored to users' preferences by integrating the <a href="https://metmuseum.github.io/?ref=public_apis">MET API. <i class="fa-solid fa-arrow-up-right-from-square"></i></a> I utilized React to manage and integrate the entire HTML/CSS structure seamlessly.</div>
+                        <div className="project_detail_desc">Collaborating closely with my colleague, a UI/UX designer, provided me with valuable experience in teamwork and cross-functional collaboration.</div>
                     </div>
 
                     <div className="project_banner_container main_italic color_white h3">

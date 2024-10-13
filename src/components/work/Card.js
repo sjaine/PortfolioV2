@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Card = forwardRef(({ title, type, info, thumbnail, onMouseEnter, onMouseLeave, isHovered, onClick }, ref) => {
+const Card = forwardRef(({ title, type, info, thumbnail, tag, onMouseEnter, onMouseLeave, isHovered, onClick }, ref) => {
   const hoverRef = useRef(null);
 
   useEffect(() => {
@@ -72,7 +72,8 @@ const Card = forwardRef(({ title, type, info, thumbnail, onMouseEnter, onMouseLe
           {type}
         </div>
         <div className="card_title title color_white">{title}</div>
-        <p className="card_desc h4 body_text body color_white">{info}</p>
+        <p className="card_tag body_text body color_white">{tag}</p>
+        <p className="card_desc body_text body color_white">{info}</p>
       </div>
     </div>
   );

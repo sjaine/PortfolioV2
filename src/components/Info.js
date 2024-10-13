@@ -24,10 +24,13 @@ function Info() {
         </div>
       </div>
       <div className="body body_text color_text info_body">
-        Hey, there! I’m Yoonsoo(aka, Jaine!), a Korean native and Interaction Design student @ Sheridan College, Canada. I always do my best in designing, coding, hanging out with friends, and living my own life! I’m passionate about designing products that make users' lives convenient with visual aesthetics or creating my own extraordinary works⎯ I don’t stop modifying until I'm satisfied with my work. (And yeah, sometimes I overwork because of this desire :P)
+        Hey there! I'm Yoonsoo <span>(aka Jaine!)</span>, currently studying Interaction Design at Sheridan College. I'm passionate about creating visually appealing products that enhance user convenience, always refining my work until it meets my standards <i>(even if it means overworking sometimes. :P) (Of course, with pleasure!)</i>
         <br />
         <br />
-        My curiosity for visual aesthetics and creating my own website led me to have a specific purpose in earning a degree in Interaction Design. It brought me to broaden my creative perspective and taught me how to empathize with humans through design. As a current goal, I want to gain more valuable experiences, collaborate with many designers, and improve my design journey in a wide range. I enjoy trying experimental and distinctive designs.</div>
+        My interest in visual aesthetics and building my own website inspired me to pursue Interaction Design. I’ve gained valuable experience in <span>human-centered design</span> and developed the ability to bridge the gap between <span>design and development.</span>
+        <br />
+        <br />
+        As a front-end developer, I focus on turning design into functional code with <span>HTML, CSS, JavaScript, and React,</span> ensuring a joyful user experience. I'm excited to keep learning and collaborate with more designers as I grow in this field!</div>  
     </div>
   );
 }
