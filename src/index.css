@@ -1563,7 +1563,7 @@ a {
   }
 
   .project_detail_title {
-    font-size: 40vw;
+    font-size: 30vw;
   }
 
   .project_detail > div:not(:nth-child(3)) {
