@@ -1419,6 +1419,7 @@ a {
 
   .project_button > img {
     margin: 0;
+    width: 24px;
   }  
 
   .project_type {
