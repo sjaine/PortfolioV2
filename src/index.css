@@ -1461,6 +1461,10 @@ a {
     font-size: 20vw;
   }
 
+  .project_detail_sub, .project_detail_desc {
+    font-size: 16px;
+  }
+
   .project_overview > div:first-child {
     margin-bottom: 50px;
   }
