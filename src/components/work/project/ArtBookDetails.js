@@ -28,7 +28,7 @@ function ArtBookDetails() {
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
     const [scrollLeft, setScrollLeft] = useState(0);
-    const [isPopover, setIsPopover] = useState(false);
+    // const [isPopover, setIsPopover] = useState(false);
 
     const navigate = useNavigate();
   
@@ -54,9 +54,9 @@ function ArtBookDetails() {
       scrollRef.current.scrollLeft = scrollLeft - walk;
     };
 
-    const PopoverHandle = () => {
-        setIsPopover(!isPopover);
-    }
+    // const PopoverHandle = () => {
+    //     setIsPopover(!isPopover);
+    // }
 
   return (
     <div>
@@ -87,11 +87,7 @@ function ArtBookDetails() {
                     </div>
                     <div className="project_info_right">
                         <div>
-                        <button onMouseEnter={PopoverHandle} onMouseLeave={PopoverHandle}>Toggle the popover</button>
-                        { isPopover && (
-                            <div id="mypopover" popover>Popover content</div>
-                        )}
-                            <a data-popover-target="popover-hover" data-popover-trigger="hover" href="https://artbookproject.netlify.app/" target="_blank" rel="noopener noreferrer" className="project_a"><i class="fa-solid fa-arrow-up-right-from-square project_arrow_up"></i></a>
+                            <a href="https://artbookproject.netlify.app/" target="_blank" rel="noopener noreferrer" className="project_a"><i class="fa-solid fa-arrow-up-right-from-square project_arrow_up"></i></a>
                             <a href="https://github.com/sjaine/ArtBook"  target="_blank" rel="noopener noreferrer" className="project_a"><i class="fa-brands fa-github"></i></a>
                         </div>
                         <div className="project_role color_white">
