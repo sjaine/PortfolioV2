@@ -658,7 +658,7 @@ a {
 }
 
 .archive_card > img:hover {
-  transform: scale(1.06);
+  transform: scale(1.05);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -713,6 +713,9 @@ a {
   content: "Reach out anytime!";
 }
 
+.footer_arrow {
+}
+
 .table {
   display: flex;
   justify-content: space-between;
@@ -750,14 +753,13 @@ a {
 }
 
 .project_button > img {
-  margin-right: 10px;
   width: 18px;
   margin-bottom: 3px;
+  margin-right: 8px;
 }
 
 .previous_button {
   font-size: 18px;
-  margin: 0;
 }
 
 .project_header {
@@ -877,7 +879,7 @@ a {
 
 .project_role_detail {
   display: flex;
-  font-size: 20px;
+  font-size: 21px;
   margin-top: 50px;
   
 }
@@ -917,7 +919,7 @@ a {
 }
 
 .project_detail_info {
-  margin-left: 100px;
+  margin-left: 200px;
 }
 
 .project_detail_sub {
@@ -975,7 +977,7 @@ a {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .project_content {
@@ -1377,7 +1379,6 @@ a {
 
   .project_info_right {
     margin: 0;
-    margin-bottom: 40px;
   }
 
   .project_role_detail {
@@ -1466,10 +1467,6 @@ a {
 
   .project_detail_desc:nth-child(:last-child) {
     margin-bottom: 60px;
-  }
-
-  .project_detail_sub, .project_detail_desc {
-    font-size: 16px;
   }
 
   .img_wrapper > img {
@@ -1561,7 +1558,7 @@ a {
   }
 
   .project_detail_title {
-    font-size: 30vw;
+    font-size: 40vw;
   }
 
   .project_detail > div:not(:nth-child(3)) {
@@ -1577,7 +1574,6 @@ a {
   }
 }
 
-/* Small devices (for smartphones) */
 @media (max-width: 425px) {
   #work {
     height: 135vh;
