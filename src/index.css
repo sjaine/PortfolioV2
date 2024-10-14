@@ -963,7 +963,7 @@ a {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-top: 100px;
+  margin-top: 40px;
 }
 
 .project_content {
@@ -1340,6 +1340,10 @@ a {
   .project_info > div {
     width: 100%;
     margin-top: 25px;
+  }
+
+  .project_info_left {
+    margin-top: 0;
   }
 
   .project_title {
