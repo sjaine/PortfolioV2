@@ -564,7 +564,7 @@ a {
   font-size: 40px;
   z-index: 10;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .card_title {
