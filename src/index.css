@@ -578,6 +578,7 @@ a {
 }
 
 .card_desc {
+  margin: 0;
   margin-top: -10px;
   font-size: 20px;
 }
