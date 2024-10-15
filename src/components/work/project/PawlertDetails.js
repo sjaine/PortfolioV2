@@ -97,9 +97,9 @@ function ArtBookDetails() {
                             </div>
                             <div className="project_role_detail body">
                                 <div>TEAMMATES</div>
-                                <div>Kage Gamis (Back-End) <br />
-                                Belinda Chen (UI/UX) <br />
-                                Nayeong Cho (UI/UX)</div>
+                                <div>Kage (Back-End) <br />
+                                Belinda (UI/UX) <br />
+                                Nayeong (UI/UX)</div>
                             </div>
                             <div className="project_role_detail body">
                                 <div>TOOLS</div>
