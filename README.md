@@ -1,4 +1,17 @@
 # It's a me, Jaine!
 
-This is my portfolio site- by utilizing React alongside GSAP Scroll Plugin! <br>
-Feel free to explore it 🥰
+Welcome to my portfolio site, built using React and enhanced with GSAP Scroll Plugin for smooth animations. <br>
+Feel free to explore and enjoy the experience! 🥰
+
+## Website
+![Website Image](./src/assets/img/Placeholder.png) 
+
+## Features
+- Smooth scrolling animations
+- Responsive design
+- Interactive Projects showcases
+
+## Built with
+- React
+- GSAP
+- Assistant from ChatGPT
