@@ -90,7 +90,7 @@
 }
 
 .body { 
-  font-family: pretendard, sans-serif;
+  font-family: 'elza', sans-serif;
 }
 
 .bc_beige {
@@ -853,7 +853,6 @@ a {
 
 .project_title {
   margin-bottom: 100px;
-  letter-spacing: -1.5px;
   font-size: 500px;
   line-height: 0.6;
 }
@@ -909,7 +908,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 200px;
+  padding: 0 250px;
   position: relative;
 }
 
@@ -917,8 +916,22 @@ a {
   height: 100vh;
 }
 
+.project_ui {
+  height: 100vh;
+}
+
 .project_detail_title {
   letter-spacing: 2px;
+}
+
+.title_ui {
+  font-size: 13vw;
+  display: flex;
+}
+
+.project_detail_subtitle {
+  font-size: 35px;
+  margin-bottom: -5px;
 }
 
 .project_detail_info {
@@ -926,15 +939,16 @@ a {
 }
 
 .project_detail_sub {
-  font-size: 18px;
-  font-family: pretendard, Arial, Helvetica, sans-serif;
-  font-weight: 800;
+  font-size: 22px;
+  font-family: "elza", Arial, Helvetica, sans-serif;
+  font-weight: 700;
   margin-bottom: 25px;
 }
 
 .project_detail_desc {
-  font-size: 18px;
-  font-family: pretendard, Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-family: "elza", Arial, Helvetica, sans-serif;
+  line-height: 1.2;
 }
 
 .project_detail_desc > a {
@@ -953,6 +967,41 @@ a {
 .project_detail_desc:not(:last-of-type) {
   margin-bottom: 25px;
 }
+
+.project_hmw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: 70px;
+  text-align: center;
+  font-size: 35px;
+  background-image: url("./assets/img/banner.png");
+}
+
+.diagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.diagram > img {
+  width: 50%;
+}
+
+.project_bg {
+  flex-direction: column;
+  margin-top: 200px;
+}
+
+.project_bg > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 200px;
+}
+
 
 .project_banner_container {
   position: absolute;
@@ -1047,6 +1096,7 @@ a {
   width: 100vw;
   height: 100vh;
 }
+
 
 
 /* animation */
@@ -1609,4 +1659,108 @@ a {
   pointer-events: none;
   transition: transform 0.1s ease;
   transform: translate(-50%, -50%);
+}
+
+
+
+/* flex */
+.jusitfy_start {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flex_column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ui project css */
+.title_ui > span {
+  font-size: 9.5vw;
+}
+
+.instagram_img {
+  width: 20vw;
+}
+
+.discover_table {
+  background-color: #22C182;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 20px;
+  width: 50%;
+}
+
+.problem_table {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.problem_table > span {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.problem_table:first-child {
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.problem_table:nth-child(2) {
+  margin-left: 20px;
+}
+
+.discover_table > span {
+  color: white;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.discover_table:first-child {
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.discover_table:nth-child(2) {
+  margin-left: 20px;
+}
+
+.ui_left {
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+}
+
+.ui_info {
+  margin-left: 0;
+  margin-top: 60px;
+}
+
+.ui_img {
+  margin-bottom: 0;
+}
+
+.competitor {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.project_discover {
+  margin-top: 120px;
+}
+
+.inProgress {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.ui_banner {
+  bottom: -10px;
 }
