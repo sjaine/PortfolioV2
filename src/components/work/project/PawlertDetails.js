@@ -104,7 +104,7 @@ function ArtBookDetails() {
                             <div className="project_role_detail body">
                                 <div>TOOLS</div>
                                 <div className="project_tools">
-                                    <div>Vanila Web Stack</div>
+                                    <div>Vanilla Web Stack</div>
                                     <div>JSON</div>
                                     <div>GitHub</div>
                                 </div>
