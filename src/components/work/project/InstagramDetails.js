@@ -175,11 +175,11 @@ function InstagramDetails() {
                         <div className="project_detail_subtitle main_italic color_orange">Identify Problem</div>
                         <div className="project_detail_title title color_green title_ui">What's the problem?</div>
                     </div>
-                        <div className="project_detail_info ui_info jusitfy_start color_green">
-                            <div className="project_detail_desc problem_table"><span>1. General User</span><br />Users struggle to find the option to add Alt text, as it's hidden in the advanced settings at the bottom of the post creation page, making it easy to overlook.
+                        <div className="project_detail_info ui_info jusitfy_start">
+                            <div className="project_detail_desc problem_table"><span>1. General User</span><br /><p>Users struggle to <strong>find the option</strong> to add Alt text, as it's hidden at the bottom of the advanced settings page, making it easy to miss.</p>
                             </div>
                             <div className="project_detail_desc problem_table"><span>2. Visually impaired users
-</span> <br />Users with visual impairments reported insufficient Alt text, with the process being time-consuming due to unnecessary steps like photo selection. They also had to rely on others to provide alternative text.
+</span> <br /><p>Users with visual impairments report that many posts <strong>lack sufficient Alt text</strong>, leaving them to rely entirely on whether others have provided it.</p>
                             </div>
                         </div>
                 </div>

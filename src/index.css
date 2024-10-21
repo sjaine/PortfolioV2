@@ -1696,11 +1696,32 @@ a {
   display: flex;
   flex-direction: column;
   width: 50%;
+  background-color: #ebebeb;
+  padding: 50px;
+  border-radius: 20px 50px 50px 50px;
+  margin-top: 20px;
+}
+
+.problem_table:nth-child(2) {
+  background-color: #4D57FE;
+  color: white;
 }
 
 .problem_table > span {
   font-weight: 700;
-  font-size: 40px;
+  color: black;
+}
+
+.problem_table > p > strong {
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+}
+
+.problem_table:nth-child(2) > span {
+  color: white;
 }
 
 .problem_table:first-child {
