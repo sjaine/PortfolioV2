@@ -5,6 +5,7 @@ import instagram from '../../../assets/img/instagram.png';
 import diagram from '../../../assets/img/instagram/diagram.png';
 import competitor from '../../../assets/img/instagram/competitor.png';
 import overview from '../../../assets/img/instagram/overview.gif';
+import currentUserFlow from '../../../assets/img/instagram/currentUserFlow.png';
 
 import final1 from '../../../assets/img/instagram/final1.png';
 import final2 from '../../../assets/img/instagram/final2.png';
@@ -204,28 +205,22 @@ function InstagramDetails() {
 </span> <br />23.1% of visually impaired users struggle with Instagram due to missing user-generated Alt Text, while 34.6% are dissatisfied with the inaccurate automatic Alt Text. 
                         </div>
                     </div>
-                    <img src={competitor} alt="competitor analysis" className="competitor" />
+                    <img src={competitor} alt="competitor analysis" className="fullImage competitor" />
                 </div>
 
-
-                <div className="inProgress title color_green">In Progress!</div>
-
-                {/* <div className="project_detail project_define project_ui flex_column jusitfy_start">
+                <div className="project_detail project_define project_ui flex_column jusitfy_start">
                     <div>
                         <div className="project_detail_subtitle main_italic color_orange">Define</div>
                         <div className="project_detail_title title color_green title_ui">Instagram, for everyone!</div>
                     </div>
-                        <div className="project_detail_info ui_info jusitfy_start">
-                            <div className="project_detail_desc discover_table"><span>35%</span><br />35% of general users reported difficulty finding Instagram’s Alt Text button, and 15% said they were confused about how to properly write Alt Text.
-                            </div>
-                            <div className="project_detail_desc discover_table"><span>23.1%
-</span> <br />23.1% of visually impaired users struggle with Instagram due to missing user-generated Alt Text, while 34.6% are dissatisfied with the inaccurate automatic Alt Text.
-                            </div>
-                        </div>
-                        
+                        <img src={currentUserFlow} alt="current user flow" className="fullImage userFlow" />
                 </div>
 
-                <div className="project_detail project_develop project_ui flex_column jusitfy_start">
+
+
+                <div className="inProgress title color_green">In Progress!</div>
+
+                {/* <div className="project_detail project_develop project_ui flex_column jusitfy_start">
                     <div>
                         <div className="project_detail_subtitle main_italic color_orange">Develop</div>
                         <div className="project_detail_title title color_green title_ui">Start to develop</div>
@@ -237,9 +232,9 @@ function InstagramDetails() {
 </span> <br />23.1% of visually impaired users struggle with Instagram due to missing user-generated Alt Text, while 34.6% are dissatisfied with the inaccurate automatic Alt Text.
                             </div>
                         </div>
-                </div>
+                </div> */}
 
-                <div className="project_detail project_deliver project_ui flex_column jusitfy_start">
+                {/* <div className="project_detail project_deliver project_ui flex_column jusitfy_start">
                     <div>
                         <div className="project_detail_subtitle main_italic color_orange">Deliver</div>
                         <div className="project_detail_title title color_green title_ui">Start to develop</div>
@@ -251,9 +246,9 @@ function InstagramDetails() {
 </span> <br />23.1% of visually impaired users struggle with Instagram due to missing user-generated Alt Text, while 34.6% are dissatisfied with the inaccurate automatic Alt Text.
                             </div>
                         </div>
-                </div>
+                </div> */}
 
-                <div className="project_detail project_reflection project_ui flex_column jusitfy_start">
+                {/* <div className="project_detail project_reflection project_ui flex_column jusitfy_start">
                     <div>
                         <div className="project_detail_subtitle main_italic color_orange">Reflection</div>
                         <div className="project_detail_title title color_green title_ui">Start to develop</div>

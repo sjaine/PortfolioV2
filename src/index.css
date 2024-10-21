@@ -1763,13 +1763,17 @@ p {
   margin-bottom: 0;
 }
 
-.competitor {
+.fullImage {
   width: 100%;
   margin-top: 40px;
 }
 
 .project_discover {
   margin-top: 120px;
+}
+
+.project_define {
+  margin-top: 200px;
 }
 
 .inProgress {
