@@ -970,17 +970,20 @@ a {
   text-align: center;
   font-size: 35px;
   background-image: url("./assets/img/banner.png");
+  margin-top: 140px;
 }
 
 .diagram {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 250px;
+  margin-bottom: 170px;
+  padding: 0 300px;
 }
 
 .diagram > img {
-  width: 50%;
+  width: 100%;
 }
 
 .project_bg {
@@ -1777,8 +1780,10 @@ p {
   margin-top: 40px;
 }
 
-.userflow {
+
+.userFlow {
   margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .project_discover {
@@ -1786,7 +1791,7 @@ p {
 }
 
 .project_ui {
-  margin-top: 200px;
+  margin-top: 140px;
 }
 
 .inProgress {
@@ -1810,7 +1815,7 @@ p {
 }
 
 .project_problem {
-  height: 100vh;
+  margin: 140px 0;
 }
 
 .deliver_container {
@@ -1832,6 +1837,11 @@ p {
 
 .deliver_desc > span {
   font-size: 40px;
+  color:#22C182;
+}
+
+.deliver_desc > strong {
+  color:#EB5B38;
 }
 
 .deliver_img {
@@ -1848,4 +1858,22 @@ p {
 
 .project_footer {
   margin-top: 200px;
+}
+
+.project_detail_result {
+  padding: 0 180px;
+  margin-top: 80px;
+}
+
+.result_title {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.project_detail_result > .project_detail_desc > strong {
+  color:#EB5B38;
+}
+
+.project_reflection > strong {
+  color:#EB5B38;
 }

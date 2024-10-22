@@ -7,6 +7,9 @@ import diagram from '../../../assets/img/instagram/diagram.svg';
 import competitor from '../../../assets/img/instagram/competitor.svg';
 import overview from '../../../assets/img/instagram/overview.gif';
 import currentUserFlow from '../../../assets/img/instagram/currentUserFlow.svg';
+import updatedUserFlow from '../../../assets/img/instagram/updatedUserFlow.svg';
+import persona1 from '../../../assets/img/instagram/persona1.svg';
+import persona2 from '../../../assets/img/instagram/persona2.svg';
 
 import final1 from '../../../assets/img/instagram/final1.png';
 import final2 from '../../../assets/img/instagram/final2.png';
@@ -180,16 +183,12 @@ function InstagramDetails() {
                         <div className="project_detail_title title color_green title_ui">What's the problem?</div>
                     </div>
                         <div className="project_detail_info ui_info jusitfy_start">
-                            <div className="project_detail_desc problem_table"><span>1. General User</span><br /><p>Users struggle to <strong>find the option</strong> to add Alt text, as it's hidden at the bottom of the advanced settings page, making it easy to miss.</p>
+                            <div className="project_detail_desc problem_table"><span>1. General User</span><p>Users struggle to <strong>find the option</strong> to add Alt text, as it's hidden at the bottom of the advanced settings page, making it easy to miss.</p>
                             </div>
                             <div className="project_detail_desc problem_table"><span>2. Visually impaired users
-</span> <br /><p>Users with visual impairments report that many posts <strong>lack sufficient Alt text</strong>, leaving them to rely entirely on whether others have provided it.</p>
+</span><p>Users with visual impairments report that many posts <strong>lack sufficient Alt text</strong>, leaving them to rely entirely on whether others have provided it.</p>
                             </div>
                         </div>
-                </div>
-
-                <div className="project_hmw main_italic color_white">
-                How might we simplify adding Alt text on Instagram <br />and improve its accessibility for visually impaired users?
                 </div>
 
                 <div className="diagram">
@@ -209,6 +208,19 @@ function InstagramDetails() {
                         </div>
                     </div>
                     <img src={competitor} alt="competitor analysis" className="fullImage competitor" />
+                    <div className="project_detail_result">
+                        <div className="project_detail_desc result_title color_green">✸ Insights from Observation</div>
+                        <div className="project_detail_desc">
+                        During the discovery phase of the Double Diamond process, I found that Instagram offers more <strong>limited access to ALT text</strong> compared to other platforms. By conducting a competitor analysis of five different brands, I identified key strengths that could be leveraged for improvement.<br />
+                        <br />
+                        As a result, I focused on two main areas for exploration: <br /><br />(1) making ALT text easier for users <strong>to find</strong>, <br />(2) using <strong>auto-generated / AI-based</strong> ALT text to reduce the burden on general users.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div className="project_hmw main_italic color_white">
+                How might we simplify adding Alt text on Instagram <br />and improve its accessibility for visually impaired users?
                 </div>
 
                 <div className="project_detail project_define project_ui flex_column jusitfy_start">
@@ -216,7 +228,28 @@ function InstagramDetails() {
                         <div className="project_detail_subtitle main_italic color_orange">Define</div>
                         <div className="project_detail_title title color_green title_ui">Instagram, for everyone!</div>
                     </div>
+                    <div className="define_container">
                         <img src={currentUserFlow} alt="current user flow" className="fullImage userFlow" />
+                        <div>
+                            <img src={persona1} alt="general user persona" className="fullImage persona" />
+                            <img src={persona2} alt="visual impairment user persona" className="fullImage persona" />
+                        </div>
+                    </div>
+                    <div className="project_detail_result">
+                        <div className="project_detail_desc result_title color_green">✸ Key Areas for Improvements</div>
+                        <div className="project_detail_desc">
+                        <strong>Too Many Steps to Access ALT Text</strong><br />
+                        I found that users struggle to locate the ALT text feature due to too many steps involved, which discourages its use.
+                        <br /><br />
+                        <strong>Reducing Steps to Encourage ALT Text Usage</strong><br />
+                        To simplify the process and increase engagement, I focused on three areas:
+                        <br /><br />
+                        <strong>Main Feed:</strong> Position ALT text below each photo for direct access.<br />
+                        <strong>Pick a Photo:</strong> Use AI to generate captions, making image selection easier for visually impaired users.<br />
+                        <strong>Add & Edit ALT Text:</strong> Move the ALT text button to the Filter & Edit page, with AI-generated text as the default option and an edit feature.
+                        </div>
+                    </div>
+                        
                 </div>
 
 
@@ -225,8 +258,17 @@ function InstagramDetails() {
                         <div className="project_detail_subtitle main_italic color_orange">Develop</div>
                         <div className="project_detail_title title color_green title_ui">Start to develop</div>
                     </div>
-                    
+                    <img src={updatedUserFlow} alt="updated user flow" className="fullImage" />
                     <SwiperJS />
+
+                    <div className="project_detail_result">
+                        <div className="project_detail_desc result_title color_green">✸ UI Updates and Feedback</div>
+                        <div className="project_detail_desc">
+                        I improved the UI based on the findings from the Define phase, reducing the steps to access the ALT text button by <strong>50%.</strong> 
+                        <br /><br />
+                        After testing the wireframe with potential users, feedback emphasized the importance of an <strong>AI-based ALT text generator</strong> for quick navigation and better handling of <strong>multiple photo uploads</strong>. Users also highlighted the need for improved <strong>GIF accessibility</strong> in replies and more consistency in the <strong>ALT text box UI</strong>. Incorporating these insights, I finalized the design, focusing on enhancing accessibility and user experience.
+                        </div>
+                    </div>
                 </div>
 
                 <div className="project_detail project_deliver project_ui flex_column jusitfy_start">
@@ -236,8 +278,8 @@ function InstagramDetails() {
                     </div>
                     <div className="deliver_container">
                         <div className="project_detail_info ui_info jusitfy_start deliver_box">
-                            <div className="project_detail_desc deliver_desc"><span>Main Feed
-</span> <br /><br />In the main feed, the ALT text box is positioned below each photo. When a user clicks on a photo, VoiceOver reads the ALT text. Additionally, users in temporary or situational cases can conveniently view the ALT text directly in the box.
+                            <div className="project_detail_desc deliver_desc"><span>✸ Main Feed
+</span> <br /><br />In the main feed, the ALT text box is positioned below each photo. When a user clicks on a photo, <strong>VoiceOver</strong> reads the ALT text.
                             </div>
                             <div className="deliver_img">
                                 <img src={final1} alt="final 1" />
@@ -245,8 +287,8 @@ function InstagramDetails() {
                         </div>
 
                         <div className="project_detail_info ui_info jusitfy_start deliver_box">
-                            <div className="project_detail_desc deliver_desc"><span>Pick a Photo
-</span> <br /><br />Captions are generally generated by AI. While the iPhone screen reader provides the photo's date, AI suggestions describe the content of the photo, helping visually impaired users select images easily. Upon clicking a photo, VoiceOver reads the AI-generated ALT text, with an ALT text box available for temporary or situational use.
+                            <div className="project_detail_desc deliver_desc"><span>✸ Pick a Photo
+</span> <br /><br />Captions are generally <strong>generated by AI</strong>. AI suggestions describe the content of the photo, helping visually impaired users <strong>select images easily.</strong> Upon clicking a photo, VoiceOver reads the AI-generated ALT text, with an ALT text box available for temporary or situational use.
 
                             </div>
                             <div className="deliver_img">
@@ -255,8 +297,8 @@ function InstagramDetails() {
                         </div>
 
                         <div className="project_detail_info ui_info jusitfy_start deliver_box">
-                            <div className="project_detail_desc deliver_desc"><span>Add ALT Text
-</span> <br /><br />The primary issue with Instagram's ALT text is its complexity. To simplify this, the ALT text button has been moved to the second page. An AI suggestion box is provided to ease the process of writing ALT text. If a user chooses not to edit, AI-generated ALT text is automatically applied.
+                            <div className="project_detail_desc deliver_desc"><span>✸ Add ALT Text
+</span> <br /><br />The primary issue with Instagram's ALT text is its complexity. To simplify this, the ALT text button has been <strong>moved to the Filter / Edit page.</strong> An AI suggestion box is provided to ease the process of writing ALT text. If a user chooses not to edit, AI-generated ALT text is automatically applied.
                             </div>
                             <div className="deliver_img">
                                 <img src={final3} alt="final 3" />
@@ -264,8 +306,8 @@ function InstagramDetails() {
                         </div>
 
                         <div className="project_detail_info ui_info jusitfy_start deliver_box">
-                            <div className="project_detail_desc deliver_desc"><span>Edit ALT Text
-</span> <br /><br />Users can review their ALT text before uploading the photo. Since screen readers typically read from the top, the ALT text is placed below the caption for better accessibility.
+                            <div className="project_detail_desc deliver_desc"><span>✸ Edit ALT Text
+</span> <br /><br />Users can review their ALT text before uploading the photo. Since screen readers typically read from the top, the ALT text is placed <strong>below the caption</strong> for better accessibility.
                             </div>
                             <div className="deliver_img">
                                 <img src={final5} alt="final 5" />
@@ -274,22 +316,21 @@ function InstagramDetails() {
                     </div>
                 </div>
 
-
-                <div className="inProgress title color_green">In Progress!</div>
-
-                {/* <div className="project_detail project_reflection project_ui flex_column jusitfy_start">
+                <div className="project_detail project_reflection project_ui flex_column jusitfy_start">
                     <div>
                         <div className="project_detail_subtitle main_italic color_orange">Reflection</div>
-                        <div className="project_detail_title title color_green title_ui">Start to develop</div>
+                        <div className="project_detail_title title color_green title_ui">So, it was...</div>
                     </div>
-                        <div className="project_detail_info ui_info jusitfy_start">
-                            <div className="project_detail_desc discover_table"><span>35%</span><br />35% of general users reported difficulty finding Instagram’s Alt Text button, and 15% said they were confused about how to properly write Alt Text.
-                            </div>
-                            <div className="project_detail_desc discover_table"><span>23.1%
-</span> <br />23.1% of visually impaired users struggle with Instagram due to missing user-generated Alt Text, while 34.6% are dissatisfied with the inaccurate automatic Alt Text.
-                            </div>
+                    <div className="project_detail_info ui_info">
+                        <div className="project_detail_desc project_reflection">
+                            This project provided valuable experience and taught me the <strong>importance of truly empathizing with users.</strong> Previously, I often relied on my own experiences, which led to biases. However, I realized that the real issue was Instagram's accessibility, not users' improper use of ALT text.
+                            <br /><br />
+                            Additionally, I gained a deeper understanding of the <strong>significance of feedback</strong>, particularly regarding the direct messaging system. It prompted me to consider factors I hadn’t initially thought about, like how the system handles multiple photo selection. This insight played a key role in enhancing the overall quality of the project.
+                            <br /><br />
+                            Lastly, I developed skills in <strong>using and connecting various APIs,</strong> significantly enhancing my capabilities.
                         </div>
-                </div> */}
+                    </div>
+                </div>
             </div>
         </div>
       
