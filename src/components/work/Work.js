@@ -11,8 +11,8 @@ import instagram from '../../assets/img/instagram.png';
 gsap.registerPlugin(ScrollTrigger);
 const projects = [
   { id: 1, title: 'ArtBook', thumbnail: artbook, info: "Explore the MET's collection with ease, one artwork at a time!", type: "Academic Project", tag: "FRONT-END, COLLABORATION, REST APIs" },
-  { id: 2, title: 'Pawlert', thumbnail: pawlert, info: "(*Award Winning Project) Keep your dog cool and safe! Pawlert watches over them in real-time!", type: "Hackathon Project", tag: "FRONT-END, UI/UX, COLLABORATION, JSON" },
-  { id: 3, title: 'Instagram', thumbnail: instagram, info: "Capture, Create & Share What You Love! Improving Instagram's Accessibility for visual impairs.", type: "Academic Project", tag: "UI/UX, HTML, CSS, JAVASCRIPT" }
+  { id: 2, title: 'Instagram', thumbnail: instagram, info: "Capture, Create & Share What You Love! Improving Instagram's Accessibility for visual impairs.", type: "Academic Project", tag: "UI/UX, HTML, CSS, JAVASCRIPT" },
+  { id: 3, title: 'Pawlert', thumbnail: pawlert, info: "(*Award Winning Project) Keep your dog cool and safe! Pawlert watches over them in real-time!", type: "Hackathon Project", tag: "FRONT-END, UI/UX, COLLABORATION, JSON" }
 ];
 
 function Work() {

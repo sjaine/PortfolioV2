@@ -87,7 +87,7 @@ function InstagramDetails() {
                             <div></div>
                             <div className="main_lightitalic">Academic Project</div>
                         </div>
-                        <div className="project_title title ui_title">Instagram</div>
+                        <div className="project_title title ui_title instagram_title">Instagram</div>
                     </div>
                     <div className="project_info_right">
                         <div>
@@ -131,7 +131,8 @@ function InstagramDetails() {
                         <div className="project_detail_title title color_green title_ui insta_title"></div>
                         <div className="project_detail_info ui_info">
                             <div className="project_detail_desc"><b>✸ Capture, Create & Share What You Love!
-</b> <br />Instagram has become one of the essential photo-based platforms for people to follow trends, build communities, and bring the world closer together. For users with visual impairments, Instagram supports Alt text, which can be read aloud by screen readers. However, there are still many challenges that limit the accessibility of alternative text for users with visual difficulties.
+</b> <br />
+Instagram is a key photo-based platform for following trends, building communities, and connecting people. While it supports Alt text for users with visual impairments, challenges remain in making this feature fully accessible to those with visual difficulties.
                             </div>
                         </div>
                     </div>
