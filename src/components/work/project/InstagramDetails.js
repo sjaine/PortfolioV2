@@ -1,11 +1,12 @@
 import React, { useRef, useState } from 'react';
+import SwiperJS from './Swiper';
 
 import instagram from '../../../assets/img/instagram.png';
 // import placeholder from '../../../assets/img/instagram/placeholder.png';
-import diagram from '../../../assets/img/instagram/diagram.png';
-import competitor from '../../../assets/img/instagram/competitor.png';
+import diagram from '../../../assets/img/instagram/diagram.svg';
+import competitor from '../../../assets/img/instagram/competitor.svg';
 import overview from '../../../assets/img/instagram/overview.gif';
-import currentUserFlow from '../../../assets/img/instagram/currentUserFlow.png';
+import currentUserFlow from '../../../assets/img/instagram/currentUserFlow.svg';
 
 import final1 from '../../../assets/img/instagram/final1.png';
 import final2 from '../../../assets/img/instagram/final2.png';
@@ -126,12 +127,14 @@ function InstagramDetails() {
                         <div className="project_detail_subtitle main_italic color_orange">Background</div>
                         <div className="project_detail_title title color_green title_ui">Hey, Whassup? <span>🫣</span></div>
                         <div className="project_detail_info ui_info">
-                            <div className="project_detail_desc"><b>Capture, Create & Share What You Love!
-</b> <br /><br />Instagram has become one of the essential photo-based platforms for people to follow trends, build communities, and bring the world closer together. For users with visual impairments, Instagram supports Alt text, which can be read aloud by screen readers. However, there are still many challenges that limit the accessibility of alternative text for users with visual difficulties.
+                            <div className="project_detail_desc"><b>✸ Capture, Create & Share What You Love!
+</b> <br />Instagram has become one of the essential photo-based platforms for people to follow trends, build communities, and bring the world closer together. For users with visual impairments, Instagram supports Alt text, which can be read aloud by screen readers. However, there are still many challenges that limit the accessibility of alternative text for users with visual difficulties.
                             </div>
                         </div>
                     </div>
-                    <img src={overview} alt="placeholder" className="instagram_img" />
+                    <div className="instagram_img">
+                    <img src={overview} alt="placeholder" />
+                    </div>
 
                     <div className="project_banner_container main_italic color_white h3 ui_banner">
                         <div>
@@ -171,7 +174,7 @@ function InstagramDetails() {
                     </div>
                 </div>
 
-                <div className="project_detail project_ui flex_column jusitfy_start">
+                <div className="project_detail project_problem flex_column jusitfy_start">
                     <div>
                         <div className="project_detail_subtitle main_italic color_orange">Identify Problem</div>
                         <div className="project_detail_title title color_green title_ui">What's the problem?</div>
@@ -199,10 +202,10 @@ function InstagramDetails() {
                         <div className="project_detail_title title color_green title_ui">Let's deep dive!</div>
                     </div>
                     <div className="project_detail_info ui_info jusitfy_start">
-                        <div className="project_detail_desc discover_table"><span>35%</span><br />35% of general users reported difficulty finding Instagram’s Alt Text button, and 15% said they were confused about how to properly write Alt Text. 
+                        <div className="project_detail_desc discover_table"><span>35%</span>35% of general users reported difficulty finding Instagram’s Alt Text button, and 15% said they were confused about how to properly write Alt Text. 
                         </div>
                         <div className="project_detail_desc discover_table"><span>23.1%
-</span> <br />23.1% of visually impaired users struggle with Instagram due to missing user-generated Alt Text, while 34.6% are dissatisfied with the inaccurate automatic Alt Text. 
+</span>23.1% of visually impaired users struggle with Instagram due to missing user-generated Alt Text, while 34.6% are dissatisfied with the inaccurate automatic Alt Text. 
                         </div>
                     </div>
                     <img src={competitor} alt="competitor analysis" className="fullImage competitor" />
@@ -217,36 +220,62 @@ function InstagramDetails() {
                 </div>
 
 
-
-                <div className="inProgress title color_green">In Progress!</div>
-
-                {/* <div className="project_detail project_develop project_ui flex_column jusitfy_start">
+                <div className="project_detail project_develop project_ui flex_column jusitfy_start">
                     <div>
                         <div className="project_detail_subtitle main_italic color_orange">Develop</div>
                         <div className="project_detail_title title color_green title_ui">Start to develop</div>
                     </div>
-                        <div className="project_detail_info ui_info jusitfy_start">
-                            <div className="project_detail_desc discover_table"><span>35%</span><br />35% of general users reported difficulty finding Instagram’s Alt Text button, and 15% said they were confused about how to properly write Alt Text.
-                            </div>
-                            <div className="project_detail_desc discover_table"><span>23.1%
-</span> <br />23.1% of visually impaired users struggle with Instagram due to missing user-generated Alt Text, while 34.6% are dissatisfied with the inaccurate automatic Alt Text.
-                            </div>
-                        </div>
-                </div> */}
+                    
+                    <SwiperJS />
+                </div>
 
-                {/* <div className="project_detail project_deliver project_ui flex_column jusitfy_start">
+                <div className="project_detail project_deliver project_ui flex_column jusitfy_start">
                     <div>
                         <div className="project_detail_subtitle main_italic color_orange">Deliver</div>
-                        <div className="project_detail_title title color_green title_ui">Start to develop</div>
+                        <div className="project_detail_title title color_green title_ui">Main Features</div>
                     </div>
-                        <div className="project_detail_info ui_info jusitfy_start">
-                            <div className="project_detail_desc discover_table"><span>35%</span><br />35% of general users reported difficulty finding Instagram’s Alt Text button, and 15% said they were confused about how to properly write Alt Text.
+                    <div className="deliver_container">
+                        <div className="project_detail_info ui_info jusitfy_start deliver_box">
+                            <div className="project_detail_desc deliver_desc"><span>Main Feed
+</span> <br /><br />In the main feed, the ALT text box is positioned below each photo. When a user clicks on a photo, VoiceOver reads the ALT text. Additionally, users in temporary or situational cases can conveniently view the ALT text directly in the box.
                             </div>
-                            <div className="project_detail_desc discover_table"><span>23.1%
-</span> <br />23.1% of visually impaired users struggle with Instagram due to missing user-generated Alt Text, while 34.6% are dissatisfied with the inaccurate automatic Alt Text.
+                            <div className="deliver_img">
+                                <img src={final1} alt="final 1" />
                             </div>
                         </div>
-                </div> */}
+
+                        <div className="project_detail_info ui_info jusitfy_start deliver_box">
+                            <div className="project_detail_desc deliver_desc"><span>Pick a Photo
+</span> <br /><br />Captions are generally generated by AI. While the iPhone screen reader provides the photo's date, AI suggestions describe the content of the photo, helping visually impaired users select images easily. Upon clicking a photo, VoiceOver reads the AI-generated ALT text, with an ALT text box available for temporary or situational use.
+
+                            </div>
+                            <div className="deliver_img">
+                                <img src={final2} alt="final 2" />
+                            </div>
+                        </div>
+
+                        <div className="project_detail_info ui_info jusitfy_start deliver_box">
+                            <div className="project_detail_desc deliver_desc"><span>Add ALT Text
+</span> <br /><br />The primary issue with Instagram's ALT text is its complexity. To simplify this, the ALT text button has been moved to the second page. An AI suggestion box is provided to ease the process of writing ALT text. If a user chooses not to edit, AI-generated ALT text is automatically applied.
+                            </div>
+                            <div className="deliver_img">
+                                <img src={final3} alt="final 3" />
+                            </div>
+                        </div>
+
+                        <div className="project_detail_info ui_info jusitfy_start deliver_box">
+                            <div className="project_detail_desc deliver_desc"><span>Edit ALT Text
+</span> <br /><br />Users can review their ALT text before uploading the photo. Since screen readers typically read from the top, the ALT text is placed below the caption for better accessibility.
+                            </div>
+                            <div className="deliver_img">
+                                <img src={final5} alt="final 5" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div className="inProgress title color_green">In Progress!</div>
 
                 {/* <div className="project_detail project_reflection project_ui flex_column jusitfy_start">
                     <div>
