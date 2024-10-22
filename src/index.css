@@ -920,6 +920,7 @@ a {
 .title_ui {
   font-size: 13vw;
   display: flex;
+  align-items: center;
 }
 
 .project_detail_subtitle {
@@ -1094,6 +1095,250 @@ a {
 }
 
 
+/* flex */
+.jusitfy_start {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flex_column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ui project css */
+.title_ui > span {
+  font-size: 9.5vw;
+}
+
+.instagram_img {
+  background-color: #1A1917;
+  padding: 0.5vw;
+  border-radius: 30px;
+  display: flex;
+}
+
+.instagram_img > img {
+  width: 20vw;
+  border-radius: 20px;
+}
+
+.discover_table {
+  background-color: #22C182;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 20px;
+  width: 50%;
+}
+
+.problem_table {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: #ebebeb;
+  padding: 50px;
+  border-radius: 20px 50px 50px 50px;
+  margin-top: 20px;
+}
+
+.problem_table:nth-child(2) {
+  background-color: #4D57FE;
+  color: white;
+}
+
+.problem_table > span {
+  font-weight: 700;
+  color: black;
+}
+
+.problem_table > p > strong {
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+}
+
+.problem_table:nth-child(2) > span {
+  color: white;
+}
+
+.problem_table:first-child {
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.problem_table:nth-child(2) {
+  margin-left: 20px;
+}
+
+.discover_table > span {
+  color: white;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.discover_table:first-child {
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.discover_table:nth-child(2) {
+  margin-left: 20px;
+}
+
+.ui_left {
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+  margin-bottom: 30px;
+}
+
+.ui_info {
+  margin-left: 0;
+  margin-top: 40px;
+}
+
+.ui_info > .project_detail_desc > b {
+  color:#EB5B38;
+}
+
+.ui_img {
+  margin-bottom: 0;
+}
+
+.fullImage {
+  width: 100%;
+  margin-top: 40px;
+}
+
+
+.userFlow {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.project_discover {
+  margin-top: 120px;
+}
+
+.project_ui {
+  margin-top: 140px;
+}
+
+.inProgress {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.ui_banner {
+  bottom: 0;
+}
+
+.swiper-container {
+  margin-top: 80px;
+  width: 100%;
+}
+
+.swiper-pagination-bullet {
+  background: #22C182 !important;
+}
+
+.project_problem {
+  margin: 140px 0;
+}
+
+/* .deliver_container {
+  padding: 0 150px;
+} */
+
+.deliver_box {
+  align-items: center;
+}
+
+.deliver_box:not(:first-child) {
+  margin-top: 80px;
+}
+
+.deliver_desc {
+  padding-right: 110px;
+  color:#1A1917;
+}
+
+.deliver_desc > span {
+  font-size: 40px;
+  color:#22C182;
+}
+
+.deliver_desc > strong {
+  color:#EB5B38;
+}
+
+.deliver_img {
+  border-radius: 30px;
+  background-color: #1A1917;
+  padding: 0.5vw;
+  display: flex;
+}
+
+.deliver_img > img {
+  width: 20vw;
+  border-radius: 20px;
+}
+
+.project_footer {
+  margin-top: 200px;
+}
+
+.project_detail_result {
+  margin-top: 80px;
+}
+
+.result_title {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.project_detail_result > .project_detail_desc > strong {
+  color:#EB5B38;
+}
+
+.project_reflection > strong {
+  color:#EB5B38;
+}
+
+.insta_title::before {
+  content: "Hey, Whassup?";
+}
+
+.identify_title::before {
+  content: "What's Bugging Us?";
+}
+
+.discover_title::before {
+  content: "Time to Dive In!";
+}
+
+.define_title::before {
+  content: "Instagram, for everyone!";
+}
+
+.develop_title::before {
+  content: "Time to Create!";
+}
+
+.deliver_title::before {
+  content: "Here’s What I Built!";
+}
+
+.reflection_title::before {
+  content: "Looking Back...";
+}
 
 /* animation */
 /* ----------------------------------------------
@@ -1134,6 +1379,14 @@ a {
 
   .project_role_detail {
     font-size: 28px;
+  }
+
+  .project_detail_result {
+    padding: 0 180px;
+  }
+
+  .deliver_container {
+    padding: 0 150px;
   }
 }
 
@@ -1508,7 +1761,11 @@ a {
   }
 
   .project_detail_title {
-    font-size: 20vw;
+    font-size: 15vw;
+  }
+  
+  .deliver_desc > span {
+    font-size: 35px;
   }
 
   .project_detail_sub, .project_detail_desc {
@@ -1541,6 +1798,59 @@ a {
 
   .footer_left {
     margin-bottom: 50px;
+  }
+
+  .ui_title {
+    font-size: 190px;
+  }
+
+  .ui_left {
+    margin-right: 0;
+  }
+
+  .instagram_img {
+    display: none;
+  }
+
+  .ui_banner {
+    bottom: 20px;
+  }
+
+  .project_problem {
+    margin-top: 60px;
+  }
+
+  .problem_table {
+    border-radius: 10px 30px 30px 30px;
+  }
+
+  .diagram {
+    margin-top: 0;
+    padding: 0 120px;
+  }
+
+  .competitor {
+    padding: 0 120px;
+  }
+
+  .project_develop > img {
+    padding: 0 120px;
+  }
+
+  .swiper-container {
+    padding: 0 120px;
+  }
+
+  .deliver_img {
+    padding: 0.8vw;
+  }
+
+  .result_title {
+    font-size: 30px;
+  }
+
+  .project_detail_result {
+    padding: 0 120px;
   }
 }
 
@@ -1626,6 +1936,127 @@ a {
   .pawlert_img > img {
     width: 50vw;
   }
+
+  .diagram {
+    margin-top: 0;
+    padding: 0 30px;
+  }
+
+  .competitor {
+    padding: 0 30px;
+  }
+
+  .project_develop > img {
+    padding: 0 30px;
+  }
+
+  .swiper-container {
+    padding: 0 30px;
+  }
+  
+  .project_detail_result  {
+    padding: 0 30px;
+  }
+
+  .ui_info {
+    flex-direction: column;
+  }
+
+  .problem_table {
+    width: 100%;
+  }
+
+  .problem_table:first-child, .problem_table:nth-child(2) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .discover_table {
+    width: 100%;
+  }
+
+  .discover_table:first-child, .discover_table:nth-child(2) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .discover_table:first-child {
+    margin-bottom: 20px;
+  }
+
+  .project_hmw {
+    font-size: 20px;
+  }
+
+  .userFlow {
+    margin-bottom: 0;
+  }
+
+  .swiper-container {
+    margin-top: 40px;
+  }
+
+  .deliver_desc {
+    padding-right: 0;
+  }
+
+  .deliver_box {
+    flex-direction: column-reverse;
+  }
+
+  .deliver_img {
+    padding: 1.8vw;
+    margin-bottom: 40px;
+  }
+
+  .deliver_img > img {
+    width: 50vw;
+  }
+
+  .project_ui {
+    margin-top: 100px;
+  }
+
+  .project_footer {
+    margin-top: 140px;
+  }
+
+  .project_problem {
+    margin: 0;
+    margin-bottom: 120px;
+  }
+
+  .diagram {
+    margin-bottom: 120px;
+  }
+
+  .project_detail_result {
+    margin-top: 50px;
+  }
+
+  .project_hmw {
+    margin-top: 100px;
+  }
+
+  .deliver_desc > span {
+    font-size: 30px;
+  }
+
+  .result_title {
+    font-size: 25px;
+  }
+
+  .project_detail_title {
+    font-size: 25vw;
+  }
+
+  .define_title::before {
+    content: "For everyone!";
+  }
+
+  .deliver_desc {
+    padding: 0 100px;
+  }
 }
 
 @media (max-width: 425px) {
@@ -1643,7 +2074,39 @@ a {
 
   .project_overview > div:first-child {
     margin-bottom: 20px;
-}
+  }
+
+  .insta_title::before {
+    content: "Whassup?";
+  }
+
+  .identify_title::before {
+    content: "The Issue?";
+  }
+
+  .discover_title::before {
+    content: "Dive In!";
+  }
+
+  .define_title::before {
+    content: "For All!";
+  }
+
+  .develop_title::before {
+    content: "Let's Build!";
+  }
+
+  .deliver_title::before{
+    content: "The Features";
+  }
+
+  .reflection_title::before {
+    content: "Look Back";
+  }  
+
+  .deliver_desc {
+    padding: 0 20px;
+  }
 }
 
 .cursor {
@@ -1658,222 +2121,3 @@ a {
 }
 
 
-
-/* flex */
-.jusitfy_start {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.flex_column {
-  display: flex;
-  flex-direction: column;
-}
-
-
-/* ui project css */
-.title_ui > span {
-  font-size: 9.5vw;
-}
-
-.instagram_img {
-  background-color: #1A1917;
-  padding: 0.5vw;
-  border-radius: 30px;
-  display: flex;
-}
-
-.instagram_img > img {
-  width: 20vw;
-  border-radius: 20px;
-}
-
-.discover_table {
-  background-color: #22C182;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  border-radius: 20px;
-  width: 50%;
-}
-
-.problem_table {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  background-color: #ebebeb;
-  padding: 50px;
-  border-radius: 20px 50px 50px 50px;
-  margin-top: 20px;
-}
-
-.problem_table:nth-child(2) {
-  background-color: #4D57FE;
-  color: white;
-}
-
-.problem_table > span {
-  font-weight: 700;
-  color: black;
-}
-
-.problem_table > p > strong {
-  font-weight: 600;
-}
-
-p {
-  margin: 0;
-}
-
-.problem_table:nth-child(2) > span {
-  color: white;
-}
-
-.problem_table:first-child {
-  margin-right: 20px;
-  margin-bottom: 0;
-}
-
-.problem_table:nth-child(2) {
-  margin-left: 20px;
-}
-
-.discover_table > span {
-  color: white;
-  font-weight: 700;
-  font-size: 50px;
-}
-
-.discover_table:first-child {
-  margin-right: 20px;
-  margin-bottom: 0;
-}
-
-.discover_table:nth-child(2) {
-  margin-left: 20px;
-}
-
-.ui_left {
-  display: flex;
-  flex-direction: column;
-  margin-right: 100px;
-  margin-bottom: 30px;
-}
-
-.ui_info {
-  margin-left: 0;
-  margin-top: 40px;
-}
-
-.ui_info > .project_detail_desc > b {
-  color:#EB5B38;
-}
-
-.ui_img {
-  margin-bottom: 0;
-}
-
-.fullImage {
-  width: 100%;
-  margin-top: 40px;
-}
-
-
-.userFlow {
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
-.project_discover {
-  margin-top: 120px;
-}
-
-.project_ui {
-  margin-top: 140px;
-}
-
-.inProgress {
-  display: flex;
-  justify-content: center;
-  margin-top: 200px;
-  margin-bottom: 200px;
-}
-
-.ui_banner {
-  bottom: 0;
-}
-
-.swiper-container {
-  margin-top: 80px;
-  width: 100%;
-}
-
-.swiper-pagination-bullet {
-  background: #22C182 !important;
-}
-
-.project_problem {
-  margin: 140px 0;
-}
-
-.deliver_container {
-  padding: 0 150px;
-}
-
-.deliver_box {
-  align-items: center;
-}
-
-.deliver_box:not(:first-child) {
-  margin-top: 80px;
-}
-
-.deliver_desc {
-  padding-right: 110px;
-  color:#1A1917;
-}
-
-.deliver_desc > span {
-  font-size: 40px;
-  color:#22C182;
-}
-
-.deliver_desc > strong {
-  color:#EB5B38;
-}
-
-.deliver_img {
-  border-radius: 30px;
-  background-color: #1A1917;
-  padding: 0.5vw;
-  display: flex;
-}
-
-.deliver_img > img {
-  width: 20vw;
-  border-radius: 20px;
-}
-
-.project_footer {
-  margin-top: 200px;
-}
-
-.project_detail_result {
-  padding: 0 180px;
-  margin-top: 80px;
-}
-
-.result_title {
-  font-size: 35px;
-  font-weight: 700;
-}
-
-.project_detail_result > .project_detail_desc > strong {
-  color:#EB5B38;
-}
-
-.project_reflection > strong {
-  color:#EB5B38;
-}

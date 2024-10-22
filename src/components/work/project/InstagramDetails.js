@@ -87,7 +87,7 @@ function InstagramDetails() {
                             <div></div>
                             <div className="main_lightitalic">Academic Project</div>
                         </div>
-                        <div className="project_title title ">Instagram</div>
+                        <div className="project_title title ui_title">Instagram</div>
                     </div>
                     <div className="project_info_right">
                         <div>
@@ -128,7 +128,7 @@ function InstagramDetails() {
                 <div className="project_detail project_overview">
                     <div className="ui_left">
                         <div className="project_detail_subtitle main_italic color_orange">Background</div>
-                        <div className="project_detail_title title color_green title_ui">Hey, Whassup? <span>🫣</span></div>
+                        <div className="project_detail_title title color_green title_ui insta_title"></div>
                         <div className="project_detail_info ui_info">
                             <div className="project_detail_desc"><b>✸ Capture, Create & Share What You Love!
 </b> <br />Instagram has become one of the essential photo-based platforms for people to follow trends, build communities, and bring the world closer together. For users with visual impairments, Instagram supports Alt text, which can be read aloud by screen readers. However, there are still many challenges that limit the accessibility of alternative text for users with visual difficulties.
@@ -180,9 +180,9 @@ function InstagramDetails() {
                 <div className="project_detail project_problem flex_column jusitfy_start">
                     <div>
                         <div className="project_detail_subtitle main_italic color_orange">Identify Problem</div>
-                        <div className="project_detail_title title color_green title_ui">What's the problem?</div>
+                        <div className="project_detail_title title color_green title_ui identify_title"></div>
                     </div>
-                        <div className="project_detail_info ui_info jusitfy_start">
+                        <div className="project_detail_info ui_info jusitfy_start project_identify">
                             <div className="project_detail_desc problem_table"><span>1. General User</span><p>Users struggle to <strong>find the option</strong> to add Alt text, as it's hidden at the bottom of the advanced settings page, making it easy to miss.</p>
                             </div>
                             <div className="project_detail_desc problem_table"><span>2. Visually impaired users
@@ -198,7 +198,7 @@ function InstagramDetails() {
                 <div className="project_detail project_discover flex_column jusitfy_start">
                     <div>
                         <div className="project_detail_subtitle main_italic color_orange">Discover</div>
-                        <div className="project_detail_title title color_green title_ui">Let's deep dive!</div>
+                        <div className="project_detail_title title color_green title_ui discover_title"></div>
                     </div>
                     <div className="project_detail_info ui_info jusitfy_start">
                         <div className="project_detail_desc discover_table"><span>35%</span>35% of general users reported difficulty finding Instagram’s Alt Text button, and 15% said they were confused about how to properly write Alt Text. 
@@ -226,7 +226,7 @@ function InstagramDetails() {
                 <div className="project_detail project_define project_ui flex_column jusitfy_start">
                     <div>
                         <div className="project_detail_subtitle main_italic color_orange">Define</div>
-                        <div className="project_detail_title title color_green title_ui">Instagram, for everyone!</div>
+                        <div className="project_detail_title title color_green title_ui define_title"></div>
                     </div>
                     <div className="define_container">
                         <img src={currentUserFlow} alt="current user flow" className="fullImage userFlow" />
@@ -256,7 +256,7 @@ function InstagramDetails() {
                 <div className="project_detail project_develop project_ui flex_column jusitfy_start">
                     <div>
                         <div className="project_detail_subtitle main_italic color_orange">Develop</div>
-                        <div className="project_detail_title title color_green title_ui">Start to develop</div>
+                        <div className="project_detail_title title color_green title_ui develop_title"></div>
                     </div>
                     <img src={updatedUserFlow} alt="updated user flow" className="fullImage" />
                     <SwiperJS />
@@ -274,7 +274,7 @@ function InstagramDetails() {
                 <div className="project_detail project_deliver project_ui flex_column jusitfy_start">
                     <div>
                         <div className="project_detail_subtitle main_italic color_orange">Deliver</div>
-                        <div className="project_detail_title title color_green title_ui">Main Features</div>
+                        <div className="project_detail_title title color_green title_ui deliver_title"></div>
                     </div>
                     <div className="deliver_container">
                         <div className="project_detail_info ui_info jusitfy_start deliver_box">
@@ -319,7 +319,7 @@ function InstagramDetails() {
                 <div className="project_detail project_reflection project_ui flex_column jusitfy_start">
                     <div>
                         <div className="project_detail_subtitle main_italic color_orange">Reflection</div>
-                        <div className="project_detail_title title color_green title_ui">So, it was...</div>
+                        <div className="project_detail_title title color_green title_ui reflection_title"></div>
                     </div>
                     <div className="project_detail_info ui_info">
                         <div className="project_detail_desc project_reflection">
