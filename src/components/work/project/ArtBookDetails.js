@@ -18,7 +18,7 @@ import footerArrow from '../../../assets/img/icons/arrow-up-right.svg';
 import { useNavigate } from 'react-router-dom';
 
 const hyperlinks = [
-    { id: 1, title: 'Resume', link: 'https://www.dropbox.com/scl/fi/u2qeg2kbhw6lfoslt14fy/Shin_Resume.pdf?rlkey=93j616q524y4o6v6y2bg1ermz&st=s3bglvto&dl=0' },
+    { id: 1, title: 'Resume', link: 'https://www.dropbox.com/scl/fi/pjjg7xl5b1v0aas7zb70w/Resume.pdf?rlkey=cgemzwnkw43h5m5m00my9752h&st=mlbi5fhd&dl=0' },
     { id: 2, title: 'LinkedIn', link: 'https://www.linkedin.com/in/jaineysshin/' },
     { id: 3, title: 'GitHub', link: 'https://github.com/sjaine' }
   ];
