@@ -125,7 +125,7 @@ function InstagramDetails() {
 
             <div className="project_section bc_beige">
 
-                <div className="project_detail project_overview">
+                <div className="project_detail project_overview ui_overview">
                     <div className="ui_left">
                         <div className="project_detail_subtitle main_italic color_orange">Background</div>
                         <div className="project_detail_title title color_green title_ui insta_title"></div>
