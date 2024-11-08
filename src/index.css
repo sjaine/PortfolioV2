@@ -178,10 +178,8 @@ header {
   text-align: right;
 }
 
-.nav_list > .nav:hover {
-  display: inline-block; 
-  -webkit-animation: tracking-in-expand 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  animation: tracking-in-expand 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+.nav-list {
+  letter-spacing: -0.5px;
 }
 
 .nav-list {
