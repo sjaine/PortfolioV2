@@ -27,7 +27,7 @@ function Info() {
         Hey there! I'm Yoonsoo <span>(aka Jaine!)</span>, currently studying Interaction Design at Sheridan College. I'm passionate about creating visually appealing products that enhance user convenience, always refining my work until it meets my standards <i>(even if it means overworking sometimes. :P) (Of course, with pleasure!)</i>
         <br />
         <br />
-        My interest in visual aesthetics and building my own website inspired me to pursue Interaction Design. I’ve gained valuable experience in <span>human-centered design</span> and developed the ability to bridge the gap between <span>design and development.</span>
+        My interest in visual aesthetics and building my own website inspired me to pursue Interaction Design. I’ve gained valuable experience in <span>human-centered design</span> and developed the ability to bridge the gap between <span>design and development.</span> <i>(Fun fact: I fully hand-coded my portfolio site as well! Someone asked me, 'Which website did you use to create your portfolio?')</i>
         <br />
         <br />
         As a front-end developer, I focus on turning design into functional code with <span>HTML, CSS, JavaScript, and React,</span> ensuring a joyful user experience. I'm excited to keep learning and collaborate with more designers as I grow in this field!</div>  
