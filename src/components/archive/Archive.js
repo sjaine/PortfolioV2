@@ -12,9 +12,9 @@ import movieposter from '../../assets/img/movieposter.png';
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  { id: 1, title: 'movie night', thumbnail: movienight },
-  { id: 2, title: 'arbor day', thumbnail: arborday },
-  { id: 3, title: 'book redesign', thumbnail: book },
+  { id: 1, title: 'arbor day', thumbnail: arborday },
+  { id: 2, title: 'book redesign', thumbnail: book },
+  { id: 3, title: 'movie night', thumbnail: movienight },
   { id: 4, title: 'movie poster', thumbnail: movieposter }
 ];
 
