@@ -1,15 +1,17 @@
 import React, { useRef, useState } from 'react';
-import SwiperJS from './Swiper';
 
 import instagram from '../../../assets/img/instagram.png';
 // import placeholder from '../../../assets/img/instagram/placeholder.png';
-import diagram from '../../../assets/img/instagram/diagram.svg';
 import competitor from '../../../assets/img/instagram/competitor.svg';
 import overview from '../../../assets/img/instagram/overview.gif';
 import currentUserFlow from '../../../assets/img/instagram/currentUserFlow.svg';
 import updatedUserFlow from '../../../assets/img/instagram/updatedUserFlow.svg';
 import persona1 from '../../../assets/img/instagram/persona1.svg';
 import persona2 from '../../../assets/img/instagram/persona2.svg';
+
+import photo1 from '../../../assets/img/instagram/lowfi.svg';
+import photo2 from '../../../assets/img/instagram/userfeedback.svg';
+import photo3 from '../../../assets/img/instagram/midfi.svg';
 
 import final1 from '../../../assets/img/instagram/final1.png';
 import final2 from '../../../assets/img/instagram/final2.png';
@@ -125,14 +127,14 @@ function InstagramDetails() {
 
             <div className="project_section bc_beige">
 
-                <div className="project_detail project_overview ui_overview">
+                <div className="project_overview project_detail ui_overview">
                     <div className="ui_left">
                         <div className="project_detail_subtitle main_italic color_orange">Background</div>
                         <div className="project_detail_title title color_green title_ui insta_title"></div>
                         <div className="project_detail_info ui_info">
                             <div className="project_detail_desc"><b>✸ Capture, Create & Share What You Love!
 </b> <br />
-Instagram is a key photo-based platform for following trends, building communities, and connecting people. While it supports Alt text for users with visual impairments, challenges remain in making this feature fully accessible to those with visual difficulties.
+Instagram is a key photo-based platform for following trends, building communities, and connecting people. While it supports Alt text for users with visual impairments, challenges remain in making this feature fully accessible.
                             </div>
                         </div>
                     </div>
@@ -140,43 +142,14 @@ Instagram is a key photo-based platform for following trends, building communiti
                     <img src={overview} alt="placeholder" />
                     </div>
 
-                    <div className="project_banner_container main_italic color_white h3 ui_banner">
-                        <div>
-                    Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • 
-                        </div>
-                    </div>
                 </div>
 
-                <div className="project_detail project_output">
-                    <div className="project_detail_title title color_green title_ui">Output</div>
-                </div>
-
-                <div className="project_img ui_img" 
-                    ref={scrollRef}
-                    onMouseDown={handleMouseDown}
-                    onMouseLeave={handleMouseLeave}
-                    onMouseUp={handleMouseUp}
-                    onMouseMove={handleMouseMove}
-                    style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
-                > 
-                    <div className="project_img_container">
-                        <div className="img_wrapper pawlert_img">
-                            <img src={final1} alt="final1" onDragStart={(e) => e.preventDefault()} />
-                        </div>
-                        <div className="img_wrapper pawlert_img">
-                            <img src={final2} alt="final2" onDragStart={(e) => e.preventDefault()} />
-                        </div>
-                        <div className="img_wrapper pawlert_img">
-                            <img src={final3} alt="final3" onDragStart={(e) => e.preventDefault()} />
-                        </div>
-                        <div className="img_wrapper pawlert_img">
-                            <img src={final4} alt="final4" onDragStart={(e) => e.preventDefault()} />
-                        </div>
-                        <div className="img_wrapper pawlert_img">
-                            <img src={final5} alt="final5" onDragStart={(e) => e.preventDefault()} />
-                        </div>
+                <div className="project_banner_container main_italic color_white h3 ui_banner">
+                    <div>
+                Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • Vanila Web Stack • JSON • Visual Studio Code • GitHub • 
                     </div>
                 </div>
+            
 
                 <div className="project_detail project_problem flex_column jusitfy_start">
                     <div>
@@ -192,29 +165,25 @@ Instagram is a key photo-based platform for following trends, building communiti
                         </div>
                 </div>
 
-                <div className="diagram">
-                    <img src={diagram} alt="diagram" />
-                </div>
-
                 <div className="project_detail project_discover flex_column jusitfy_start">
                     <div>
                         <div className="project_detail_subtitle main_italic color_orange">Discover</div>
                         <div className="project_detail_title title color_green title_ui discover_title"></div>
                     </div>
                     <div className="project_detail_info ui_info jusitfy_start">
-                        <div className="project_detail_desc discover_table"><span>35%</span>35% of general users reported difficulty finding Instagram’s Alt Text button, and 15% said they were confused about how to properly write Alt Text. 
+                        <div className="project_detail_desc discover_table"><span>35% can't find the Alt button.</span>35% of general users reported difficulty finding Instagram’s Alt Text button, and 15% said they were confused about how to properly write Alt Text. 
                         </div>
-                        <div className="project_detail_desc discover_table"><span>23.1%
+                        <div className="project_detail_desc discover_table"><span>24%
 </span>23.1% of visually impaired users struggle with Instagram due to missing user-generated Alt Text, while 34.6% are dissatisfied with the inaccurate automatic Alt Text. 
                         </div>
                     </div>
                     <img src={competitor} alt="competitor analysis" className="fullImage competitor" />
                     <div className="project_detail_result">
-                        <div className="project_detail_desc result_title color_green">✸ Insights from Observation</div>
+                        <div className="project_detail_desc result_title color_green">✸ Insights from Competitor Analysis</div>
                         <div className="project_detail_desc">
                         During the discovery phase of the Double Diamond process, I found that Instagram offers more <strong>limited access to ALT text</strong> compared to other platforms. By conducting a competitor analysis of five different brands, I identified key strengths that could be leveraged for improvement.<br />
                         <br />
-                        As a result, I focused on two main areas for exploration: <br /><br />(1) making ALT text easier for users <strong>to find</strong>, <br />(2) using <strong>auto-generated / AI-based</strong> ALT text to reduce the burden on general users.
+                        As a result, I focused on two main areas for exploration: <br /><br />(1) making ALT text <strong>easier</strong> for users <strong>to find</strong>, <br />(2) using <strong>auto-generated / AI-based ALT text</strong> to reduce the burden on general users.
                         </div>
                     </div>
                 </div>
@@ -260,23 +229,56 @@ Instagram is a key photo-based platform for following trends, building communiti
                         <div className="project_detail_title title color_green title_ui develop_title"></div>
                     </div>
                     <img src={updatedUserFlow} alt="updated user flow" className="fullImage" />
-                    <SwiperJS />
+                    {/* <SwiperJS /> */}
+                    <img src={photo1} alt="Low-fi" className="fullImage" />
+                    <img src={photo2} alt="User Feedback" className="fullImage" />
+                    <img src={photo3} alt="Mid-fi" className="fullImage" />
 
                     <div className="project_detail_result">
                         <div className="project_detail_desc result_title color_green">✸ UI Updates and Feedback</div>
                         <div className="project_detail_desc">
-                        I improved the UI based on the findings from the Define phase, reducing the steps to access the ALT text button by <strong>50%.</strong> 
+                        I improved the UI based on the findings from the Define phase, <strong>cutting the steps</strong> to access the ALT text button <strong>in half.</strong>
                         <br /><br />
                         After testing the wireframe with potential users, feedback emphasized the importance of an <strong>AI-based ALT text generator</strong> for quick navigation and better handling of <strong>multiple photo uploads</strong>. Users also highlighted the need for improved <strong>GIF accessibility</strong> in replies and more consistency in the <strong>ALT text box UI</strong>. Incorporating these insights, I finalized the design, focusing on enhancing accessibility and user experience.
                         </div>
                     </div>
                 </div>
 
-                <div className="project_detail project_deliver project_ui flex_column jusitfy_start">
+                <div className="project_detail project_output">
                     <div>
                         <div className="project_detail_subtitle main_italic color_orange">Deliver</div>
                         <div className="project_detail_title title color_green title_ui deliver_title"></div>
                     </div>
+                </div>
+
+                <div className="project_img ui_img" 
+                    ref={scrollRef}
+                    onMouseDown={handleMouseDown}
+                    onMouseLeave={handleMouseLeave}
+                    onMouseUp={handleMouseUp}
+                    onMouseMove={handleMouseMove}
+                    style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+                > 
+                    <div className="project_img_container">
+                        <div className="img_wrapper pawlert_img">
+                            <img src={final1} alt="final1" onDragStart={(e) => e.preventDefault()} />
+                        </div>
+                        <div className="img_wrapper pawlert_img">
+                            <img src={final2} alt="final2" onDragStart={(e) => e.preventDefault()} />
+                        </div>
+                        <div className="img_wrapper pawlert_img">
+                            <img src={final3} alt="final3" onDragStart={(e) => e.preventDefault()} />
+                        </div>
+                        <div className="img_wrapper pawlert_img">
+                            <img src={final4} alt="final4" onDragStart={(e) => e.preventDefault()} />
+                        </div>
+                        <div className="img_wrapper pawlert_img">
+                            <img src={final5} alt="final5" onDragStart={(e) => e.preventDefault()} />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="project_detail project_deliver project_ui flex_column jusitfy_start">
                     <div className="deliver_container">
                         <div className="project_detail_info ui_info jusitfy_start deliver_box">
                             <div className="project_detail_desc deliver_desc"><span>✸ Main Feed

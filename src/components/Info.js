@@ -24,7 +24,7 @@ function Info() {
         </div>
       </div>
       <div className="body body_text color_text info_body">
-        Hey there! I'm Yoonsoo <span>(aka Jaine!)</span>, currently studying Interaction Design at Sheridan College. I'm passionate about creating visually appealing products that enhance user convenience, always refining my work until it meets my standards <i>(even if it means overworking sometimes. :P) (Of course, with pleasure!)</i>
+        Hey there! I'm Yoonsoo <span>(aka Jaine!)</span>, currently studying Interaction Design at Sheridan College. I'm passionate about creating visually appealing products that enhance user convenience, always refining my work until it meets my standards.
         <br />
         <br />
         My interest in visual aesthetics and building my own website inspired me to pursue Interaction Design. I’ve gained valuable experience in <span>human-centered design</span> and developed the ability to bridge the gap between <span>design and development.</span> <i>(Fun fact: I fully hand-coded my portfolio site as well! Someone asked me, 'Which website did you use to create your portfolio?')</i>

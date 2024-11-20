@@ -322,7 +322,7 @@ a {
 }
 
 .first_table > div:nth-child(2)::before {
-  content: "UI/UX Designer • Interaction Designer";
+  content: "UI/UX Designer";
 }
 
 .first_arrow {
@@ -340,7 +340,7 @@ a {
 
 .first_box {
   border-radius: 20px;
-  height: 87vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -612,13 +612,20 @@ a {
 }
 
 .archive_sticky {
-  position: relative;
-  top: 50%;
+  position: absolute;
   z-index: -1;
+}
+
+.archive_list {
+  height: 100%;
 }
 
 .archive_banner {
   display: none !important;
+}
+
+.archive_title {
+  height: 15vw;
 }
 
 .archive_box {
@@ -629,12 +636,14 @@ a {
   display: flex;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
+  height: 100%;
   width: 100%; 
   max-width: 100vw; 
+  align-items: center;
 }
 
 .archive_container > div:first-child {
-  margin-left: 150px;
+  margin-left: 700px;
 }
 
 .archive_card_container {
@@ -789,7 +798,7 @@ a {
 }
 
 .project_info_right {
-  margin-left: 200px;
+  margin-left: 100px;
   display: flex;
   flex-direction: column;
 }
@@ -908,20 +917,20 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 250px;
+  padding: 8vh 15vw;
   position: relative;
 }
 
-.project_overview {
+/* .project_overview {
   height: 100vh;
-}
+} */
 
 .project_detail_title {
   letter-spacing: 2px;
 }
 
 .title_ui {
-  font-size: 13vw;
+  font-size: 10vw;
   display: flex;
   align-items: center;
 }
@@ -943,7 +952,7 @@ a {
 }
 
 .project_detail_desc {
-  font-size: 22px;
+  font-size: 20px;
   font-family: "elza", Arial, Helvetica, sans-serif;
   line-height: 1.5;
 }
@@ -972,9 +981,9 @@ a {
   width: 100vw;
   padding: 70px;
   text-align: center;
-  font-size: 35px;
+  font-size: 2.5vw;
   background-color:#22C182;
-  margin-top: 140px;
+  margin: 5vh 0;
 }
 
 .diagram {
@@ -1004,8 +1013,6 @@ a {
 
 
 .project_banner_container {
-  position: absolute;
-  bottom: 10px;
   display: flex;
   background-color: #22C182;
   justify-content: center;
@@ -1030,6 +1037,7 @@ a {
   align-items: flex-start;
   justify-content: flex-start;
   margin-top: 55px;
+  padding: 5vh 15vw;
 }
 
 .project_content {
@@ -1066,8 +1074,8 @@ a {
 .project_img_container {
   display: flex;
   width: max-content;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 4vh;
+  /* margin-bottom: 100px; */
 }
 
 .img_wrapper {
@@ -1197,10 +1205,6 @@ p {
   margin-left: 20px;
 }
 
-.ui_overview {
-  padding-bottom: 20px;
-}
-
 .ui_left {
   display: flex;
   flex-direction: column;
@@ -1232,13 +1236,13 @@ p {
   margin-bottom: 60px;
 }
 
-.project_discover {
+/* .project_discover {
   margin-top: 120px;
-}
+} */
 
-.project_ui {
+/* .project_ui {
   margin-top: 140px;
-}
+} */
 
 .inProgress {
   display: flex;
@@ -1248,7 +1252,11 @@ p {
 }
 
 .ui_banner {
-  bottom: 0;
+  margin: 0 0 8vh 0;
+}
+
+.project_overview {
+  padding: 20vh 15vw;
 }
 
 .swiper-container {
@@ -1260,9 +1268,9 @@ p {
   background: #22C182 !important;
 }
 
-.project_problem {
+/* .project_problem {
   margin: 140px 0;
-}
+} */
 
 /* .deliver_container {
   padding: 0 150px;
@@ -1282,7 +1290,7 @@ p {
 }
 
 .deliver_desc > span {
-  font-size: 40px;
+  font-size: 30px;
   color:#22C182;
 }
 
@@ -1311,7 +1319,7 @@ p {
 }
 
 .result_title {
-  font-size: 35px;
+  font-size: 25px;
   font-weight: 700;
 }
 
@@ -1499,7 +1507,7 @@ p {
   }
 
   .first_table > div:nth-child(2)::before {
-    content: "Interaction Designer";
+    content: "UI/UX Designer";
   }
 
   .first_arrow {
@@ -1764,11 +1772,16 @@ p {
     margin: 0;
     text-align: right;
   }
-
+  
   .project_detail {
-    padding: 0;
+    padding: 5vh 0;
     flex-direction: column;
     align-items: flex-start;
+  }
+  
+  
+  .project_overview {
+    padding: 10vh 0;
   }
 
   .project_detail > div:not(:nth-child(3)) {
@@ -1788,7 +1801,7 @@ p {
   }
 
   .project_overview > div:first-child {
-    margin-bottom: 50px;
+    margin-bottom: 0;
   }
 
   .project_detail_desc:nth-child(:last-child) {
@@ -1828,12 +1841,12 @@ p {
   }
 
   .ui_banner {
-    bottom: 20px;
+    margin: 2vh 0;
   }
 
-  .project_problem {
+  /* .project_problem {
     margin-top: 60px;
-  }
+  } */
 
   .problem_table {
     border-radius: 10px 30px 30px 30px;
