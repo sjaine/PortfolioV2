@@ -8,14 +8,19 @@ import movienight from '../../assets/img/movienight.png';
 import arborday from '../../assets/img/arborday.gif';
 import book from '../../assets/img/book.png';
 import movieposter from '../../assets/img/movieposter.png';
+import movieticket from '../../assets/img/movieticket.png';
+import watering from '../../assets/img/watering.png';
+import leftArrow from '../../assets/img/archive_arrow.svg';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   { id: 1, title: 'arbor day', thumbnail: arborday },
-  { id: 2, title: 'book redesign', thumbnail: book },
-  { id: 3, title: 'movie night', thumbnail: movienight },
-  { id: 4, title: 'movie poster', thumbnail: movieposter }
+  { id: 2, title: 'movie ticket', thumbnail: movieticket },
+  { id: 3, title: 'planting app', thumbnail: watering },
+  { id: 4, title: 'book redesign', thumbnail: book },
+  { id: 5, title: 'movie night', thumbnail: movienight },
+  { id: 6, title: 'movie poster', thumbnail: movieposter }
 ];
 
 function Archive() {
@@ -96,6 +101,7 @@ function Archive() {
             onMouseUp={handleMouseUp}
             onMouseMove={handleMouseMove}
             style={{ cursor: isDragging ? 'grabbing' : 'grab' }}>
+            <div className="archive_arrow"><img src={leftArrow} alt="left arrow" /></div>
             {projects.map((project) => (
               <CardA
                 key={project.id}
