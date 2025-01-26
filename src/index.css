@@ -126,7 +126,7 @@
 }
 
 .color_text {
-  color: #1A1917;
+  color: #5E5E5E;
 }
 
 .color_white {
@@ -578,10 +578,11 @@ a {
   color: gray;
 }
 
-.about {
+.about, .work {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .about_profileImg {
@@ -610,7 +611,7 @@ a {
 
 .about_right {
   flex-direction: column;
-  padding-right: 150px;
+  padding-right: 130px;
 }
 
 .about_title {
@@ -640,12 +641,12 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 15px 0;
-  border-top: 1px solid black;
+  border-top: 1px solid #5E5E5E;
   align-items: center;
 }
 
 .about_table:last-of-type {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #5E5E5E;
 }
 
 .about_table > div {
@@ -710,7 +711,7 @@ a {
   position: sticky;
 }
 
-.work_container {
+/* .work_container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -719,7 +720,7 @@ a {
   position: relative;
   width: 100vw;
   height: 100vh;
-}
+} */
 
 .card {
   cursor: pointer;
@@ -732,6 +733,96 @@ a {
   border-radius: 30px;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+/* Redesign Work */
+
+.work_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 45px;
+}
+
+.work_preview {
+  position: relative;
+  font-size: 18px;
+  width: 380px;
+  margin-left: 90px;
+}
+
+.work_folderContent {
+  position: relative;
+  left: 60px;
+}
+
+.work_sectionDetail {
+  position: relative;
+  left: 15px;
+  margin-top: 2px;
+}
+
+.work_folderName {
+  margin-bottom: 30px;
+}
+
+.work_section {
+  position: relative;
+}
+
+.work_section:not(:last-of-type) {
+  margin-bottom: 60px;
+}
+
+.work_line {
+  width: 35px;
+  left: -40px;
+  top: 12px;
+  position: absolute;
+  border-bottom: 1px solid #5E5E5E;
+}
+
+.work_line_1 {
+  position: absolute;
+  top: 12px;
+  left: -25px;
+  height: 24px;
+  border-left: 1px solid #5E5E5E;
+}
+
+.work_line_2 {
+  position: absolute;
+  top: 12px;
+  left: -25px;
+  height: 48px;
+  border-left: 1px solid #5E5E5E;
+}
+
+.work_line_5 {
+  position: absolute;
+  top: 12px;
+  left: -25px;
+  height: 118px;
+  border-left: 1px solid #5E5E5E;
+}
+
+.work_detail_line {
+  width: 35px;
+  left: -40px;
+  top: 12px;
+  position: absolute;
+  border-bottom: 1px solid #5E5E5E;
+}
+
+.work_thumb {
+  width: 800px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.work_thumb > img {
+  width: 100%;
 }
 
 /* Work Hover */
