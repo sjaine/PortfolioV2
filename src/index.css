@@ -173,7 +173,7 @@ section > div {
   box-shadow: 0px 4px 4px 0px rgba(61, 61, 61, 0.10);
   backdrop-filter: blur(2px);
   position: fixed;
-  bottom: 0;
+  bottom: 20px;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px 45px;
@@ -181,6 +181,7 @@ section > div {
   align-items: center;
   gap: 46.25px;
   align-self: stretch;
+  z-index: 100;
 }
 
 .common {
@@ -192,7 +193,7 @@ section > div {
 .link {
   position: fixed;
   padding: 0 45px;
-  top: 45px;
+  top: 35px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -798,11 +799,10 @@ a {
   border-left: 1px solid #5E5E5E;
 }
 
-.work_line_5 {
+.work_line_d {
   position: absolute;
   top: 12px;
   left: -25px;
-  height: 118px;
   border-left: 1px solid #5E5E5E;
 }
 
@@ -823,6 +823,11 @@ a {
 
 .work_thumb > img {
   width: 100%;
+}
+
+.swiper-slide {
+  display: flex !important; 
+  height: 100vh;
 }
 
 /* Work Hover */
@@ -2420,3 +2425,12 @@ p {
 }
 
 
+.swiper-pagination-bullet {
+  background: #5E5E5E !important; 
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #22C182 !important; 
+}

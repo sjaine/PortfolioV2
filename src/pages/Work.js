@@ -1,4 +1,19 @@
 import React from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+// import required modules
+import { Pagination, Navigation } from 'swiper/modules';
+
+const projects = [
+    { id: 1, title: "ArtBook", thumbnail: "/assets/img/artbook.png", role: "front-end developer", start: "from September 2024", end: "to December 2024", team: "Nayeong Cho, UI/UX Designer", tools: ["Visual Studio Code", "React", "Figma", "MongoDB", "REST APIs"] },
+    { id: 2, title: "Instagram", thumbnail: "/assets/img/instagram.png", role: "UI/UX Designer", start: "from September 2023", end: "to December 2023", team: "Alone", tools: ["Visual Studio Code", "HTML, CSS", "Figma", "REST APIs"] },
+    { id: 3, title: "Pawlert", thumbnail: "/assets/img/pawlart.png", role: "front-end developer", start: "from September 2024", end: "to December 2024", team: "Nayeong Cho, UI/UX Designer", tools: ["Visual Studio Code", "React", "Figma", "MongoDB", "REST APIs"] },
+  ];
 
 function Work() {
   return (
@@ -10,72 +25,75 @@ function Work() {
 Hand-coded with ❤️ using React</div>
         </div>
         {/* sections */}
-        <div className="work_container">
-            <div className="work_thumb">
-                <img src="/assets/img/artbook.png" alt="thumb" />
-            </div>
-            <div className="work_preview">
-                <div className="work_folderName color_blue body"><b>📁 ArtBook/</b></div>
-                <div className="work_folderContent color_text body">
-                    <div className="work_section">
-                        <div className="work_line"></div>
-                        <div className="work_line_1"></div>
-                        <div className="work_sectionName color_blue">role/</div>
-                        <div className="work_sectionDetail">
-                            <div className="work_detail_line"></div>
-                            <p>front-end developer</p>
+        <Swiper
+            pagination={true} 
+            navigation={true}
+            modules={[Pagination, Navigation]} 
+            loop={true}
+            className="mySwiper"
+        >
+            {projects.map((project) => (
+                <SwiperSlide className="work_container">
+                    <div className="work_thumb">
+                        <img src={project.thumbnail} alt={`${project.title} thumbnail`} />
+                    </div>
+                    <div className="work_preview">
+                        <div className="work_folderName color_blue body"><b>📁 {project.title}/</b></div>
+                        <div className="work_folderContent color_text body">
+                            {/* role */}
+                            <div className="work_section">
+                                <div className="work_line"></div>
+                                <div className="work_line_1"></div>
+                                <div className="work_sectionName color_blue">role/</div>
+                                <div className="work_sectionDetail">
+                                    <div className="work_detail_line"></div>
+                                    <p>{project.role}</p>
+                                </div>
+                            </div>
+
+                            {/* timeline */}
+                            <div className="work_section">
+                                <div className="work_line"></div>
+                                <div className="work_line_2"></div>
+                                <div className="work_sectionName color_blue">timeline/</div>
+                                <div className="work_sectionDetail">
+                                    <div className="work_detail_line"></div>
+                                    <p>{project.start}</p>
+                                </div>
+                                <div className="work_sectionDetail">
+                                    <div className="work_detail_line"></div>
+                                    <p>{project.end}</p>
+                                </div>
+                            </div>
+
+                            {/* team */}
+                            <div className="work_section">
+                                <div className="work_line"></div>
+                                <div className="work_line_1"></div>
+                                <div className="work_sectionName color_blue">team/</div>
+                                <div className="work_sectionDetail">
+                                    <div className="work_detail_line"></div>
+                                    <p>{project.team}</p>
+                                </div>
+                            </div>
+
+                            {/* tools */}
+                            <div className="work_section">
+                                <div className="work_line"></div>
+                                <div className="work_line_d" style={{height: `${project.tools.length * 23.5}px`}}></div>
+                                <div className="work_sectionName color_blue">tools/</div>
+                                {project.tools.map((tool, index) => (
+                                    <div className="work_sectionDetail" key={index}>
+                                        <div className="work_detail_line"></div>
+                                        <p>{tool}</p>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
-                    <div className="work_section">
-                        <div className="work_line"></div>
-                        <div className="work_line_2"></div>
-                        <div className="work_sectionName color_blue">timeline/</div>
-                        <div className="work_sectionDetail">
-                            <div className="work_detail_line"></div>
-                            <p>from September 2024</p>
-                        </div>
-                        <div className="work_sectionDetail">
-                            <div className="work_detail_line"></div>
-                            <p>to December 2024</p>
-                        </div>
-                    </div>
-                    <div className="work_section">
-                        <div className="work_line"></div>
-                        <div className="work_line_1"></div>
-                        <div className="work_sectionName color_blue">team/</div>
-                        <div className="work_sectionDetail">
-                            <div className="work_detail_line"></div>
-                            <p>Nayeong Cho, UI/UX Designer</p>
-                        </div>
-                    </div>
-                    <div className="work_section">
-                        <div className="work_line"></div>
-                        <div className="work_line_5"></div>
-                        <div className="work_sectionName color_blue">tools/</div>
-                        <div className="work_sectionDetail">
-                            <div className="work_detail_line"></div>
-                            <p>Visual Studio Code</p>
-                        </div>
-                        <div className="work_sectionDetail">
-                            <div className="work_detail_line"></div>
-                            <p>React</p>
-                        </div>
-                        <div className="work_sectionDetail">
-                            <div className="work_detail_line"></div>
-                            <p>Figma</p>
-                        </div>
-                        <div className="work_sectionDetail">
-                            <div className="work_detail_line"></div>
-                            <p>MongoDB</p>
-                        </div>
-                        <div className="work_sectionDetail">
-                            <div className="work_detail_line"></div>
-                            <p>REST APIs</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                </SwiperSlide>
+            ))}
+        </Swiper>
     </div>
   );
 }

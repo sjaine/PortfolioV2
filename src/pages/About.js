@@ -16,7 +16,7 @@ Hand-coded with ❤️ using React</div>
             </div>
             <div className="about_right">
                 <div className="about_annyeong color_text">
-                    <div className="about_title main">🐭 sjaine.me/about/annyeong</div>
+                    <div className="about_title main">🐭 sjaine.me/about/annyeong!</div>
                     <div className="about_content body">Hey, there! I’m Yoonsoo(aka, Jaine!), a Korean native and Interaction Design student @ Sheridan College, Canada. I always do my best in designing, coding, hanging out with friends, and living my own life! I’m passionate about designing products that make users' lives convenient with visual aesthetics or creating my own extraordinary works⎯ I don’t stop modifying until I'm satisfied with my work. (And yeah, sometimes I overwork because of this desire :P)</div>
                 </div>
                 <div className="about_experience color_text">
