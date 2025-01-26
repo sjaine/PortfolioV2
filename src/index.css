@@ -98,7 +98,7 @@
 }
 
 .body { 
-  font-family: 'elza', sans-serif;
+  font-family: 'pretendard', sans-serif;
 }
 
 .bc_beige {
@@ -191,15 +191,27 @@ section > div {
 
 .link {
   position: fixed;
+  padding: 0 45px;
   top: 45px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.copyright {
+.link_home {
+  padding: 0;
+}
+
+.copyright_home {
   position: fixed;
   top: 45px;
   left: 40%;
   text-align: right;
   transform: translate(-40%, 0);
+}
+
+.copyright {
+  text-align: right;
 }
 
 /* Nav */
@@ -414,7 +426,8 @@ a {
 
 .status > div {
   color: #B3F319;
-  font-weight: 800;
+  font-weight: 700;
+  margin-top: 3px;
 }
 
 .home_box_bold {
@@ -563,6 +576,104 @@ a {
 
 .info_body > i {
   color: gray;
+}
+
+.about {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.about_profileImg {
+  border-radius: 40px;
+  overflow: hidden;
+  width: 45%;
+  height: 95%;
+}
+
+.about_profileImg > img {
+  width: 100%;
+  transform: scale(1.3);
+}
+
+.about_container {
+  display: flex;
+  padding: 45px;
+}
+
+.about_left, .about_right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_right {
+  flex-direction: column;
+  padding-right: 150px;
+}
+
+.about_title {
+  margin-bottom: 15px;
+}
+
+.about_content {
+  margin-bottom: 60px;
+}
+
+.about_skills > .about_content {
+  margin-bottom: 0;
+}
+
+.about_experience {
+  width: 100%;
+}
+
+.about_experience > .about_content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.about_table {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-top: 1px solid black;
+  align-items: center;
+}
+
+.about_table:last-of-type {
+  border-bottom: 1px solid black;
+}
+
+.about_table > div {
+  display: flex;
+  align-items: center;
+}
+
+.company_icon {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.about_table > div > td:nth-child(2) {
+  padding-right: 30px;
+}
+
+.about_table_2 {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+.about_table_2 > td:first-child {
+  width: 30%;
+}
+
+.about_table_2 > td:last-child {
+  width: 70%;
 }
 
 /* Banner */

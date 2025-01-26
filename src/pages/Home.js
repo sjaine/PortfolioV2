@@ -4,9 +4,11 @@ function Home() {
   return (
     <div className="home">
         {/* header */}
-        <div className="link main color_orange">👋 sjaine.me</div>
-        <div className="copyright main color_orange">© 2025 Yoonsoo Jaine Shin <br />
+        <div className="link main color_orange link_home">
+            <div className="gotoHome">👋 sjaine.me</div>
+            <div className="copyright_home main color_orange">© 2025 Yoonsoo Jaine Shin <br />
 Hand-coded with ❤️ using React</div>
+        </div>
         {/* sections */}
         <div className="home_left">
             <table className="number_table main">

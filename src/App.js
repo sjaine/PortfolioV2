@@ -1,15 +1,14 @@
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop'; 
-import React, { useEffect } from 'react';
 import ArtBookDetails from './components/work/project/ArtBookDetails';
 import PawlertDetails from './components/work/project/PawlertDetails';
 import InstagramDetails from './components/work/project/InstagramDetails';
 
 // new
 import Home from './pages/Home';
-import About from './pages/Home';
-import Work from './pages/Home';
-import Archive from './pages/Home';
+import About from './pages/About';
+import Work from './pages/Work';
+import Archive from './pages/Archive';
 
 import NavBar from './components/NavBar';
 
