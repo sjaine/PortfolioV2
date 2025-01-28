@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop'; 
 import ArtBookDetails from './components/work/project/ArtBookDetails';
 import PawlertDetails from './components/work/project/PawlertDetails';
-import InstagramDetails from './components/work/project/InstagramDetails';
+import InstagramDetails from './pages/works/instagram.js';
 
 // new
 import Home from './pages/Home';

@@ -24,7 +24,7 @@ function Archive() {
     <div className="archive">
         {/* header */}
         <div className="link main color_orange">
-            <div className="gotoHome">👋 sjaine.me/work</div>
+            <div className="gotoHome">👋 sjaine.me/archive</div>
             <div className="copyright main color_orange">© 2025 Yoonsoo Jaine Shin <br />
 Hand-coded with ❤️ using React</div>
         </div>
