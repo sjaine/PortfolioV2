@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import * as motion from "motion/react-client"
 
 import final1 from '../../assets/img/instagram/final1.png';
 import final2 from '../../assets/img/instagram/final2.png';
@@ -49,7 +50,13 @@ Hand-coded with ❤️ using React</div>
             </div>
 
             {/* intro */}
-            <div className="project_intro">
+            <motion.div
+                className="project_intro"
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+            >
                 <div className="title color_blue" >Instagram.</div>
                 <div className="project_content">
                     <div className="main color_text project_subject">&lt;overview&gt;</div> 
@@ -57,10 +64,16 @@ Hand-coded with ❤️ using React</div>
                     <br />
                     This project aimed to improve user’s accessibility through research.</div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* overview */}
-            <div className="body project_overview">
+            <motion.div
+                className="body project_overview"
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+            >
                 <div className="overview_container line_height">
                     {/* role */}
                     <div>
@@ -91,10 +104,16 @@ Hand-coded with ❤️ using React</div>
                         <div>Visual Studio Code</div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* problem statement */}
-            <div className="project_problem">
+            <motion.div
+                className="project_problem"
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+            >
                 <div className="main color_text">&lt;problem statement&gt;</div>
                 <div className="problem_content line_height">
                     <div className="problem_table content_left body"><span>1. General User</span><p>Users struggle to <strong>find the option</strong> to add Alt text, as it's hidden at the bottom of the advanced settings page, making it easy to miss.</p>
@@ -103,7 +122,7 @@ Hand-coded with ❤️ using React</div>
 </span><p>Users with visual impairments report that many posts <strong>lack sufficient Alt text</strong>, leaving them to rely entirely on whether others have provided it.</p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* observation */}
             <div className="project_body">

@@ -1,4 +1,5 @@
 import React from 'react';
+import * as motion from "motion/react-client"
 
 function Home() {
   return (
@@ -98,7 +99,19 @@ Hand-coded with ❤️ using React</div>
             <div className="point"></div>
             <div>Available for work</div>
             </div>
-            <div className="home_box_bold title color_green">YOONSOO<br />JAINE SHIN</div>
+            <motion.div 
+                animate={{ y: 0 }}
+                // Fade in when the element enters the viewport:
+                whileInView={{ opacity: 1 }}
+                // Animate the component when its layout changes:
+                layout
+                // Style now supports indepedent transforms:
+                style={{ y: 200 }}
+                transition={{ type: "spring", stiffness: 150 }}
+                className="home_box_bold title color_green"
+            >
+                YOONSOO<br />JAINE SHIN
+            </motion.div>
         </div>
         </div>
     </div>

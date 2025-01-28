@@ -12,7 +12,6 @@ import Archive from './pages/Archive';
 
 import NavBar from './components/NavBar';
 
-
 function App() {
   // const location = useLocation();
 

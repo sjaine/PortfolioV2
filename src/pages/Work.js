@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 // import required modules
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 const projects = [
     { id: 'artbook', title: "ArtBook", thumbnail: "/assets/img/artbook.png", role: "front-end developer", start: "from September 2024", end: "to December 2024", team: "Nayeong Cho, UI/UX Designer", tools: ["Visual Studio Code", "React", "Figma", "MongoDB", "REST APIs"] },
@@ -35,9 +35,15 @@ function Work() {
         <Swiper
             pagination={true} 
             navigation={true}
-            modules={[Pagination, Navigation]} 
+            modules={[Pagination, Navigation, Autoplay]} 
             loop={true}
             className="mySwiper"
+            grabCursor={true} 
+            speed={500}
+            autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+            }}
         >
             {projects.map((project) => (
                 <SwiperSlide className="work_container">
