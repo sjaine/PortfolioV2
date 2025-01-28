@@ -115,7 +115,6 @@
 
 * {
   box-sizing: border-box;
-  color: #303030;
 }
 
 /* main css part */
@@ -1078,7 +1077,7 @@ a {
 
 .project_intro {
   margin-top: 100px;
-  padding: 0 280px;
+  padding: 0 300px;
   display: flex;
   flex-direction: column;
 }
@@ -1095,7 +1094,7 @@ a {
 
 .project_overview, .project_problem {
   width: 100%;
-  padding: 0 280px;
+  padding: 0 300px;
   margin-top: 140px;
 }
 
@@ -1143,6 +1142,68 @@ a {
 
 .problem_table > span {
   font-weight: 700;
+}
+
+.project_body {
+  margin-top: 150px;
+  padding: 0 400px;
+}
+
+.body_title {
+  margin-bottom: 25px;
+}
+
+.body_content {
+  padding-right: 50px;
+}
+
+.observation_photo {
+  margin-top: 80px;
+}
+
+.observation_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.observation_container > img {
+  width: 49%;
+}
+
+.observation_container2 > img {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.project_hmw {
+  font-size: 22px;
+  line-height: 160%;
+  text-align: center;
+  margin-top: 150px;
+  padding: 80px 0;
+  border: 1px solid #FFF;
+  background: rgba(255, 255, 255, 0.50);
+}
+
+.body_imgs {
+  margin-top: 50px;
+}
+
+.body_imgs > img {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.project_table_bold {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.45px;
+  margin-left: 13px;
+}
+
+.project_table_left {
+  display: flex;
 }
 
 /* animation */

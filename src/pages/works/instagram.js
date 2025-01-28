@@ -75,8 +75,8 @@ Hand-coded with ❤️ using React</div>
             {/* observation */}
             <div className="project_body">
                 <div>
-                    <div>📁 ../discover/observation</div>
-                    <div>
+                    <div className="body_title main color_text">📁 ../discover/observation</div>
+                    <div className="body_content body">
                     During the discovery phase of the Double Diamond process, I found that Instagram offers more limited access to ALT text compared to other platforms. By conducting a competitor analysis of five different brands, I identified key strengths that could be leveraged for improvement. <br />
                     <br />
                     As a result, I focused on two main areas for exploration: <br />
@@ -85,26 +85,26 @@ Hand-coded with ❤️ using React</div>
                     </div>
                 </div>
 
-                <div>
-                    <div>
-                        {/* photo 1 */}
-                        {/* photo 2 */}
+                <div className="observation_photo">
+                    <div className="observation_container">
+                        <img src="/assets/img/instagram/observation1.svg" alt="observation 1" />
+                        <img src="/assets/img/instagram/observation2.svg" alt="observation 2" />
                     </div>
-                    <div>
-                        {/* photo 3 */}
+                    <div className="observation_container2">
+                        <img src="/assets/img/instagram/competitor.svg" alt="competitor analysis" />
                     </div>
                 </div>
             </div>
 
             {/* HMW Statement */}
-            <div>How might we simplify adding Alt text on Instagram <br />
-                and improve its accessibility for visually impaired users?</div>
+            <div className="project_hmw body">How might we <b>simplify adding Alt text</b> on Instagram <br />
+                and <b>improve its accessibility</b> for visually impaired users?</div>
 
             {/* define */}
             <div className="project_body">
                 <div>
-                    <div>📁 ../define/user flow</div>
-                    <div>
+                    <div className="body_title main color_text">📁 ../define/user flow</div>
+                    <div className="body_content body">
                         Too Many Steps to Access ALT Text<br />
                         I found that users struggle to locate the ALT text feature due to too many steps involved, which discourages its use. <br />
                         <br />
@@ -116,61 +116,59 @@ Hand-coded with ❤️ using React</div>
                         Add & Edit ALT Text: Move the ALT text button to the Filter & Edit page, with AI-generated text as the default option and an edit feature.
                     </div>
                 </div>
-                <div> 
-                    {/* photo 1 */}
-                    {/* photo 2 */}
-                    {/* photo 3 */}
+                <div className="body_imgs"> 
+                    <img src="/assets/img/instagram/currentUserFlow.svg" alt="current user flow" />
+                    <img src="/assets/img/instagram/persona1.svg" alt="current user flow" />
+                    <img src="/assets/img/instagram/persona2.svg" alt="current user flow" />
                 </div>
             </div>
 
             {/* develop */}
             <div className="project_body">
                 <div>
-                    <div>📁 ../develop/creation</div>
-                    <div>
+                    <div className="body_title main color_text">📁 ../develop/creation</div>
+                    <div className="body_content body">
                         I improved the UI based on the findings from the Define phase, cutting the steps to access the ALT text button in half.<br />
                         <br />
                         After testing the wireframe with potential users, feedback emphasized the importance of an AI-based ALT text generator for quick navigation and better handling of multiple photo uploads. Users also highlighted the need for improved GIF accessibility in replies and more consistency in the ALT text box UI. Incorporating these insights, I finalized the design, focusing on enhancing accessibility and user experience.
                     </div>
                 </div>
-                <div> 
-                    {/* photo 1 */}
-                    {/* photo 2 */}
-
+                <div className="body_imgs"> 
+                    <img src="/assets/img/instagram/lowfi.svg" alt="low fidelity wireframe" />
                     {/* user feedback */}
                     <table>
                         <tr>
-                            <div>
-                                <td>[1]</td>
-                                <td>ALT Text Generation and Efficiency</td>
-                            </div>
-                            <td>ALT Text Generator: An AI-based ALT text generator saves time for users, especially those navigating Instagram quickly. <br />
+                            <td className="project_table_left">
+                                <div className="main color_text">[1]</div>
+                                <div className="body project_table_bold">ALT Text Generation and Efficiency</div>
+                            </td>
+                            <td className="body project_table_right">ALT Text Generator: An AI-based ALT text generator saves time for users, especially those navigating Instagram quickly. <br />
                             <br />
                             Efficiency: ALT text improves user experience during poor internet connections by reducing delays.</td>
                         </tr>
                         <tr>
-                            <div>
-                                <td>[2]</td>
-                                <td>Multimedia & Messaging Access</td>
-                            </div>
-                            <td>ALT Text for Replies: GIFs used in replies need improved GIF accessibility. <br />
+                            <td className="project_table_left">
+                                <div className="main color_text">[2]</div>
+                                <div className="body project_table_bold">Multimedia & Messaging Access</div>
+                            </td>
+                            <td className="body project_table_right">ALT Text for Replies: GIFs used in replies need improved GIF accessibility. <br />
                             <br />
                             Multiple Photos: Better handling of multiple photo uploads with ALT text is necessary, especially on the timeline. <br />
                             <br />
                             DM Accessibility: Many users rely on Direct Messaging (DM), so enhancing its accessibility is essential.</td>
                         </tr>
                         <tr>
-                            <div>
-                                <td>[3]</td>
-                                <td>UI/UX Consistency</td>
-                            </div>
-                            <td>UI Consistency: The ALT text box UI is inconsistent with Instagram’s interface and needs refinement. <br />
+                            <td className="project_table_left">
+                                <div className="main color_text">[3]</div>
+                                <div className="body project_table_bold">UI/UX Consistency</div>
+                            </td>
+                            <td className="body project_table_right">UI Consistency: The ALT text box UI is inconsistent with Instagram’s interface and needs refinement. <br />
                             <br />
                             Accessibility: The AI-powered ALT text generator can greatly enhance accessibility for visual impaired users.</td>
                         </tr>
                     </table>
 
-                    {/* photo 3 */}
+                    <img src="/assets/img/instagram/midfi.svg" alt="mid fidelity wireframe" />
                 </div>
             </div>
 
