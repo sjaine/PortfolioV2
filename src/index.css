@@ -537,7 +537,7 @@ section > div {
   overflow: hidden;
   border-radius: 10px;
   margin-bottom: 80px;
-  transition: transform .3s ease, box-shadow .3s ease;
+  transition: box-shadow .3s ease;
 }
 
 .archive_image > img {
@@ -547,7 +547,6 @@ section > div {
 }
 
 .archive_image:hover {
-  transform: scale(1.05);
   box-shadow: 0 4px 15px #0003;
 }
 

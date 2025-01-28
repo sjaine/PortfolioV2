@@ -11,7 +11,17 @@ function Home() {
 Hand-coded with ❤️ using React</div>
         </div>
         {/* sections */}
-        <div className="home_left">
+        <motion.div 
+            animate={{ y: 0 }}
+            // Fade in when the element enters the viewport:
+            whileInView={{ opacity: 1 }}
+            // Animate the component when its layout changes:
+            layout
+            // Style now supports indepedent transforms:
+            style={{ y: 80 }}
+            transition={{ type: "spring", stiffness: 150 }}
+            className="home_left"
+        >
             <table className="number_table main">
                 <div className="table_line"></div>
                 <tr>
@@ -91,10 +101,20 @@ Hand-coded with ❤️ using React</div>
                     <td></td>
                 </tr>
             </table>
-            
-        </div>
+        </motion.div >
+
         <div className="home_right">
-        <div className="home_box bc_blue">
+        <motion.div 
+            animate={{ y: 0 }}
+            // Fade in when the element enters the viewport:
+            whileInView={{ opacity: 1 }}
+            // Animate the component when its layout changes:
+            layout
+            // Style now supports indepedent transforms:
+            style={{ y: 150 }}
+            transition={{ type: "spring", stiffness: 100 }}
+            className="home_box bc_blue"
+        >
             <div className="status body">
             <div className="point"></div>
             <div>Available for work</div>
@@ -106,13 +126,13 @@ Hand-coded with ❤️ using React</div>
                 // Animate the component when its layout changes:
                 layout
                 // Style now supports indepedent transforms:
-                style={{ y: 200 }}
-                transition={{ type: "spring", stiffness: 150 }}
+                style={{ y: 80, opacity: 0 }}
+                transition={{ type: "spring", stiffness: 150, delay: 0.1  }}
                 className="home_box_bold title color_green"
             >
                 YOONSOO<br />JAINE SHIN
             </motion.div>
-        </div>
+        </motion.div >
         </div>
     </div>
   );

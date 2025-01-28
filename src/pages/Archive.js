@@ -1,6 +1,7 @@
 import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import * as motion from "motion/react-client"
 
 // Import Swiper styles
 import 'swiper/css';
@@ -40,9 +41,19 @@ Hand-coded with ❤️ using React</div>
         >
             {projects.map((project) => (
                 <SwiperSlide className="archive_container">
-                    <div className="archive_image">
+                    <motion.div 
+                        whileHover={{ scale: 1.05 }}
+                        animate={{ y: 0 }}
+                        // Fade in when the element enters the viewport:
+                        whileInView={{ opacity: 1 }}
+                        // Animate the component when its layout changes:
+                        layout
+                        // Style now supports indepedent transforms:
+                        style={{ y: 25 }}
+                        transition={{ type: "spring", stiffness: 100 }}   className="archive_image"
+                    >
                         <img src={project.thumbnail} alt={`${project.title} thumbnail`} />
-                    </div>
+                    </motion.div >
                 </SwiperSlide>
             ))}
         </Swiper>

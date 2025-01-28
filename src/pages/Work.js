@@ -2,6 +2,7 @@ import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useNavigate } from 'react-router-dom'; // React Router
+import * as motion from "motion/react-client"
 
 // Import Swiper styles
 import 'swiper/css';
@@ -40,21 +41,35 @@ function Work() {
             className="mySwiper"
             grabCursor={true} 
             speed={500}
-            autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-            }}
         >
             {projects.map((project) => (
                 <SwiperSlide className="work_container">
-                    <div 
+                    <motion.div 
+                        animate={{ y: 0 }}
+                        // Fade in when the element enters the viewport:
+                        whileInView={{ opacity: 1 }}
+                        // Animate the component when its layout changes:
+                        layout
+                        // Style now supports indepedent transforms:
+                        style={{ y: 80, cursor: 'pointer' }}
+                        transition={{ type: "spring", stiffness: 80 }} 
                         className="work_thumb" 
                         onClick={() => handleThumbnailClick(project)} // Add click handler
-                        style={{ cursor: 'pointer' }} // Indicate clickable area
                     >
                         <img src={project.thumbnail} alt={`${project.title} thumbnail`} />
-                    </div>
-                    <div className="work_preview">
+                    </motion.div>
+
+                    <motion.div 
+                        animate={{ y: 0 }}
+                        // Fade in when the element enters the viewport:
+                        whileInView={{ opacity: 1 }}
+                        // Animate the component when its layout changes:
+                        layout
+                        // Style now supports indepedent transforms:
+                        style={{ y: 140 }}
+                        transition={{ type: "spring", stiffness: 100 }}  
+                        className="work_preview"
+                    >
                         <div className="work_folderName color_blue body"><b>📁 {project.title}/</b></div>
                         <div className="work_folderContent color_text body">
                             {/* role */}
@@ -107,7 +122,7 @@ function Work() {
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </SwiperSlide>
             ))}
         </Swiper>
