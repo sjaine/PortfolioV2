@@ -1,6 +1,7 @@
 import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useNavigate } from 'react-router-dom'; // React Router
 
 // Import Swiper styles
 import 'swiper/css';
@@ -10,19 +11,25 @@ import 'swiper/css/pagination';
 import { Pagination, Navigation } from 'swiper/modules';
 
 const projects = [
-    { id: 1, title: "ArtBook", thumbnail: "/assets/img/artbook.png", role: "front-end developer", start: "from September 2024", end: "to December 2024", team: "Nayeong Cho, UI/UX Designer", tools: ["Visual Studio Code", "React", "Figma", "MongoDB", "REST APIs"] },
-    { id: 2, title: "Instagram", thumbnail: "/assets/img/instagram.png", role: "UI/UX Designer", start: "from September 2023", end: "to December 2023", team: "Alone", tools: ["Visual Studio Code", "HTML, CSS", "Figma", "REST APIs"] },
-    { id: 3, title: "Pawlert", thumbnail: "/assets/img/pawlart.png", role: "front-end developer", start: "from September 2024", end: "to December 2024", team: "Nayeong Cho, UI/UX Designer", tools: ["Visual Studio Code", "React", "Figma", "MongoDB", "REST APIs"] },
+    { id: 'artbook', title: "ArtBook", thumbnail: "/assets/img/artbook.png", role: "front-end developer", start: "from September 2024", end: "to December 2024", team: "Nayeong Cho, UI/UX Designer", tools: ["Visual Studio Code", "React", "Figma", "MongoDB", "REST APIs"] },
+    { id: 'instagram', title: "Instagram", thumbnail: "/assets/img/instagram.png", role: "UI/UX Designer", start: "from September 2023", end: "to December 2023", team: "Alone", tools: ["Visual Studio Code", "HTML, CSS", "Figma", "REST APIs"] },
+    { id: 'pawlert', title: "Pawlert", thumbnail: "/assets/img/pawlart.png", role: "front-end developer", start: "from September 2024", end: "to December 2024", team: "Nayeong Cho, UI/UX Designer", tools: ["Visual Studio Code", "React", "Figma", "MongoDB", "REST APIs"] },
   ];
 
 function Work() {
-  return (
+    const navigate = useNavigate(); // Hook for navigation
+
+    const handleThumbnailClick = (project) => {
+        navigate(`/${project.id}`, { state: { project } }); // Pass project data
+    };
+
+    return (
     <div className="work">
         {/* header */}
         <div className="link main color_orange">
             <div className="gotoHome">👋 sjaine.me/work</div>
             <div className="copyright main color_orange">© 2025 Yoonsoo Jaine Shin <br />
-Hand-coded with ❤️ using React</div>
+    Hand-coded with ❤️ using React</div>
         </div>
         {/* sections */}
         <Swiper
@@ -34,7 +41,11 @@ Hand-coded with ❤️ using React</div>
         >
             {projects.map((project) => (
                 <SwiperSlide className="work_container">
-                    <div className="work_thumb">
+                    <div 
+                        className="work_thumb" 
+                        onClick={() => handleThumbnailClick(project)} // Add click handler
+                        style={{ cursor: 'pointer' }} // Indicate clickable area
+                    >
                         <img src={project.thumbnail} alt={`${project.title} thumbnail`} />
                     </div>
                     <div className="work_preview">
@@ -95,7 +106,7 @@ Hand-coded with ❤️ using React</div>
             ))}
         </Swiper>
     </div>
-  );
+    );
 }
 
 export default Work;
