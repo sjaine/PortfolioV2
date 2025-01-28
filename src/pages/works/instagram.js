@@ -52,10 +52,10 @@ Hand-coded with ❤️ using React</div>
             {/* intro */}
             <motion.div
                 className="project_intro"
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once:false, amount: 0.3 }}
+                transition={{ type: "tween", stiffness: 150 }}
             >
                 <div className="title color_blue" >Instagram.</div>
                 <div className="project_content">
@@ -69,10 +69,10 @@ Hand-coded with ❤️ using React</div>
             {/* overview */}
             <motion.div
                 className="body project_overview"
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once:false, amount: 0.3 }}
+                transition={{ type: "tween", stiffness: 150 }}
             >
                 <div className="overview_container line_height">
                     {/* role */}
@@ -109,10 +109,10 @@ Hand-coded with ❤️ using React</div>
             {/* problem statement */}
             <motion.div
                 className="project_problem"
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once:false, amount: 0.3 }}
+                transition={{ type: "tween", stiffness: 150 }}
             >
                 <div className="main color_text">&lt;problem statement&gt;</div>
                 <div className="problem_content line_height">
@@ -126,7 +126,12 @@ Hand-coded with ❤️ using React</div>
 
             {/* observation */}
             <div className="project_body">
-                <div>
+                <motion.div
+                    initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once:false, amount: 0.3 }}
+                    transition={{ type: "tween", stiffness: 150 }}
+                >
                     <div className="body_title main color_text">📁 ../discover/observation</div>
                     <div className="body_content body line_height">
                     During the discovery phase of the Double Diamond process, I found that Instagram offers more limited access to ALT text compared to other platforms. By conducting a competitor analysis of five different brands, I identified key strengths that could be leveraged for improvement. <br />
@@ -135,9 +140,14 @@ Hand-coded with ❤️ using React</div>
                     (1) making ALT text easier for users to find, <br />
                     (2) using auto-generated / AI-based ALT text to reduce the burden on general users.
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="observation_photo">
+                <motion.div
+                    initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once:false, amount: 0.1 }}
+                    transition={{ type: "tween", stiffness: 150 }} className="observation_photo"
+                >
                     <div className="observation_container">
                         <img src="/assets/img/instagram/observation1.svg" alt="observation 1" />
                         <img src="/assets/img/instagram/observation2.svg" alt="observation 2" />
@@ -145,7 +155,7 @@ Hand-coded with ❤️ using React</div>
                     <div className="observation_container2">
                         <img src="/assets/img/instagram/competitor.svg" alt="competitor analysis" />
                     </div>
-                </div>
+                </motion.div>
             </div>
 
             {/* HMW Statement */}
@@ -154,7 +164,12 @@ Hand-coded with ❤️ using React</div>
 
             {/* define */}
             <div className="project_body">
-                <div>
+                <motion.div
+                    initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once:false, amount: 0.3 }}
+                    transition={{ type: "tween", stiffness: 150 }}
+                >
                     <div className="body_title main color_text">📁 ../define/user flow</div>
                     <div className="body_content body line_height">
                         Too Many Steps to Access ALT Text<br />
@@ -167,28 +182,54 @@ Hand-coded with ❤️ using React</div>
                         Pick a Photo: Use AI to generate captions, making image selection easier for visually impaired users.<br />
                         Add & Edit ALT Text: Move the ALT text button to the Filter & Edit page, with AI-generated text as the default option and an edit feature.
                     </div>
-                </div>
+                </motion.div>
+
                 <div className="body_imgs"> 
-                    <img src="/assets/img/instagram/currentUserFlow.svg" alt="current user flow" />
-                    <img src="/assets/img/instagram/persona1.svg" alt="current user flow" />
-                    <img src="/assets/img/instagram/persona2.svg" alt="current user flow" />
+                    <motion.img initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once:false, amount: 0.1 }}
+                    transition={{ type: "tween", stiffness: 150 }} src="/assets/img/instagram/currentUserFlow.svg" alt="current user flow" />
+                    <motion.img initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once:false, amount: 0.1 }}
+                    transition={{ type: "tween", stiffness: 150 }} src="/assets/img/instagram/persona1.svg" alt="current user flow" />
+                    <motion.img initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once:false, amount: 0.1 }}
+                    transition={{ type: "tween", stiffness: 150 }} src="/assets/img/instagram/persona2.svg" alt="current user flow" />
                 </div>
             </div>
 
             {/* develop */}
             <div className="project_body">
-                <div>
+                <motion.div
+                    initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once:false, amount: 0.3 }}
+                    transition={{ type: "tween", stiffness: 150 }}
+                >
                     <div className="body_title main color_text">📁 ../develop/creation</div>
                     <div className="body_content body line_height">
                         I improved the UI based on the findings from the Define phase, cutting the steps to access the ALT text button in half.<br />
                         <br />
                         After testing the wireframe with potential users, feedback emphasized the importance of an AI-based ALT text generator for quick navigation and better handling of multiple photo uploads. Users also highlighted the need for improved GIF accessibility in replies and more consistency in the ALT text box UI. Incorporating these insights, I finalized the design, focusing on enhancing accessibility and user experience.
                     </div>
-                </div>
+                </motion.div>
+
                 <div className="body_imgs"> 
-                    <img src="/assets/img/instagram/lowfi.svg" alt="low fidelity wireframe" />
+                    <motion.img initial={{ y: 50, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once:false, amount: 0.1 }}
+                        transition={{ type: "tween", stiffness: 150 }} src="/assets/img/instagram/lowfi.svg" alt="low fidelity wireframe" />
+
                     {/* user feedback */}
-                    <table className="project_table line_height">
+                    <motion.table
+                        className="project_table line_height"
+                        initial={{ y: 50, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once:false, amount: 0.3 }}
+                        transition={{ type: "tween", stiffness: 150 }}
+                    >
                         <tr>
                             <td className="project_table_left">
                                 <div className="main color_text">[1]</div>
@@ -218,16 +259,20 @@ Hand-coded with ❤️ using React</div>
                             <br />
                             <b>Accessibility:</b> The AI-powered ALT text generator can greatly enhance accessibility for visual impaired users.</td>
                         </tr>
-                    </table>
+                    </motion.table>
 
-                    <img src="/assets/img/instagram/midfi.svg" alt="mid fidelity wireframe" />
+                    <motion.img initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once:false, amount: 0.1 }}
+                    transition={{ type: "tween", stiffness: 150 }} src="/assets/img/instagram/midfi.svg" alt="mid fidelity wireframe" />
                 </div>
             </div>
 
             {/* deliver */}
-            <div className="project_body">
+            <motion.div
+                className="project_body">
                 <div className="body_title main color_text">📁 ../deliver/final_solution</div>
-            </div>
+            </motion.div>
 
             <div className="project_deliver" 
                     ref={scrollRef}
@@ -256,54 +301,84 @@ Hand-coded with ❤️ using React</div>
                     </div>
                 </div>
 
-                <div className="project_body">
-                    <div className="deliver_container">
-                        <div className="deliver_box line_height">
-                            <div>
-                                <div className="deliver_desc main color_text">[Main Feed]</div>
-                                <div className="body ">In the main feed, the ALT text box is positioned below each photo. <br />When a user clicks on a photo, <strong>VoiceOver</strong> reads the ALT text.</div>
-                            </div>
-                            <div className="deliver_img">
-                                <img src={final1} alt="final 1" />
-                            </div>
+            <div className="project_body">
+                <div className="deliver_container">
+                    <motion.div
+                        initial={{ y: 50, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once:false, amount: 0.3 }}
+                        transition={{ type: "tween", stiffness: 150 }} 
+                        className="deliver_box line_height"
+                    >
+                        <div>
+                            <div className="deliver_desc main color_text">[Main Feed]</div>
+                            <div className="body ">In the main feed, the ALT text box is positioned below each photo. <br />When a user clicks on a photo, <strong>VoiceOver</strong> reads the ALT text.</div>
                         </div>
+                        <div className="deliver_img">
+                            <img src={final1} alt="final 1" />
+                        </div>
+                    </motion.div>
 
-                        <div className="deliver_box">
-                            <div>
-                                <div className="deliver_desc main color_text">[Pick a Photo]</div>
-                                <div className="body">Captions are generally <strong>generated by AI</strong>. AI suggestions describe the content of the photo, helping visually impaired users <strong>select images easily.</strong> Upon clicking a photo, VoiceOver reads the AI-generated ALT text, with an ALT text box available for temporary or situational use.</div>
-                            </div>
-                            <div className="deliver_img">
-                                <img src={final2} alt="final 2" />
-                            </div>
+                    <motion.div
+                        initial={{ y: 50, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once:false, amount: 0.3 }}
+                        transition={{ type: "tween", stiffness: 150 }} 
+                        className="deliver_box line_height"
+                    >
+                        <div>
+                            <div className="deliver_desc main color_text">[Pick a Photo]</div>
+                            <div className="body">Captions are generally <strong>generated by AI</strong>. AI suggestions describe the content of the photo, helping visually impaired users <strong>select images easily.</strong> Upon clicking a photo, VoiceOver reads the AI-generated ALT text, with an ALT text box available for temporary or situational use.</div>
                         </div>
+                        <div className="deliver_img">
+                            <img src={final2} alt="final 2" />
+                        </div>
+                    </motion.div>
 
-                        <div className="deliver_box">
-                            <div>
-                                <div className="deliver_desc main color_text">[Add ALT Text]</div>
-                                <div className="body">The primary issue with Instagram's ALT text is its complexity. To simplify this, the ALT text button has been <strong>moved to the Filter / Edit page.</strong> An AI suggestion box is provided to ease the process of writing ALT text. If a user chooses not to edit, AI-generated ALT text is automatically applied.
-                            </div>
-                            </div>
-                            <div className="deliver_img">
-                                <img src={final3} alt="final 3" />
-                            </div>
+                    <motion.div
+                        initial={{ y: 50, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once:false, amount: 0.3 }}
+                        transition={{ type: "tween", stiffness: 150 }} 
+                        className="deliver_box line_height"
+                    >
+                        <div>
+                            <div className="deliver_desc main color_text">[Add ALT Text]</div>
+                            <div className="body">The primary issue with Instagram's ALT text is its complexity. To simplify this, the ALT text button has been <strong>moved to the Filter / Edit page.</strong> An AI suggestion box is provided to ease the process of writing ALT text. If a user chooses not to edit, AI-generated ALT text is automatically applied.
                         </div>
+                        </div>
+                        <div className="deliver_img">
+                            <img src={final3} alt="final 3" />
+                        </div>
+                    </motion.div>
 
-                        <div className="deliver_box">
-                            <div>
-                                <div className="deliver_desc main color_text">[Edit ALT Text]</div>
-                                <div className="body">Users can review their ALT text before uploading the photo. Since screen readers typically read from the top, the ALT text is placed <strong>below the caption</strong> for better accessibility.
-                            </div>
-                            </div>
-                            <div className="deliver_img">
-                                <img src={final5} alt="final 5" />
-                            </div>
+                    <motion.div
+                        initial={{ y: 50, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once:false, amount: 0.3 }}
+                        transition={{ type: "tween", stiffness: 150 }} 
+                        className="deliver_box line_height"
+                    >
+                        <div>
+                            <div className="deliver_desc main color_text">[Edit ALT Text]</div>
+                            <div className="body">Users can review their ALT text before uploading the photo. Since screen readers typically read from the top, the ALT text is placed <strong>below the caption</strong> for better accessibility.
                         </div>
-                    </div>
+                        </div>
+                        <div className="deliver_img">
+                            <img src={final5} alt="final 5" />
+                        </div>
+                    </motion.div>
                 </div>
+            </div>
 
             {/* reflection */}
-            <div className="project_body">
+            <motion.div
+                className="project_body"
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once:false, amount: 0.3 }}
+                transition={{ type: "tween", stiffness: 150 }}
+            >
                 <div className="body_title main color_text">📁 ../reflection/takeaways</div>
                 <div className="body_content body line_height">
                 This project provided valuable experience and taught me the <b>importance of truly empathizing with users.</b> Previously, I often relied on my own experiences, which led to biases. However, I realized that the real issue was Instagram's accessibility, not users' improper use of ALT text. <br />
@@ -317,7 +392,7 @@ Hand-coded with ❤️ using React</div>
                 <div className="body_content body">
                    
                 </div> */}
-            </div>
+            </motion.div>
         </div>
     </div>
   );
