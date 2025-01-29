@@ -1,4 +1,3 @@
-import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useNavigate } from 'react-router-dom'; // React Router
@@ -7,9 +6,10 @@ import * as motion from "motion/react-client"
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 // import required modules
-import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 
 const projects = [
     { id: 'artbook', title: "ArtBook", thumbnail: "/assets/img/artbook.png", role: "front-end developer", start: "from September 2024", end: "to December 2024", team: "Nayeong Cho, UI/UX Designer", tools: ["Visual Studio Code", "React", "Figma", "MongoDB", "REST APIs"] },
@@ -36,41 +36,31 @@ function Work() {
         <Swiper
             pagination={true} 
             navigation={true}
-            modules={[Pagination, Navigation, Autoplay]} 
+            modules={[Pagination, Navigation]} 
             loop={true}
             className="mySwiper"
-            grabCursor={true} 
-            speed={500}
-            slidesPerView={1}
             centeredSlides={true}
-            threshold={0} 
-            resistanceRatio={0} 
-            touchRatio={1.5} 
+            threshold={50} 
+            lazyPreloadPrevNext={3}
         >
             {projects.map((project, index) => (
                 <SwiperSlide key={index} className="work_container">
                     <motion.div 
-                        animate={{ y: 0 }}
-                        // Animate the component when its layout changes:
-                        layout
-                        // Style now supports indepedent transforms:
-                        style={{ y: 80, cursor: 'pointer' }}
-                        transition={{ type: "spring", stiffness: 80 }} 
+                        animate={index === 0 ? { y: 0 } : {}}
+                        style={index === 0 ? { y: 80, cursor: 'pointer' } : { cursor: 'pointer' }}
+                        transition={index === 0 ? { type: "spring", stiffness: 80 } : {}} 
                         className="work_thumb" 
                         onClick={() => handleThumbnailClick(project)} // Add click handler
                     >
                         <div className="gradient"></div>
                         <div className="view_case main">view case study 👆</div>
-                        <img src={project.thumbnail} alt={`${project.title} thumbnail`} />
+                        <img src={project.thumbnail} alt={`${project.title} thumbnail`} loading="lazy" />
                     </motion.div>
 
                     <motion.div 
-                        animate={{ y: 0 }}
-                        // Animate the component when its layout changes:
-                        layout
-                        // Style now supports indepedent transforms:
-                        style={{ y: 140 }}
-                        transition={{ type: "spring", stiffness: 100 }}  
+                        animate={index === 0 ? { y: 0 } : {}}
+                        style={index === 0 ? { y: 140 } : {}}
+                        transition={index === 0 ? { type: "spring", stiffness: 100 } : {}}  
                         className="work_preview"
                     >
                         <div className="work_folderName color_blue body"><b>📁 {project.title}/</b></div>
@@ -128,6 +118,7 @@ function Work() {
                     </motion.div>
                 </SwiperSlide>
             ))}
+
         </Swiper>
     </div>
     );

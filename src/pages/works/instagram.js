@@ -47,13 +47,11 @@ Hand-coded with ❤️ using React</div>
         <div className="project_container">
             <motion.div
                 className="project_thumbnail"
-                animate={{ y: 0 }}
+                initial={{ y: 10, opacity: 0 }}
                 // Fade in when the element enters the viewport:
-                whileInView={{ opacity: 1 }}
+                whileInView={{ y: 0, opacity: 1 }}
                 // Animate the component when its layout changes:
                 layout
-                // Style now supports indepedent transforms:
-                style={{ y: 100, opacity: 0 }}
                 transition={{ type: "spring", stiffness: 80 }}
             >
                 <img src="/assets/img/instagram.png" alt="project thumbnail" />
@@ -62,10 +60,10 @@ Hand-coded with ❤️ using React</div>
             {/* intro */}
             <motion.div
                 className="project_intro"
-                initial={{ y: 50, opacity: 0 }}
+                initial={{ y: 100, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once:false, amount: 0.3 }}
-                transition={{ type: "tween", stiffness: 150 }}
+                transition={{ type: "spring", stiffness: 80 }}
             >
                 <div className="title color_blue" >Instagram.</div>
                 <div className="project_content">
@@ -144,11 +142,11 @@ Hand-coded with ❤️ using React</div>
                 >
                     <div className="body_title main color_text">📁 ../discover/observation</div>
                     <div className="body_content body line_height">
-                    During the discovery phase of the Double Diamond process, I found that Instagram offers more limited access to ALT text compared to other platforms. By conducting a competitor analysis of five different brands, I identified key strengths that could be leveraged for improvement. <br />
+                    During the discovery phase of the Double Diamond process, I found that Instagram offers more <b>limited access to ALT text</b> compared to other platforms. By conducting a competitor analysis of five different brands, I identified key strengths that could be leveraged for improvement. <br />
                     <br />
                     As a result, I focused on two main areas for exploration: <br />
-                    (1) making ALT text easier for users to find, <br />
-                    (2) using auto-generated / AI-based ALT text to reduce the burden on general users.
+                    (1) making ALT text<b> easier</b> for users to find, <br />
+                    (2) using<b> auto-generated / AI-based ALT text</b> to reduce the burden on general users.
                     </div>
                 </motion.div>
 
@@ -177,35 +175,35 @@ Hand-coded with ❤️ using React</div>
                 <motion.div
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once:false, amount: 0.3 }}
+                    viewport={{ once:false }}
                     transition={{ type: "tween", stiffness: 150 }}
                 >
                     <div className="body_title main color_text">📁 ../define/user flow</div>
                     <div className="body_content body line_height">
-                        Too Many Steps to Access ALT Text<br />
+                        <b>Too Many Steps to Access ALT Text</b><br />
                         I found that users struggle to locate the ALT text feature due to too many steps involved, which discourages its use. <br />
                         <br />
-                        Reducing Steps to Encourage ALT Text Usage<br />
+                        <b>Reducing Steps to Encourage ALT Text Usage</b><br />
                         To simplify the process and increase engagement, I focused on three areas:<br />
                         <br />
-                        Main Feed: Position ALT text below each photo for direct access.<br />
-                        Pick a Photo: Use AI to generate captions, making image selection easier for visually impaired users.<br />
-                        Add & Edit ALT Text: Move the ALT text button to the Filter & Edit page, with AI-generated text as the default option and an edit feature.
+                        <b>Main Feed:</b> Position ALT text below each photo for direct access.<br />
+                        <b>Pick a Photo:</b> Use AI to generate captions, making image selection easier for visually impaired users.<br />
+                        <b>Add & Edit ALT Text:</b> Move the ALT text button to the Filter & Edit page, with AI-generated text as the default option and an edit feature.
                     </div>
                 </motion.div>
 
                 <div className="body_imgs"> 
                     <motion.img initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once:false, amount: 0.3 }}
-                    transition={{ type: "tween", stiffness: 60 }} src="/assets/img/instagram/currentUserFlow.svg" alt="current user flow" />
+                    viewport={{ once:false }}
+                    transition={{ type: "tween", stiffness: 20 }} src="/assets/img/instagram/currentUserFlow.svg" alt="current user flow" />
                     <motion.img initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once:false, amount: 0.3 }}
+                    viewport={{ once:false, stiffness: 20 }}
                     transition={{ type: "tween" }} src="/assets/img/instagram/persona1.svg" alt="current user flow" />
                     <motion.img initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once:false, amount: 0.3 }}
+                    viewport={{ once:false, stiffness: 20 }}
                     transition={{ type: "tween" }} src="/assets/img/instagram/persona2.svg" alt="current user flow" />
                 </div>
             </div>
@@ -215,12 +213,12 @@ Hand-coded with ❤️ using React</div>
                 <motion.div
                     initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once:false, amount: 0.3 }}
+                    viewport={{ once:false }}
                     transition={{ type: "tween", stiffness: 150 }}
                 >
                     <div className="body_title main color_text">📁 ../develop/creation</div>
                     <div className="body_content body line_height">
-                        I improved the UI based on the findings from the Define phase, cutting the steps to access the ALT text button in half.<br />
+                        I improved the UI based on the findings from the Define phase, <b>cutting the steps</b> to access the ALT text button in half.<br />
                         <br />
                         After testing the wireframe with potential users, feedback emphasized the importance of an AI-based ALT text generator for quick navigation and better handling of multiple photo uploads. Users also highlighted the need for improved GIF accessibility in replies and more consistency in the ALT text box UI. Incorporating these insights, I finalized the design, focusing on enhancing accessibility and user experience.
                     </div>

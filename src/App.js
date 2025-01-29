@@ -2,6 +2,9 @@ import { Route, Routes } from 'react-router-dom';
 import Instagram from './pages/works/instagram.js';
 import Artbook from './pages/works/artbook.js';
 
+import { LoadingProvider } from "./components/LoadingContext";
+import LoadingScreen from "./components/LoadingScreen";
+
 // new
 import Home from './pages/Home';
 import About from './pages/About';
@@ -13,6 +16,8 @@ import NavBar from './components/NavBar';
 function App() {
   return (
     <>
+    <LoadingProvider>
+      <LoadingScreen />
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -22,6 +27,7 @@ function App() {
         <Route path="/instagram" element={<Instagram />} />
         <Route path="/artbook" element={<Artbook />} />
       </Routes>
+      </LoadingProvider>
     </>
   );
 }
