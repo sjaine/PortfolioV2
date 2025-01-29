@@ -41,13 +41,16 @@ function Work() {
             className="mySwiper"
             grabCursor={true} 
             speed={500}
+            slidesPerView={1}
+            centeredSlides={true}
+            threshold={0} 
+            resistanceRatio={0} 
+            touchRatio={1.5} 
         >
-            {projects.map((project) => (
-                <SwiperSlide className="work_container">
+            {projects.map((project, index) => (
+                <SwiperSlide key={index} className="work_container">
                     <motion.div 
                         animate={{ y: 0 }}
-                        // Fade in when the element enters the viewport:
-                        whileInView={{ opacity: 1 }}
                         // Animate the component when its layout changes:
                         layout
                         // Style now supports indepedent transforms:
@@ -56,13 +59,13 @@ function Work() {
                         className="work_thumb" 
                         onClick={() => handleThumbnailClick(project)} // Add click handler
                     >
+                        <div className="gradient"></div>
+                        <div className="view_case main">view case study 👆</div>
                         <img src={project.thumbnail} alt={`${project.title} thumbnail`} />
                     </motion.div>
 
                     <motion.div 
                         animate={{ y: 0 }}
-                        // Fade in when the element enters the viewport:
-                        whileInView={{ opacity: 1 }}
                         // Animate the component when its layout changes:
                         layout
                         // Style now supports indepedent transforms:

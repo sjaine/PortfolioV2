@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import InstagramDetails from './pages/works/instagram.js';
+import Instagram from './pages/works/instagram.js';
+import Artbook from './pages/works/artbook.js';
 
 // new
 import Home from './pages/Home';
@@ -18,7 +19,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/work" element={<Work />} />
         <Route path="/archive" element={<Archive />} />
-        <Route path="/instagram" element={<InstagramDetails />} />
+        <Route path="/instagram" element={<Instagram />} />
+        <Route path="/artbook" element={<Artbook />} />
       </Routes>
     </>
   );

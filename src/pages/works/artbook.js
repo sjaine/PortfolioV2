@@ -7,7 +7,7 @@ import final3 from '../../assets/img/instagram/final3.png';
 import final4 from '../../assets/img/instagram/final4.png';
 import final5 from '../../assets/img/instagram/final5.png';
 
-function Instagram() {
+function Artbook() {
     const scrollRef = useRef(null);
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
@@ -39,7 +39,7 @@ function Instagram() {
     <div className="project">
         {/* header */}
         <div className="link main color_orange">
-            <div className="gotoHome">👋 sjaine.me/work/instagram</div>
+            <div className="gotoHome">👋 sjaine.me/work/artbook</div>
             <div className="copyright main color_orange">© 2025 Yoonsoo Jaine Shin <br />
 Hand-coded with ❤️ using React</div>
         </div>
@@ -56,7 +56,7 @@ Hand-coded with ❤️ using React</div>
                 style={{ y: 100, opacity: 0 }}
                 transition={{ type: "spring", stiffness: 80 }}
             >
-                <img src="/assets/img/instagram.png" alt="project thumbnail" />
+                <img src="/assets/img/artbook.png" alt="project thumbnail" />
             </motion.div>
 
             {/* intro */}
@@ -67,12 +67,12 @@ Hand-coded with ❤️ using React</div>
                 viewport={{ once:false, amount: 0.3 }}
                 transition={{ type: "tween", stiffness: 150 }}
             >
-                <div className="title color_blue" >Instagram.</div>
+                <div className="title color_blue" >ArtBook.</div>
                 <div className="project_content">
                     <div className="main color_text project_subject">&lt;overview&gt;</div> 
-                    <div className="body project_desc line_height">Instagram has become one of the essential photo-based platforms for people to follow trends, build communities, and bring the world closer together. For users with visual impairments, Instagram supports Alt text, which can be read aloud by screen readers. <br />
+                    <div className="body project_desc line_height">Developed a website that recommends artworks tailored to users' preferences by integrating the MET API. I utilized React to manage and integrate the entire HTML/CSS structure seamlessly. <br />
                     <br />
-                    This project aimed to improve user’s accessibility through research.</div>
+                    Collaborating closely with my colleague, a UI/UX designer, provided me with valuable experience in teamwork and cross-functional collaboration.</div>
                 </div>
             </motion.div>
 
@@ -88,30 +88,31 @@ Hand-coded with ❤️ using React</div>
                     {/* role */}
                     <div>
                         <div className="main color_text overview_title">&lt;role&gt;</div>
-                        <div>UI/UX Designer</div>
                         <div>Front-End Developer</div>
                     </div>
                     
                     {/* timeline */}
                     <div>
                         <div className="main color_text overview_title">&lt;timeline&gt;</div>
-                        <div>From August 2023</div>
-                        <div>To December 2023</div>
+                        <div>From August 2024</div>
+                        <div>To December 2024</div>
                     </div>
 
                     {/* team */}
                     <div>
                         <div className="main color_text overview_title">&lt;team&gt;</div>
-                        <div>Alone!</div>
+                        <div>Nayeong Cho; <br />
+                        UI/UX Designer</div>
                     </div>
 
                     {/* team */}
                     <div>
                         <div className="main color_text overview_title">&lt;tools&gt;</div>
-                        <div>Figma</div>
-                        <div>HTML, CSS</div>
-                        <div>REST APIs</div>
                         <div>Visual Studio Code</div>
+                        <div>React</div>
+                        <div>Figma</div>
+                        <div>MongoDB</div>
+                        <div>REST APIs</div>
                     </div>
                 </div>
             </motion.div>
@@ -197,16 +198,16 @@ Hand-coded with ❤️ using React</div>
                 <div className="body_imgs"> 
                     <motion.img initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once:false, amount: 0.3 }}
-                    transition={{ type: "tween", stiffness: 60 }} src="/assets/img/instagram/currentUserFlow.svg" alt="current user flow" />
+                    viewport={{ once:false, amount: 0.1 }}
+                    transition={{ type: "tween", stiffness: 150 }} src="/assets/img/instagram/currentUserFlow.svg" alt="current user flow" />
                     <motion.img initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once:false, amount: 0.3 }}
-                    transition={{ type: "tween" }} src="/assets/img/instagram/persona1.svg" alt="current user flow" />
+                    viewport={{ once:false, amount: 0.1 }}
+                    transition={{ type: "tween", stiffness: 150 }} src="/assets/img/instagram/persona1.svg" alt="current user flow" />
                     <motion.img initial={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once:false, amount: 0.3 }}
-                    transition={{ type: "tween" }} src="/assets/img/instagram/persona2.svg" alt="current user flow" />
+                    viewport={{ once:false, amount: 0.1 }}
+                    transition={{ type: "tween", stiffness: 150 }} src="/assets/img/instagram/persona2.svg" alt="current user flow" />
                 </div>
             </div>
 
@@ -408,4 +409,4 @@ Hand-coded with ❤️ using React</div>
   );
 }
 
-export default Instagram;
+export default Artbook;

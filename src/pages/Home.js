@@ -115,10 +115,10 @@ Hand-coded with ❤️ using React</div>
             transition={{ type: "spring", stiffness: 100 }}
             className="home_box bc_blue"
         >
-            <div className="status body">
-            <div className="point"></div>
-            <div>Available for work</div>
-            </div>
+            <a className="status body" href="https://www.linkedin.com/in/jaineysshin/">
+                <div className="point"></div>
+                <div>Available for work</div>
+            </a>
             <motion.div 
                 animate={{ y: 0 }}
                 // Fade in when the element enters the viewport:
@@ -130,7 +130,7 @@ Hand-coded with ❤️ using React</div>
                 transition={{ type: "spring", stiffness: 150, delay: 0.1  }}
                 className="home_box_bold title color_green"
             >
-                YOONSOO<br />JAINE SHIN
+                <p>YOONSOO<br />JAINE SHIN</p>
             </motion.div>
         </motion.div >
         </div>

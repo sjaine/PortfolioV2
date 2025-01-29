@@ -49,7 +49,7 @@ Hand-coded with ❤️ using React</div>
                         // Animate the component when its layout changes:
                         layout
                         // Style now supports indepedent transforms:
-                        style={{ y: 25 }}
+                        style={{ y: 70, opacity: 0 }}
                         transition={{ type: "spring", stiffness: 100 }}   className="archive_image"
                     >
                         <img src={project.thumbnail} alt={`${project.title} thumbnail`} />
