@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Instagram from './pages/works/instagram.js';
 import Artbook from './pages/works/artbook.js';
+import Pawlert from './pages/works/pawlert.js';
 
 import { LoadingProvider } from "./components/LoadingContext";
 import LoadingScreen from "./components/LoadingScreen";
@@ -26,6 +27,7 @@ function App() {
         <Route path="/archive" element={<Archive />} />
         <Route path="/instagram" element={<Instagram />} />
         <Route path="/artbook" element={<Artbook />} />
+        <Route path="/pawlert" element={<Pawlert />} />
       </Routes>
       </LoadingProvider>
     </>

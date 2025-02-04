@@ -13,9 +13,9 @@ import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 
 const projects = [
-    { id: 'artbook', title: "ArtBook", thumbnail: "/assets/img/artbook.png", role: "front-end developer", start: "from September 2024", end: "to December 2024", team: "Nayeong Cho, UI/UX Designer", tools: ["Visual Studio Code", "React", "Figma", "MongoDB", "REST APIs"] },
-    { id: 'instagram', title: "Instagram", thumbnail: "/assets/img/instagram.png", role: "UI/UX Designer", start: "from September 2023", end: "to December 2023", team: "Alone", tools: ["Visual Studio Code", "HTML, CSS", "Figma", "REST APIs"] },
-    { id: 'pawlert', title: "Pawlert", thumbnail: "/assets/img/pawlart.png", role: "front-end developer", start: "from September 2024", end: "to December 2024", team: "Nayeong Cho, UI/UX Designer", tools: ["Visual Studio Code", "React", "Figma", "MongoDB", "REST APIs"] },
+    { id: 'instagram', title: "Instagram", thumbnail: "/assets/img/instagram.png", role: "UI/UX Designer", start: "from September 2023", end: "to December 2023", team: "Alone", tools: ["Visual Studio Code", "HTML, CSS", "Figma", "REST APIs"], info: "Capture, Create & Share What You Love! Improving Instagram's Accessibility for visual impairs.", },
+    { id: 'artbook', title: "ArtBook", thumbnail: "/assets/img/artbook.png", role: "front-end developer", start: "from September 2024", end: "to December 2024", team: "Nayeong Cho, UI/UX Designer", tools: ["Visual Studio Code", "React", "Figma", "MongoDB", "REST APIs",], info: "Explore the MET's collection with ease, one artwork at a time!", },
+    { id: 'pawlert', title: "Pawlert", thumbnail: "/assets/img/pawlart.png", role: "front-end developer", start: "from September 2024", end: "to December 2024", team: "Nayeong Cho, UI/UX Designer", tools: ["Visual Studio Code", "React", "Figma", "MongoDB", "REST APIs"], info: "(*Award Winning Project) Keep your dog cool and safe! Pawlert watches over them in real-time!", },
   ];
 
 function Work() {
@@ -58,7 +58,11 @@ function Work() {
                             onClick={() => handleThumbnailClick(project)} // Add click handler
                         >
                             <div className="gradient"></div>
-                            <div className="view_case main">view case study 👆</div>
+                            <div className="work_info">
+                                <div className="work_name title">{project.title}</div>
+                                <div className="main">{project.info}</div>
+                            </div>
+                            <div className="view_case main"></div>
                             <img src={project.thumbnail} alt={`${project.title} thumbnail`} loading="lazy" />
                         </motion.div>
                     </div>
@@ -84,6 +88,10 @@ function Work() {
                             onClick={() => handleThumbnailClick(project)} // Add click handler
                         >
                             <div className="gradient"></div>
+                            <div className="work_info">
+                                <div className="work_name title">{project.title}</div>
+                                <div className="main">{project.info}</div>
+                            </div>
                             <div className="view_case main">view case study 👆</div>
                             <img src={project.thumbnail} alt={`${project.title} thumbnail`} loading="lazy" />
                         </motion.div>

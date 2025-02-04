@@ -1,13 +1,14 @@
 import React, { useRef, useState } from 'react';
 import * as motion from "motion/react-client"
 
-import final1 from '../../assets/img/artbook/final1.png';
-import final2 from '../../assets/img/artbook/final2.png';
-import final3 from '../../assets/img/artbook/final3.png';
-import final4 from '../../assets/img/artbook/final4.png';
-import final5 from '../../assets/img/artbook/final5.png';
+import final1 from '../../assets/img/pawlert/First.png';
+import final2 from '../../assets/img/pawlert/Main.png';
+import final3 from '../../assets/img/pawlert/Main2.png';
+import final4 from '../../assets/img/pawlert/Main3.png';
+import final5 from '../../assets/img/pawlert/Main4.png';
+import final6 from '../../assets/img/pawlert/Map.png';
 
-function Artbook() {
+function Pawlert() {
     const scrollRef = useRef(null);
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
@@ -39,7 +40,7 @@ function Artbook() {
     <div className="project">
         {/* header */}
         <div className="link main color_orange">
-            <div className="gotoHome">👋 sjaine.me/work/artbook</div>
+            <div className="gotoHome">👋 sjaine.me/work/pawlert</div>
             <div className="copyright main color_orange">© 2025 Yoonsoo Jaine Shin <br />
 Hand-coded with ❤️ using React</div>
         </div>
@@ -56,7 +57,7 @@ Hand-coded with ❤️ using React</div>
                 style={{ y: 100, opacity: 0 }}
                 transition={{ type: "spring", stiffness: 80 }}
             >
-                <img src="/assets/img/artbook.png" alt="project thumbnail" />
+                <img src="/assets/img/pawlart.png" alt="project thumbnail" />
             </motion.div>
 
             {/* intro */}
@@ -67,11 +68,11 @@ Hand-coded with ❤️ using React</div>
                 viewport={{ once:false, amount: 0.3 }}
                 transition={{ type: "tween", stiffness: 150 }}
             >
-                <div className="title color_blue" >ArtBook.</div>
+                <div className="title color_blue" >Pawlert.</div>
                 <div className="project_content">
                     <div className="main color_text project_subject">&lt;overview&gt;</div> 
-                    <div className="body project_desc line_height">I developed a website that recommends artworks tailored to users' preferences by integrating the MET API. I utilized React to manage and integrate the entire HTML/CSS structure seamlessly. <br />
-                    Collaborating closely with my colleague, a UI/UX designer, provided me with valuable experience in teamwork and cross-functional collaboration.</div>
+                    <div className="body project_desc line_height">We built our product as WebApp with Vanila Web Stack through Visual Studio Code. Using the weather API, we generated JSON files for defining the information of users and their dogs. With the JSON data file, we created an AI based assistant application that recommends the best way for users with detailed analysis. <br />
+                    Through this project, I experienced the biggest learning curve including learning how GitHub works, or more technical aspects such as exploring JSON files.</div>
                 </div>
             </motion.div>
 
@@ -131,20 +132,23 @@ Hand-coded with ❤️ using React</div>
                 style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
             > 
                 <div className="project_deliver_container">
-                    <div className="img_wrapper wrapper_laptop">
+                    <div className="img_wrapper">
                         <img src={final1} alt="final1" onDragStart={(e) => e.preventDefault()} />
                     </div>
-                    <div className="img_wrapper wrapper_laptop">
+                    <div className="img_wrapper">
                         <img src={final2} alt="final2" onDragStart={(e) => e.preventDefault()} />
                     </div>
-                    <div className="img_wrapper wrapper_laptop">
+                    <div className="img_wrapper">
                         <img src={final3} alt="final3" onDragStart={(e) => e.preventDefault()} />
                     </div>
-                    <div className="img_wrapper wrapper_laptop">
+                    <div className="img_wrapper">
                         <img src={final4} alt="final4" onDragStart={(e) => e.preventDefault()} />
                     </div>
-                    <div className="img_wrapper wrapper_laptop">
+                    <div className="img_wrapper">
                         <img src={final5} alt="final5" onDragStart={(e) => e.preventDefault()} />
+                    </div>
+                    <div className="img_wrapper">
+                        <img src={final6} alt="final5" onDragStart={(e) => e.preventDefault()} />
                     </div>
                 </div>
             </div>
@@ -176,4 +180,4 @@ Hand-coded with ❤️ using React</div>
   );
 }
 
-export default Artbook;
+export default Pawlert;

@@ -14,6 +14,10 @@
 }
 
 /* Font / Font-size / Color */
+a {
+  text-decoration: none;
+}
+
 .h0 {
   font-size: 500px;
 }
@@ -162,20 +166,25 @@ section > div {
   box-shadow: 0px 4px 4px 0px rgba(61, 61, 61, 0.10);
   backdrop-filter: blur(2px);
   position: fixed;
-  bottom: 50px;
+  bottom: 40px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   padding: 10px 45px;
   display: flex;
   align-items: center;
   gap: 46.25px;
   align-self: stretch;
   z-index: 100;
+  transition: padding 0.3s;
 }
 
 .nav_content {
   width: 24px;
   height: 24px;
+}
+
+.contact {
+  cursor: pointer;
 }
 
 .homeNav {
@@ -212,24 +221,56 @@ section > div {
   align-items: center;
 }
 
-.common > a:first-child:hover .homeNav{
+.common > a:first-child:hover .homeNav, .homeActive{
   background-image: url('/public/assets/navbar/hover_home.svg');
 }
 
-.common > a:nth-child(2):hover .aboutNav{
+.common > a:nth-child(2):hover .aboutNav, .aboutActive{
   content: url('/public/assets/navbar/hover_person.svg');
 }
 
-.common > a:nth-child(3):hover .workNav{
+.common > a:nth-child(3):hover .workNav, .workActive{
   content: url('/public/assets/navbar/hover_folder.svg');
 }
 
-.common > a:nth-child(4):hover .archiveNav{
+.common > a:nth-child(4):hover .archiveNav, .archiveActive{
   content: url('/public/assets/navbar/hover_archive.svg');
 }
 
-.contact:hover > .contactNav {
+.contact:hover > .contactNav, .contactActive {
   content: url('/public/assets/navbar/hover_contact.svg');
+}
+
+.navBarActive {
+  padding: 180px 45px 10px 45px;
+}
+
+.contactInfo {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.contactInfo > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  color: #5E5E5E;
+}
+
+.contactInfo > a:not(:last-of-type) {
+  border-bottom: 1px solid #5E5E5E;
+}
+
+.contactInfoActive {
+  display: flex;
 }
 
 .tooltip {
@@ -701,6 +742,20 @@ section > div {
   background-blend-mode: multiply;
 }
 
+.work_name {
+  font-size: 10vw;
+  margin-bottom: -5px;
+}
+
+.work_info {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  color: white;
+  width: 60%;
+}
+
+
 .view_case {
   position: absolute;
   bottom: 20px;
@@ -933,6 +988,11 @@ section > div {
   transform: scale(1.02);
 }
 
+.wrapper_laptop > img {
+  border-radius: 10px;
+  width: 60vw;
+}
+
 .deliver_box {
   display: flex;
   justify-content: center;
@@ -1060,10 +1120,14 @@ section > div {
 /* Medium screens */
 @media (max-width: 1024px) {
   .NavBar {
+    bottom: 20px;
     padding: 6px 45px;
     gap: 30px;
-    transform: translate(-50%, -50%);
-    bottom: 0;
+    transform: translate(-50%, 0%);
+  }
+
+  .navBarActive {
+    padding: 180px 45px 6px 45px;
   }
 
   .common {
@@ -1140,17 +1204,18 @@ section > div {
     padding: 0;
   }
 
-  .about_profileImg {
-    width: 55%;
-  }
-
   /* work */
   .work_container {
     flex-direction: column;
   }
 
+  .work > div:nth-child(2) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
   .work_thumb {
-    height: 50vw;
+    height: 55vw;
     width: 100%;
   }
 
@@ -1201,6 +1266,10 @@ section > div {
     transform: scale(0.9);
     bottom: 20px;
     right: 10px;
+  }
+
+  .view_case::before {
+    content: "view case study 👆";
   }
 
   /* project */
@@ -1260,7 +1329,11 @@ section > div {
   .img_wrapper > img {
     border-radius: 10px;
     width: 50vw;
-}
+  }
+
+  .wrapper_laptop > img {
+    width: 80vw;
+  }
 }
 
 /* Small screens */
@@ -1316,9 +1389,8 @@ section > div {
 
   .NavBar {
     display: flex;
-    width: 80%;
+    width: 90%;
     justify-content: center;
-    transform: translate(-50%, -50%) scale(1.1);
   }
 
   .common {
@@ -1364,6 +1436,49 @@ section > div {
   .work_container {
     padding: 20px;
     margin-bottom: 30px;
+  }
+
+  .work_info {
+    bottom: 10px;
+  }
+
+  .work_info > div:last-of-type {
+    display:none;
+  }
+
+  .view_case {
+    font-size: 60px;
+    padding: 0;
+    bottom: 10px;
+    border: 0;
+  }
+
+  .view_case::before {
+    content: "👆";
+  }
+
+
+  /* Project */
+  .overview_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .overview_container > div {
+    width: 45%;
+  }
+
+  .project_overview, .project_problem {
+    margin-top: 100px;
+  }
+
+  .project_body, .project_hmw {
+    margin-top: 100px;
+  }
+
+  .deliver_box > div:first-child {
+    margin-right: 40px;
   }
 }
 

@@ -34,7 +34,7 @@ Hand-coded with ❤️ using React</div>
             breakpoints={{
                 1024: { slidesPerView: 3.5, 
                     spaceBetween: 50 }, 
-                768: { slidesPerView: 2, 
+                768: { slidesPerView: 1.5, 
                     spaceBetween: 30 },
                 0: { slidesPerView: 1, 
                     spaceBetween: 30 }
