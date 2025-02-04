@@ -4,7 +4,7 @@ Welcome to my portfolio site, built using React and enhanced with GSAP Scroll Pl
 Feel free to explore and enjoy the experience! 🥰
 
 ## Website
-
+[![Website Image](./src/assets/img/Placeholder.png)](https://sjaine.me/)
 
 ## Features
 - Smooth scrolling animations
