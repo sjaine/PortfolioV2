@@ -31,15 +31,21 @@ Hand-coded with ❤️ using React</div>
         </div>
         {/* sections */}
         <Swiper
-            slidesPerView={3.5}
-            spaceBetween={50}
+            breakpoints={{
+                1024: { slidesPerView: 3.5, 
+                    spaceBetween: 50 }, 
+                768: { slidesPerView: 2, 
+                    spaceBetween: 30 },
+                0: { slidesPerView: 1, 
+                    spaceBetween: 30 }
+            }}
             grabCursor={true}
             modules={[Pagination]}
             initialSlide={0}
             className="mySwiper"
             style={{ padding: "45px" }}
         >
-            {projects.map((project) => (
+            {projects.map((project, index) => (
                 <SwiperSlide className="archive_container">
                     <motion.div 
                         whileHover={{ scale: 1.05 }}
@@ -50,7 +56,7 @@ Hand-coded with ❤️ using React</div>
                         layout
                         // Style now supports indepedent transforms:
                         style={{ y: 70, opacity: 0 }}
-                        transition={{ type: "spring", stiffness: 100 }}   className="archive_image"
+                        transition={{ type: "spring", stiffness: 100, delay: index * 0.1 }}   className="archive_image"
                     >
                         <img src={project.thumbnail} alt={`${project.title} thumbnail`} />
                     </motion.div >

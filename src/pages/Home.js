@@ -1,18 +1,21 @@
 import React from 'react';
 import * as motion from "motion/react-client"
+import { useLoading } from "../components/LoadingContext";
 
 function Home() {
-  return (
+    const { loading } = useLoading();
+
+    return (
     <div className="home">
         {/* header */}
         <div className="link main color_orange link_home">
             <div className="gotoHome">👋 sjaine.me</div>
             <div className="copyright_home main color_orange">© 2025 Yoonsoo Jaine Shin <br />
-Hand-coded with ❤️ using React</div>
+    Hand-coded with ❤️ using React</div>
         </div>
         {/* sections */}
         <motion.div 
-            animate={{ y: 0 }}
+            animate={loading ? { } : { y: 0 }}
             // Fade in when the element enters the viewport:
             whileInView={{ opacity: 1 }}
             // Animate the component when its layout changes:
@@ -105,7 +108,7 @@ Hand-coded with ❤️ using React</div>
 
         <div className="home_right">
         <motion.div 
-            animate={{ y: 0 }}
+            animate={loading ? { } : { y: 0 }}
             // Fade in when the element enters the viewport:
             whileInView={{ opacity: 1 }}
             // Animate the component when its layout changes:
@@ -120,7 +123,7 @@ Hand-coded with ❤️ using React</div>
                 <div>Available for work</div>
             </a>
             <motion.div 
-                animate={{ y: 0 }}
+                animate={loading ? { } : { y: 0 }}
                 // Fade in when the element enters the viewport:
                 whileInView={{ opacity: 1 }}
                 // Animate the component when its layout changes:
@@ -134,8 +137,32 @@ Hand-coded with ❤️ using React</div>
             </motion.div>
         </motion.div >
         </div>
+
+        <table className="number_table table_mob main">
+                <div className="table_line"></div>
+                <tr>
+                    <td className="color_orange">1</td>
+                    <td>&emsp;&emsp;return(</td>
+                </tr>
+                <tr>
+                    <td className="color_orange">2</td>
+                    <td>&emsp;&emsp;&emsp;&emsp;&lt;div&gt;Yoonsoo <span>Jaine</span> Shin&lt;/div&gt;</td>
+                </tr>
+                <tr>
+                    <td className="color_orange">3</td>
+                    <td>&emsp;&emsp;&emsp;&emsp;&lt;div&gt;<span>UI/UX Designer</span>&lt;/div&gt;</td>
+                </tr>
+                <tr>
+                    <td className="color_orange">4</td>
+                    <td>&emsp;&emsp;&emsp;&emsp;&lt;div&gt;<span>Front-end Developer</span>&lt;/div&gt;</td>
+                </tr>
+                <tr>
+                    <td className="color_orange">5</td>
+                    <td>&emsp;&emsp;);</td>
+                </tr>
+            </table>
     </div>
-  );
+    );
 }
 
 export default Home;

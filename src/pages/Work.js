@@ -1,4 +1,5 @@
 // Import Swiper React components
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useNavigate } from 'react-router-dom'; // React Router
 import * as motion from "motion/react-client"
@@ -24,6 +25,14 @@ function Work() {
         navigate(`/${project.id}`, { state: { project } }); // Pass project data
     };
 
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
     <div className="work">
         {/* header */}
@@ -33,93 +42,117 @@ function Work() {
     Hand-coded with ❤️ using React</div>
         </div>
         {/* sections */}
-        <Swiper
-            pagination={true} 
-            navigation={true}
-            modules={[Pagination, Navigation]} 
-            loop={true}
-            className="mySwiper"
-            centeredSlides={true}
-            threshold={50} 
-            lazyPreloadPrevNext={3}
-        >
-            {projects.map((project, index) => (
-                <SwiperSlide key={index} className="work_container">
-                    <motion.div 
-                        animate={index === 0 ? { y: 0 } : {}}
-                        style={index === 0 ? { y: 80, cursor: 'pointer' } : { cursor: 'pointer' }}
-                        transition={index === 0 ? { type: "spring", stiffness: 80 } : {}} 
-                        className="work_thumb" 
-                        onClick={() => handleThumbnailClick(project)} // Add click handler
-                    >
-                        <div className="gradient"></div>
-                        <div className="view_case main">view case study 👆</div>
-                        <img src={project.thumbnail} alt={`${project.title} thumbnail`} loading="lazy" />
-                    </motion.div>
+        {isMobile ? <>
+            <div>
+                {projects.map((project, index) => (
+                    <div key={index} className="work_container">
+                        <motion.div 
+                            animate={{ y: 0 }}
+                            style={{ y: 80, cursor: 'pointer' }}
+                            transition={{ 
+                                duration: 1,
+                                type: "spring", 
+                                delay: index * 0.2 // Add a delay based on the index
+                            }} 
+                            className="work_thumb" 
+                            onClick={() => handleThumbnailClick(project)} // Add click handler
+                        >
+                            <div className="gradient"></div>
+                            <div className="view_case main">view case study 👆</div>
+                            <img src={project.thumbnail} alt={`${project.title} thumbnail`} loading="lazy" />
+                        </motion.div>
+                    </div>
+                ))}
 
-                    <motion.div 
-                        animate={index === 0 ? { y: 0 } : {}}
-                        style={index === 0 ? { y: 140 } : {}}
-                        transition={index === 0 ? { type: "spring", stiffness: 100 } : {}}  
-                        className="work_preview"
-                    >
-                        <div className="work_folderName color_blue body"><b>📁 {project.title}/</b></div>
-                        <div className="work_folderContent color_text body">
-                            {/* role */}
-                            <div className="work_section">
-                                <div className="work_line"></div>
-                                <div className="work_line_1"></div>
-                                <div className="work_sectionName color_blue">role/</div>
-                                <div className="work_sectionDetail">
-                                    <div className="work_detail_line"></div>
-                                    <p>{project.role}</p>
-                                </div>
-                            </div>
+            </div>
+        </> : <>
+            <Swiper
+                pagination={true}
+                navigation={true}
+                modules={[Pagination, Navigation]} 
+                loop={true}
+                className="mySwiper"
+                lazyPreloadPrevNext={3}
+            >
+                {projects.map((project, index) => (
+                    <SwiperSlide key={index} className="work_container">
+                        <motion.div 
+                            animate={index === 0 ? { y: 0 } : {}}
+                            style={index === 0 ? { y: 80, cursor: 'pointer' } : { cursor: 'pointer' }}
+                            transition={index === 0 ? { type: "spring", stiffness: 80 } : {}} 
+                            className="work_thumb" 
+                            onClick={() => handleThumbnailClick(project)} // Add click handler
+                        >
+                            <div className="gradient"></div>
+                            <div className="view_case main">view case study 👆</div>
+                            <img src={project.thumbnail} alt={`${project.title} thumbnail`} loading="lazy" />
+                        </motion.div>
 
-                            {/* timeline */}
-                            <div className="work_section">
-                                <div className="work_line"></div>
-                                <div className="work_line_2"></div>
-                                <div className="work_sectionName color_blue">timeline/</div>
-                                <div className="work_sectionDetail">
-                                    <div className="work_detail_line"></div>
-                                    <p>{project.start}</p>
-                                </div>
-                                <div className="work_sectionDetail">
-                                    <div className="work_detail_line"></div>
-                                    <p>{project.end}</p>
-                                </div>
-                            </div>
-
-                            {/* team */}
-                            <div className="work_section">
-                                <div className="work_line"></div>
-                                <div className="work_line_1"></div>
-                                <div className="work_sectionName color_blue">team/</div>
-                                <div className="work_sectionDetail">
-                                    <div className="work_detail_line"></div>
-                                    <p>{project.team}</p>
-                                </div>
-                            </div>
-
-                            {/* tools */}
-                            <div className="work_section">
-                                <div className="work_line"></div>
-                                <div className="work_line_d" style={{height: `${project.tools.length * 23.5}px`}}></div>
-                                <div className="work_sectionName color_blue">tools/</div>
-                                {project.tools.map((tool, index) => (
-                                    <div className="work_sectionDetail" key={index}>
+                        <motion.div 
+                            animate={index === 0 ? { y: 0 } : {}}
+                            style={index === 0 ? { y: 140 } : {}}
+                            transition={index === 0 ? { type: "spring", stiffness: 100 } : {}}  
+                            className="work_preview"
+                        >
+                            <div className="work_folderName color_blue body"><b>📁 {project.title}/</b></div>
+                            <div className="work_folderContent color_text body">
+                                {/* role */}
+                                <div className="work_section">
+                                    <div className="work_line"></div>
+                                    <div className="work_line_1"></div>
+                                    <div className="work_sectionName color_blue">role/</div>
+                                    <div className="work_sectionDetail">
                                         <div className="work_detail_line"></div>
-                                        <p>{tool}</p>
+                                        <p>{project.role}</p>
                                     </div>
-                                ))}
-                            </div>
-                        </div>
-                    </motion.div>
-                </SwiperSlide>
-            ))}
+                                </div>
 
-        </Swiper>
+                                {/* timeline */}
+                                <div className="work_section">
+                                    <div className="work_line"></div>
+                                    <div className="work_line_2"></div>
+                                    <div className="work_sectionName color_blue">timeline/</div>
+                                    <div className="work_sectionDetail">
+                                        <div className="work_detail_line"></div>
+                                        <p>{project.start}</p>
+                                    </div>
+                                    <div className="work_sectionDetail">
+                                        <div className="work_detail_line"></div>
+                                        <p>{project.end}</p>
+                                    </div>
+                                </div>
+
+                                {/* team */}
+                                <div className="work_section">
+                                    <div className="work_line"></div>
+                                    <div className="work_line_1"></div>
+                                    <div className="work_sectionName color_blue">team/</div>
+                                    <div className="work_sectionDetail">
+                                        <div className="work_detail_line"></div>
+                                        <p>{project.team}</p>
+                                    </div>
+                                </div>
+
+                                {/* tools */}
+                                <div className="work_section">
+                                    <div className="work_line"></div>
+                                    <div className="work_line_d" style={{height: `${project.tools.length * 23.5}px`}}></div>
+                                    <div className="work_sectionName color_blue">tools/</div>
+                                    {project.tools.map((tool, index) => (
+                                        <div className="work_sectionDetail" key={index}>
+                                            <div className="work_detail_line"></div>
+                                            <p>{tool}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </motion.div>
+                    </SwiperSlide>
+                ))}
+
+            </Swiper>
+        </>}
+        
     </div>
     );
 }

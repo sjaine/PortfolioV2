@@ -13,7 +13,7 @@ export const LoadingProvider = ({ children }) => {
     setTimeout(() => {
       setLoading(false);
       sessionStorage.setItem("hasVisited", "true"); 
-    }, 6000);
+    }, 2500);
   }, [loading]);
 
   return (

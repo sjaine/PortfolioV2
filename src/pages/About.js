@@ -38,7 +38,7 @@ Hand-coded with ❤️ using React</div>
                     className="about_annyeong color_text"
                 >
                     <div className="about_title main">🐭 sjaine.me/about/annyeong!</div>
-                    <div className="about_content body">Hey, there! I’m <b>Yoonsoo(aka, Jaine!)</b>, a Korean native and Interaction Design student <br />@Sheridan College, Canada. I always do my best in designing, coding, hanging out with friends, and living my own life! I'm passionate about experimenting with new things and making my products more <b>engaging and fun!</b></div>
+                    <div className="about_content body">Hey, there! I’m <b>Yoonsoo(aka, Jaine!)</b>, a Korean native and Interaction Design student @Sheridan College, Canada. I always do my best in designing, coding, hanging out with friends, and living my own life! I'm passionate about experimenting with new things and making my products more <b>engaging and fun!</b></div>
                 </motion.div >
                 <motion.div 
                     animate={{ y: 0 }}
